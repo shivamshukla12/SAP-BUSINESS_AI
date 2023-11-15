@@ -1,0 +1,32 @@
+{
+  "configuration.title": "SAP Fiori Tools - Guided Development",
+  "configuration.properties.enableTelemetry.description": "Enable telemetry data to be captured for SAP Fiori Tools - Guided Development extension. (if enabled the setting still abides by the overall 'Telemetry: enable telemetry' setting). As part of the telemetry data recording, non personally identifiable information is used to help understand product usage and improve the product.",
+  "configuration.properties.deprecation.enableTelemetry.description": "This setting has been deprecated. Refer to https://help.sap.com/viewer/17d50220bcd848aa854c9c182d65b699/Latest/en-US/837c23115bff43b4a245e9f01b0e80f7.html",
+
+  "commands.help.category": "Fiori",
+  "commands.help.openGuidedDevelopment.title": "Open Guided Development",
+  "commands.help.openGuidedDevelopmentToTheSide.title": "Open Guided Development to the Side",
+  "commands.help.openGuidedDevelopmentFromExplorer.title": "Open Guided Development",
+
+  "sap.ux.help.guideDetailsMode": "Select Guide Details View Mode",
+  "sap.ux.help.guideDetailsMode.enum.wizard": "wizard",
+  "sap.ux.help.guideDetailsMode.enum.wizard.desc": "Wizard Mode",
+  "sap.ux.help.guideDetailsMode.enum.full": "full",
+  "sap.ux.help.guideDetailsMode.enum.full.desc": "Full View Mode",
+
+  "sap.ux.help.showDescriptions": "Set the visibility of descriptions in Guided Development guides",
+  "sap.ux.help.showDescriptions.enum.disabled": "disabled",
+  "sap.ux.help.showDescriptions.enum.disabled.desc": "Hide step and parameter descriptions",
+  "sap.ux.help.showDescriptions.enum.enabled": "enabled",
+  "sap.ux.help.showDescriptions.enum.enabled.desc": "Show all guide, step, and parameter descriptions",
+
+  "sap.ux.help.loggingLevel": "Set the logging level",
+  "sap.ux.help.loggingLevel.enum.info": "information",
+  "sap.ux.help.loggingLevel.enum.info.desc": "Provides general information about the application",
+  "sap.ux.help.loggingLevel.enum.warn": "warning",
+  "sap.ux.help.loggingLevel.enum.warn.desc": "Provides warnings and information that may require developer attention",
+  "sap.ux.help.loggingLevel.enum.error": "error",
+  "sap.ux.help.loggingLevel.enum.error.desc": "Provides information related to a failure in the application",
+  "sap.ux.help.loggingLevel.enum.debug": "debug",
+  "sap.ux.help.loggingLevel.enum.debug.desc": "Provides information to help diagnose and troubleshoot issues in the application"
+}

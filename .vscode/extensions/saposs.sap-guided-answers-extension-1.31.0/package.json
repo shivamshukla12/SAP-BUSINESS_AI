@@ -1,0 +1,108 @@
+{
+	"name": "sap-guided-answers-extension",
+	"displayName": "%guidedAnswer.displayName%",
+	"description": "%guidedAnswer.description%",
+	"publisher": "SAPOSS",
+	"license": "Apache-2.0",
+	"version": "1.31.0",
+	"icon": "media/guided-answers-extension.png",
+	"categories": [
+		"Education"
+	],
+	"keywords": [
+		"SAP",
+		"Guided Answers",
+		"Support"
+	],
+	"bugs": {
+		"url": "https://github.com/SAP/guided-answers-extension/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/SAP/guided-answers-extension.git"
+	},
+	"engines": {
+		"vscode": "^1.74.1"
+	},
+	"main": "./dist/extension-min.js",
+	"private": false,
+	"scripts": {
+		"build": "pnpm clean && pnpm build:extension",
+		"build:extension": "node esbuild.js",
+		"clean": "rimraf --glob ./dist ./out ./reports *.tgz *.vsix",
+		"format": "prettier --write '**/*.{js,json,ts,yaml,yml}' --ignore-path ../../.prettierignore",
+		"lint": "eslint . --ext .ts",
+		"ide-ext:package": "vsce package",
+		"test": "jest --ci --forceExit --detectOpenHandles --colors",
+		"watch": "pnpm clean && node esbuild.js --watch",
+		"vscode:prepublish": "pnpm run build"
+	},
+	"activationEvents": [
+		"onCommand:sap.ux.guidedAnswer.openGuidedAnswer",
+		"onUri",
+		"onWebviewPanel:sap.ux.guidedAnswer.view"
+	],
+	"contributes": {
+		"configuration": {
+			"id": "sap.ux.guidedAnswer",
+			"type": "object",
+			"title": "%configuration.title%",
+			"properties": {
+				"sap.ux.guidedAnswer.apiHost": {
+					"type": "string",
+					"description": "%configuration.apiHost%",
+					"default": "https://ga.support.sap.com",
+					"scope": "window"
+				},
+				"sap.ux.guidedAnswer.openInNewTab": {
+					"type": "boolean",
+					"description": "%configuration.openInNewTab%",
+					"default": false,
+					"scope": "window"
+				},
+				"sap.ux.guidedAnswer.telemetryEnabled": {
+					"type": "boolean",
+					"description": "%configuration.telemetryEnabled%",
+					"default": true,
+					"scope": "window"
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "sap.ux.guidedAnswer.openGuidedAnswer",
+				"title": "%commands.guidedAnswer.openGuidedAnswer.title%",
+				"category": "%commands.fiori.category%"
+			}
+		]
+	},
+	"__dependencies": {
+		"@sap/guided-answers-extension-webapp": "workspace:*"
+	},
+	"devDependencies": {
+		"@sap/guided-answers-extension-core": "workspace:*",
+		"@sap/guided-answers-extension-types": "workspace:*",
+		"@types/uuid": "9.0.2",
+		"@types/vscode": "1.74.1",
+		"@vscode/vsce": "2.19.0",
+		"applicationinsights": "2.5.0",
+		"esbuild": "0.18.10",
+		"esbuild-plugin-copy": "2.1.1",
+		"uuid": "9.0.0",
+		"vscode-uri": "3.0.7"
+	},
+	"galleryBanner": {
+		"color": "#00195A",
+		"theme": "dark"
+	},
+	"__metadata": {
+		"id": "306c69c1-4ad0-4bc1-857f-20d91f3d75aa",
+		"publisherId": "84787529-c0f6-41e7-86db-6bdb9ac312ae",
+		"publisherDisplayName": "SAP OSS",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1695628558216,
+		"preRelease": false
+	}
+}

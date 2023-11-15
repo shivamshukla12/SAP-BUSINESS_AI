@@ -1,0 +1,52 @@
+{
+  "SaveRegistrationList": true,
+  "UpdateURL": "",
+  "MADCookie": "",
+  "FullScreenMode": false,
+  "FullScreenSingleMonitor": false,
+  "IsHighDpiStreamingMode": false,
+  "IsHwAccEnabled": true,
+  "ExtendedLocalizerVersion": "",
+  "BaseLocalizerVersion": "",
+  "ExtendedErrorDefinitionVersion": "",
+  "BaseErrorDefinitionVersion": "",
+  "Version": 2,
+  "CurrentRegistration": {
+    "RegistrationCode": "WSpdx+JPPATZ",
+    "CustomDescription": null,
+    "RegionKey": "WSpdx",
+    "OrgName": "d-92673560a3",
+    "RememberMeSetting": {
+      "AdminSetting": true,
+      "LocalSetting": true
+    },
+    "LogLevelSetting": {
+      "AdminSetting": true,
+      "LocalSetting": 2
+    },
+    "DiagnosticUploadSetting": {
+      "AutoLogUploadSetting": {
+        "AdminSetting": true,
+        "LocalSetting": true
+      }
+    }
+  },
+  "Locale": "en-US",
+  "WSPStreamingSettings": {
+    "transportType": 0,
+    "useProxyForTCP": false
+  },
+  "Proxy": {
+    "UseProxy": false,
+    "NoProxy": false,
+    "ProxyAddress": "127.0.0.1",
+    "ProxyPort": "8080"
+  },
+  "Position": {
+    "X": 0,
+    "Y": 0,
+    "Width": 1439,
+    "Height": 851,
+    "IsMaximized": false
+  }
+}

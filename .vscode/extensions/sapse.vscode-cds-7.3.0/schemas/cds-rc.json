@@ -1,0 +1,399 @@
+{
+    "title": "JSON schema for CDS configuration",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "This is a JSON schema representation for CDS project configuration",
+    "type": "object",
+    "additionalProperties": true,
+    "properties": {
+        "folders": {
+            "type": "object",
+            "description": "Set folders if you don't want to use the defaults 'app', 'db', 'srv'.",
+            "additionalProperties": true,
+            "properties": {
+                "app": {
+                    "type": "string",
+                    "format": "uri-reference",
+                    "default": "app",
+                    "description": "Path for app folder."
+                },
+                "db": {
+                    "type": "string",
+                    "format": "uri-reference",
+                    "default": "db",
+                    "description": "Path for db folder."
+                },
+                "srv": {
+                    "type": "string",
+                    "format": "uri-reference",
+                    "default": "srv",
+                    "description": "Path for srv folder."
+                }
+            },
+            "patternProperties": {
+                ".+": {
+                    "description": "A static name identifying this folder."
+                }
+            }
+        },
+        "build": {
+            "type": "object",
+            "description": "CDS build settings.",
+            "additionalProperties": true,
+            "properties": {
+                "target": {
+                    "type": "string",
+                    "description": "The folder which contains generated build results. Defaults to 'gen'.",
+                    "format": "uri-reference",
+                    "default": "gen"
+                },
+                "tasks": {
+                    "type": "array",
+                    "description": "Controls which tasks cds build will execute on your project modules.",
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": true,
+                        "properties": {
+                            "dest": {
+                                "type": "string",
+                                "description": "Destination folder for this build task relative to build target folder.",
+                                "format": "uri-reference"
+                            },
+                            "src": {
+                                "type": "string",
+                                "description": "Source folder for this build task.",
+                                "format": "uri-reference"
+                            },
+                            "for": {
+                                "type": "string",
+                                "description": "Target technology for this build task.",
+                                "minLength": 1,
+                                "enum": [
+                                    "nodejs",
+                                    "java",
+                                    "hana",
+                                    "mtx-sidecar",
+                                    "mtx",
+                                    "fiori",
+                                    "node-cf",
+                                    "java-cf"
+                                ]
+                            },
+                            "options": {
+                                "type": "object",
+                                "description": "Set target technology specific options for this build task.",
+                                "additionalProperties": true,
+                                "properties": {
+                                    "model": {
+                                        "$ref": "#/$defs/foldersStringArray"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "i18n": {
+            "type": "object",
+            "description": "CDS translation settings.",
+            "additionalProperties": true,
+            "properties": {
+                "default_language": {
+                    "type": "string",
+                    "default": "en"
+                },
+                "folders": {
+                    "description": "List of language file folders. First valid entry wins.",
+                    "default": [
+                        "_i18n",
+                        "i18n",
+                        "assets/i18n"
+                    ],
+                    "$ref": "#/$defs/foldersStringArray"
+                }
+            }
+        },
+        "deploy": {
+            "type": "object",
+            "description": "CDS deploy settings.",
+            "additionalProperties": true,
+            "properties": {
+                "no_save": {
+                    "type": "boolean",
+                    "description": "Do / don't update config in package.json.",
+                    "default": true
+                }
+            }
+        },
+        "requires": {
+            "type": "object",
+            "description": "CDS Dependencies to databases and services can be configured by listing them within a requires section.",
+            "additionalProperties": true,
+            "properties": {
+                "auth": {
+                    "oneOf": [
+                        {
+                            "type": "string",
+                            "description": "Auth-specific settings via shortcut.",
+                            "anyOf": [
+                                {
+                                    "$ref": "#/$defs/authType"
+                                },
+                                {
+                                    "minLength": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "object",
+                            "description": "Authentication settings.",
+                            "default": {
+                                "kind": "mocked"
+                            },
+                            "additionalProperties": true,
+                            "properties": {
+                                "kind": {
+                                    "type": "string",
+                                    "description": "Kind of dependency.",
+                                    "anyOf": [
+                                        {
+                                            "$ref": "#/$defs/authType"
+                                        },
+                                        {
+                                            "minLength": 1
+                                        }
+                                    ]
+                                },
+                                "credentials": {
+                                    "type": "object",
+                                    "description": "Can be explicitly configured here, but will be overruled by VCAP_SERVICES if a matching entry is found therein.",
+                                    "additionalProperties": true,
+                                    "properties": {
+                                        "database": {
+                                            "type": "string",
+                                            "format": "uri-reference"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                "db": {
+                    "oneOf": [
+                        {
+                            "type": "string",
+                            "description": "Database specific settings via shortcut.",
+                            "anyOf": [
+                                {
+                                    "$ref": "#/$defs/databaseType"
+                                },
+                                {
+                                    "minLength": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "object",
+                            "description": "Database specific settings.",
+                            "default": {
+                                "kind": "sqlite"
+                            },
+                            "additionalProperties": true,
+                            "properties": {
+                                "kind": {
+                                    "type": "string",
+                                    "description": "Kind of dependency.",
+                                    "anyOf": [
+                                        {
+                                            "$ref": "#/$defs/databaseType"
+                                        },
+                                        {
+                                            "minLength": 1
+                                        }
+                                    ]
+                                },
+                                "model": {
+                                    "description": "Assigned model. Interpreted like Node.js 'requires' logic.",
+                                    "$ref": "#/$defs/foldersStringArray"
+                                },
+                                "credentials": {
+                                    "type": "object",
+                                    "description": "Can be explicitly configured here, but will be overruled by VCAP_SERVICES if a matching entry is found therein.",
+                                    "additionalProperties": true,
+                                    "properties": {
+                                        "database": {
+                                            "type": "string",
+                                            "format": "uri-reference"
+                                        }
+                                    }
+                                },
+                                "vcap": {
+                                    "type": "object",
+                                    "description": "Can optionally be used to select entry in VCAP_SERVICES.",
+                                    "additionalProperties": true,
+                                    "properties": {
+                                        "name": {
+                                            "type": "string",
+                                            "minLength": 1
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "patternProperties": {
+                ".+": {
+                    "oneOf": [
+                        {
+                            "type": "boolean",
+                            "description": "Add this type with default settings during runtime."
+                        },
+                        {
+                            "type": "string",
+                            "description": "A shortcut referencing a predefined configuration.",
+                            "anyOf": [
+                                {
+                                    "$ref": "#/$defs/authType"
+                                },
+                                {
+                                    "$ref": "#/$defs/databaseType"
+                                },
+                                {
+                                    "$ref": "#/$defs/serviceType"
+                                },
+                                {
+                                    "minLength": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "object",
+                            "default": {},
+                            "additionalProperties": true,
+                            "properties": {
+                                "kind": {
+                                    "type": "string",
+                                    "description": "Kind of dependency.",
+                                    "anyOf": [
+                                        {
+                                            "$ref": "#/$defs/authType"
+                                        },
+                                        {
+                                            "$ref": "#/$defs/databaseType"
+                                        },
+                                        {
+                                            "$ref": "#/$defs/serviceType"
+                                        },
+                                        {
+                                            "minLength": 1
+                                        }
+                                    ]
+                                },
+                                "model": {
+                                    "description": "Assigned model. Interpreted like Node.js 'requires' logic.",
+                                    "$ref": "#/$defs/foldersStringArray"
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "$defs": {
+        "serviceType": {
+            "oneOf": [
+                {
+                    "const": "app-service",
+                    "description": "Standard app service"
+                },
+                {
+                    "const": "odata",
+                    "description": "Odata service"
+                },
+                {
+                    "const": "odata-v2",
+                    "description": "Odata service version 2"
+                },
+                {
+                    "const": "odata-v4",
+                    "description": "Odata service version 4"
+                },
+                {
+                    "const": "rest",
+                    "description": "REST service"
+                }
+            ]
+        },
+        "authType": {
+            "default": "mocked",
+            "oneOf": [
+                {
+                    "const": "mocked",
+                    "description": "Mocked authentication"
+                },
+                {
+                    "const": "basic",
+                    "description": "Basic authentication"
+                },
+                {
+                    "const": "jwt",
+                    "description": "JWT authentication"
+                },
+                {
+                    "const": "xsuaa",
+                    "description": "Authentication using XSUAA"
+                },
+                {
+                    "const": "dummy",
+                    "description": "Dummy authentication"
+                }
+            ]
+        },
+        "databaseType": {
+            "default": "sqlite",
+            "oneOf": [
+                {
+                    "const": "hana",
+                    "description": "Standard SAP HANA"
+                },
+                {
+                    "const": "hana-cloud",
+                    "description": "SAP HANA Cloud"
+                },
+                {
+                    "const": "hana-mt",
+                    "description": "Multitenancy"
+                },
+                {
+                    "const": "sql",
+                    "description": "SQL"
+                },
+                {
+                    "const": "sqlite",
+                    "description": "Local sqlite database"
+                }
+            ]
+        },
+        "foldersStringArray": {
+            "oneOf": [
+                {
+                    "type": "string",
+                    "format": "uri-reference"
+                },
+                {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "string",
+                        "format": "uri-reference"
+                    }
+                }
+            ]
+        }
+    }
+}

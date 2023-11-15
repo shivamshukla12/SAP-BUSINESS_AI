@@ -1,0 +1,11 @@
+{
+  "systemmigrationstatuses": {
+    "systemMigration": {
+      "migrationDone": true,
+      "authTypeMigrated": true,
+      "migrationLogs": [
+        "2023-09-25T07:53:16.634Z ft:store:migrate Mon Sep 25 2023 13:23:16 GMT+0530 (India Standard Time)"
+      ]
+    }
+  }
+}

@@ -1,0 +1,928 @@
+2023-03-21T17:25:19.286Z { Version: "5.6.0.3404" }: [INF] Initiating clean up at logs
+2023-03-21T17:25:19.284Z { Version: "5.6.0.3404" }: [INF] Target framework .NET 6.0.11
+2023-03-21T17:25:19.310Z { Version: "5.6.0.3404" }: [INF] Initiating clean up at pcoip
+2023-03-21T17:25:19.314Z { Version: "5.6.0.3404" }: [DBG] Launched from cli
+2023-03-21T17:25:19.376Z { Version: "5.6.0.3404" }: [DBG] Registry value Software\Amazon Web Services. LLC\Amazon WorkSpacesEnableHwAcc Does Not Exists
+2023-03-21T17:25:19.376Z { Version: "5.6.0.3404" }: [DBG] Hardware acceleration enabled from UserSettings file.
+2023-03-21T17:25:19.550Z { Version: "5.6.0.3404" }: [DBG] Setting Session factory
+2023-03-21T17:25:19.552Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Application::Launch=1
+2023-03-21T17:25:20.028Z { Version: "5.6.0.3404" }: [WRN] Exception occurred while reading setting: No value for key: HKEY_LOCAL_MACHINE\SOFTWARE\Amazon\Amazon WorkSpaces Client\clientUpgradeDisabled
+2023-03-21T17:25:20.060Z { Version: "5.6.0.3404" }: [WRN] Local OS: Windows , Version: [64 bit OS] 10.0.22621.0
+2023-03-21T17:25:20.081Z { Version: "5.6.0.3404" }: [DBG] WorkspaceStateChange: Init
+2023-03-21T17:25:20.082Z { Version: "5.6.0.3404" }: [ERR] File 'LoginPageProperties.json' is not found
+2023-03-21T17:25:20.436Z { Version: "5.6.0.3404" }: [INF] Navigating to Use Case WorkSpacesClient.Common.UseCases.BeginPreSessionUseCase.BeginPreSessionPresenter
+2023-03-21T17:25:20.450Z { Version: "5.6.0.3404" }: [DBG] CredentialCache.DefaultCredentials is set to acutal system proxy
+2023-03-21T17:25:20.450Z { Version: "5.6.0.3404" }: [INF] HttpClient created using SystemProxy from settings: SystemProxy -> 127.0.0.1:8080
+2023-03-21T17:25:20.536Z { Version: "5.6.0.3404" }: [INF] Before <BeginUseCase> CPU:0% Memory:196,436.000kb
+2023-03-21T17:25:20.542Z { Version: "5.6.0.3404" }: [INF] Resolving region for: WSpdx+JPPATZ
+2023-03-21T17:25:20.542Z { Version: "5.6.0.3404" }: [INF] Region Key obtained from code: WSpdx
+2023-03-21T17:25:20.544Z { Version: "5.6.0.3404" }: [INF] Checking for localization update
+2023-03-21T17:25:20.574Z { Version: "5.6.0.3404" }: [INF] Local language assets version: 1
+2023-03-21T17:25:20.574Z { Version: "5.6.0.3404" }: [INF] Requesting language updates from: https://ws-client-service.us-west-2.amazonaws.com/configuration/GetLocalizationAssets
+2023-03-21T17:25:20.597Z { Version: "5.6.0.3404" }: [INF] Checking for error definitions update
+2023-03-21T17:25:20.598Z { Version: "5.6.0.3404" }: [INF] Local languages version: 1 | Local error definitions version: 1
+2023-03-21T17:25:20.598Z { Version: "5.6.0.3404" }: [INF] Requesting error definition updates from: https://ws-client-service.us-west-2.amazonaws.com/configuration/GetErrorDefinition
+2023-03-21T17:25:20.626Z { Version: "5.6.0.3404" }: [DBG] GetAuthInfo Request Amzn-id: 7c4ae1f6-3733-4fc3-acac-548932aa0d03
+2023-03-21T17:25:20.925Z { Version: "5.6.0.3404" }: [DBG] Check for Custom udate URL https://d2td7dqidlhjx7.cloudfront.net/custom/prod/pdx/d-92673560a3/windows/WorkSpacesAppCast.xml returned OverrideDoesNotExists
+2023-03-21T17:25:20.926Z { Version: "5.6.0.3404" }: [DBG] Setting the Update FeedURL URL to https://d2td7dqidlhjx7.cloudfront.net/prod/pdx/windows/WorkSpacesAppCastx64.xml
+2023-03-21T17:25:21.360Z { Version: "5.6.0.3404" }: [ERR] Error while making a request to : https://ws-client-service.us-west-2.amazonaws.com/configuration/GetErrorDefinition. Message: Response status code does not indicate success: 403 (Forbidden).
+2023-03-21T17:25:21.360Z { Version: "5.6.0.3404" }: [ERR] Error while making a request to : https://ws-client-service.us-west-2.amazonaws.com/configuration/GetLocalizationAssets. Message: Response status code does not indicate success: 403 (Forbidden).
+2023-03-21T17:25:21.361Z { Version: "5.6.0.3404" }: [ERR] Exception occured during error-definition remote configuration: HttpClient4xxNetworkError
+2023-03-21T17:25:21.361Z { Version: "5.6.0.3404" }: [ERR] Exception occured during locale remote configuration: HttpClient4xxNetworkError
+2023-03-21T17:25:21.361Z { Version: "5.6.0.3404" }: [INF] No changes to error definitions
+2023-03-21T17:25:21.361Z { Version: "5.6.0.3404" }: [INF] No changes to localization
+2023-03-21T17:25:21.362Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> ErrorUpdate::Error=0
+2023-03-21T17:25:21.362Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> LocaleUpdate::Error=0
+2023-03-21T17:25:21.362Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> ErrorUpdate::Fault=0
+2023-03-21T17:25:21.362Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> LocaleUpdate::Fault=0
+2023-03-21T17:25:21.796Z { Version: "5.6.0.3404" }: [DBG] Received Http WsBrokerGetAuthInfoResponse(Url: https://ws-broker-service.us-west-2.amazonaws.com/) with (SessionId: 1fc4d842-a3ac-4149-9d06-fa717d4d29db, OrgName: d-92673560a3, AuthMethods: [OAUTH])
+2023-03-21T17:25:21.797Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> GetAuthInfo::Error=0
+2023-03-21T17:25:21.797Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> GetAuthInfo::Fault=0
+2023-03-21T17:25:21.813Z { Version: "5.6.0.3404" }: [DBG] WorkspaceStateChange: Registered
+2023-03-21T17:25:22.731Z { Version: "5.6.0.3404" }: [ERR] Error while making a request to : https://d1cbg795sa4g1u.cloudfront.net/prod/pdx/d-92673560a3/en_US/wsassets.json. Message: Response status code does not indicate success: 403 (Forbidden).
+2023-03-21T17:25:22.740Z { Version: "5.6.0.3404" }: [ERR] Exception while getting file headers from URI: https://d1cbg795sa4g1u.cloudfront.net/prod/pdx/d-92673560a3/en_US/wsassets.json. Exception: WorkSpacesClient.Common.Infrastructure.ExceptionHandler.WorkspacesClientNetworkException: HttpClient - 4xx Network error
+ ---> System.Net.Http.HttpRequestException: Response status code does not indicate success: 403 (Forbidden).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at WorkSpacesClient.Common.UseCases.CommonGateways.HttpClientWorker.HttpClientWorker.SendAsync(HttpMethod method, Uri uri, Int64 timeoutTicks)
+   --- End of inner exception stack trace ---
+   at WorkSpacesClient.Common.UseCases.CommonGateways.HttpClientWorker.HttpClientWorker.SendAsync(HttpMethod method, Uri uri, Int64 timeoutTicks)
+   at WorkSpacesClient.Common.UseCases.CommonGateways.HttpClientWorker.HttpClientWorker.SendAsync(HttpMethod method, Uri uri)
+   at WorkSpacesClient.Common.UseCases.CommonGateways.FileDownloadWorker.FileDownloadWorker.GetFileHeadersAsync(Uri uri)
+2023-03-21T17:25:22.828Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:22.829Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:22.835Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:22.835Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:23.137Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:23.137Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:23.394Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:23.394Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:23.407Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:23.407Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:23.428Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:23.429Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:23.434Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> HealthCheck::HcUnhealthy=1
+2023-03-21T17:25:23.737Z { Version: "5.6.0.3404" }: [ERR] Error while making a request to : https://d1cbg795sa4g1u.cloudfront.net/messaging/prod/pdx/d-92673560a3/en_US/wsMessagings.json. Message: Response status code does not indicate success: 403 (Forbidden).
+2023-03-21T17:25:23.737Z { Version: "5.6.0.3404" }: [ERR] Exception while getting file headers from URI: https://d1cbg795sa4g1u.cloudfront.net/messaging/prod/pdx/d-92673560a3/en_US/wsMessagings.json. Exception: WorkSpacesClient.Common.Infrastructure.ExceptionHandler.WorkspacesClientNetworkException: HttpClient - 4xx Network error
+ ---> System.Net.Http.HttpRequestException: Response status code does not indicate success: 403 (Forbidden).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at WorkSpacesClient.Common.UseCases.CommonGateways.HttpClientWorker.HttpClientWorker.SendAsync(HttpMethod method, Uri uri, Int64 timeoutTicks)
+   --- End of inner exception stack trace ---
+   at WorkSpacesClient.Common.UseCases.CommonGateways.HttpClientWorker.HttpClientWorker.SendAsync(HttpMethod method, Uri uri, Int64 timeoutTicks)
+   at WorkSpacesClient.Common.UseCases.CommonGateways.HttpClientWorker.HttpClientWorker.SendAsync(HttpMethod method, Uri uri)
+   at WorkSpacesClient.Common.UseCases.CommonGateways.FileDownloadWorker.FileDownloadWorker.GetFileHeadersAsync(Uri uri)
+2023-03-21T17:25:23.750Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:23.750Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:23.751Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientAddIns::Error=0
+2023-03-21T17:25:23.752Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientAddIns::Fault=0
+2023-03-21T17:25:23.753Z { Version: "5.6.0.3404" }: [INF] Started diagnostics upload process watcher timer
+2023-03-21T17:25:23.770Z { Version: "5.6.0.3404" }: [INF] Navigating to Use Case WorkSpacesClient.Common.UseCases.Authenticate.WarpDriveAuthentication.WarpDriveAuthenticationPresenter
+2023-03-21T17:25:23.804Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> HealthCheck::HcUnhealthy=1
+2023-03-21T17:25:23.823Z { Version: "5.6.0.3404" }: [DBG] Setting proxy for embedded browser
+2023-03-21T17:25:23.825Z { Version: "5.6.0.3404" }: [DBG] Received login url: https://d-92673560a3.awsapps.com:443/login/?client_id=f6547774fae7346f&redirect_uri=https%3a%2f%2fskylight.local&locale=en_US
+2023-03-21T17:25:23.826Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:23.826Z { Version: "5.6.0.3404" }: [DBG] Got IsRememberMeDisalbeResult False
+2023-03-21T17:25:23.826Z { Version: "5.6.0.3404" }: [DBG] Initialize view for embedded browser
+2023-03-21T17:25:23.835Z { Version: "5.6.0.3404" }: [DBG] Initializing WebView2 (version: 107.0.1418.42, browserExeFolder: C:\Program Files\Amazon Web Services, Inc\Amazon WorkSpaces\WebView2, userDataFolder: C:\Users\Yoga\AppData\Local\Amazon Web Services\Amazon WorkSpaces\webview2)
+2023-03-21T17:25:23.836Z { Version: "5.6.0.3404" }: [DBG] OS level proxy will be used for WebView2 browser
+2023-03-21T17:25:23.880Z { Version: "5.6.0.3404" }: [INF] After <BeginUseCase> Elapsed:3361ms, CPU:1.6% Memory:215,352.000kb
+2023-03-21T17:25:24.320Z { Version: "5.6.0.3404" }: [INF] WebView2 initialized successfully (version: 107.0.1418.42, browserExeFolder: C:\Program Files\Amazon Web Services, Inc\Amazon WorkSpaces\WebView2, userDataFolder: C:\Users\Yoga\AppData\Local\Amazon Web Services\Amazon WorkSpaces\webview2)
+2023-03-21T17:25:24.322Z { Version: "5.6.0.3404" }: [DBG] OS level proxy will be used for WebView2 browser
+2023-03-21T17:25:24.381Z { Version: "5.6.0.3404" }: [DBG] LoadUrl: https://d-92673560a3.awsapps.com:443/login/?client_id=f6547774fae7346f&redirect_uri=https%3a%2f%2fskylight.local&locale=en_US
+2023-03-21T17:25:24.385Z { Version: "5.6.0.3404" }: [DBG] Loading WarpDrive Page from: $https://d-92673560a3.awsapps.com/login/?client_id=f6547774fae7346f&redirect_uri=https%3a%2f%2fskylight.local&locale=en_US
+2023-03-21T17:25:24.762Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> HealthCheck::HcUnhealthy=1
+2023-03-21T17:25:25.261Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientCustomization::Error=0
+2023-03-21T17:25:25.262Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientCustomization::Fault=0
+2023-03-21T17:25:25.264Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:25.267Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:25.281Z { Version: "5.6.0.3404" }: [INF] Diagnostic process is already running, continuing without starting a new process
+2023-03-21T17:25:25.291Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:25.291Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:25.293Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientAddIns::Error=0
+2023-03-21T17:25:25.293Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientAddIns::Fault=0
+2023-03-21T17:25:25.472Z { Version: "5.6.0.3404" }: [DBG] Registry value Software\Amazon Web Services. LLC\Amazon WorkSpaces\SSOOverrideSSO Does Not Exists
+2023-03-21T17:25:25.472Z { Version: "5.6.0.3404" }: [DBG] Injecting JS to Override SSO
+2023-03-21T17:25:28.472Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> WdPageLoad::Error=0
+2023-03-21T17:25:28.472Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> WdPageLoad::Fault=0
+2023-03-21T17:25:28.475Z { Version: "5.6.0.3404" }: [DBG] WarpDrive Page Loaded in 3208 ms
+2023-03-21T17:25:28.480Z { Version: "5.6.0.3404" }: [DBG] Apply CSS to WarpDrive Page
+2023-03-21T17:25:28.482Z { Version: "5.6.0.3404" }: [DBG] Disable Context Menu in WarpDrive Page
+2023-03-21T17:25:28.483Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:28.483Z { Version: "5.6.0.3404" }: [DBG] Uncloaked WarpDrive Page
+2023-03-21T17:25:28.520Z { Version: "5.6.0.3404" }: [DBG] Sent Metrics Request to https://skylight-client-ds.us-west-2.amazonaws.com/put-metrics: 
+2023-03-21T17:25:53.093Z { Version: "5.6.0.3404" }: [DBG] Username/password are used for authentication
+2023-03-21T17:25:53.106Z { Version: "5.6.0.3404" }: [DBG] Authenticate Request Session-Id: 1fc4d842-a3ac-4149-9d06-fa717d4d29db Amzn-id: fd789fb0-3adb-44b3-935f-a54064fad1e9
+2023-03-21T17:25:54.343Z { Version: "5.6.0.3404" }: [DBG] Received Http AuthenticateResponse(Url: https://ws-broker-service.us-west-2.amazonaws.com/)
+2023-03-21T17:25:54.353Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:54.353Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:54.356Z { Version: "5.6.0.3404" }: [DBG] WorkspaceStateChange: Authenticated
+2023-03-21T17:25:54.356Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Authenticate::Error=0
+2023-03-21T17:25:54.356Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Authenticate::Fault=0
+2023-03-21T17:25:54.358Z { Version: "5.6.0.3404" }: [INF] setting failure action in no op heart beat task
+2023-03-21T17:25:54.358Z { Version: "5.6.0.3404" }: [INF] Starting no op heart beat task
+2023-03-21T17:25:54.359Z { Version: "5.6.0.3404" }: [ERR] File 'debug_data.json' is not found
+2023-03-21T17:25:54.401Z { Version: "5.6.0.3404" }: [INF] Navigating to Use Case WorkSpacesClient.Common.UseCases.PrepareWorkspaceUseCase.PrepareWorkspacePresenter
+2023-03-21T17:25:54.445Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> WdUserAuth::Error=0
+2023-03-21T17:25:54.446Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> WdUserAuth::Fault=0
+2023-03-21T17:25:54.520Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:54.520Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:54.523Z { Version: "5.6.0.3404" }: [DBG] WorkspaceStateChange: Processing
+2023-03-21T17:25:54.536Z { Version: "5.6.0.3404" }: [DBG] GetResources Request Session-Id: 1fc4d842-a3ac-4149-9d06-fa717d4d29db Amzn-id: f47b61ac-28cd-469b-a0bc-5c9df7df1a81
+2023-03-21T17:25:54.967Z { Version: "5.6.0.3404" }: [DBG] Received Http GetResourcesResponse(Url: https://ws-broker-service.us-west-2.amazonaws.com/) with [(ResourceId: ws-79w6w6c44, ResourceType: WORKSPACE)]
+2023-03-21T17:25:54.969Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> GetResources::Error=0
+2023-03-21T17:25:54.969Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> GetResources::Fault=0
+2023-03-21T17:25:54.976Z { Version: "5.6.0.3404" }: [DBG] Received resource, Protocol: Pcoip
+2023-03-21T17:25:54.977Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:25:54.977Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:25:54.980Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:54.981Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:54.981Z { Version: "5.6.0.3404" }: [INF] Allocating resource with resourceId/workspaceId: ws-79w6w6c44.
+2023-03-21T17:25:54.981Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:25:54.982Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:25:54.982Z { Version: "5.6.0.3404" }: [DBG] PerformResourceActionRequest Type: CONNECT, Protocol: PCOIP, Session-Id: 1fc4d842-a3ac-4149-9d06-fa717d4d29db, Amzn-id: 3d4c08c3-d8c4-4b63-ab0c-9775788e485e
+2023-03-21T17:25:55.439Z { Version: "5.6.0.3404" }: [DBG] Received Http AllocateResourceResponse(Url: $https://ws-broker-service.us-west-2.amazonaws.com/) with (ResultType: SUCCESS_REDIRECT, ResultValues.SessionId: 5253aaeffa17f8ec07349c4b6684ac82)
+2023-03-21T17:25:55.439Z { Version: "5.6.0.3404" }: [INF] AllocateResource Action successfully performed
+2023-03-21T17:25:55.441Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Connect::Cancel=0
+2023-03-21T17:25:55.441Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Connect::Error=0
+2023-03-21T17:25:55.441Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Connect::Fault=0
+2023-03-21T17:25:55.457Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:55.457Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:55.462Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientAddIns::Error=0
+2023-03-21T17:25:55.462Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientAddIns::Fault=0
+2023-03-21T17:25:55.466Z { Version: "5.6.0.3404" }: [INF] Navigating to Use Case WorkSpacesClient.Common.UseCases.SessionProvisionUseCase.SessionProvisionPresenter
+2023-03-21T17:25:55.475Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:55.475Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:55.476Z { Version: "5.6.0.3404" }: [DBG] WorkspaceStateChange: Processing
+2023-03-21T17:25:55.549Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:55.549Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:25:55.551Z { Version: "5.6.0.3404" }: [DBG] WorkspaceStateChange: Processing
+2023-03-21T17:25:55.555Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:25:55.556Z { Version: "5.6.0.3404" }: [DBG] Provision Session Request: gw:b9463784bbac3b7515df0673f3b1aaa1 | 35.80.90.36 | 4172
+2023-03-21T17:25:56.389Z { Version: "5.6.0.3404" }: [DBG] StreamProtocol: Tls12
+2023-03-21T17:25:58.501Z { Version: "5.6.0.3404" }: [DBG] Sent Metrics Request to https://skylight-client-ds.us-west-2.amazonaws.com/put-metrics: 
+2023-03-21T17:26:02.407Z { Version: "5.6.0.3404" }: [DBG] Provision Session Response Received
+2023-03-21T17:26:02.412Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> SessionProvision::Error=0
+2023-03-21T17:26:02.413Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> SessionProvision::Fault=0
+2023-03-21T17:26:02.415Z { Version: "5.6.0.3404" }: [DBG] Construct Pcoip Session started.
+2023-03-21T17:26:02.447Z { Version: "5.6.0.3404" }: [INF] Before <ConstructPcoipSession> CPU:0.26% Memory:130,036.000kb
+2023-03-21T17:26:02.513Z { Version: "5.6.0.3404" }: [DBG] Entering windowed mode
+2023-03-21T17:26:02.513Z { Version: "5.6.0.3404" }: [INF] Getting window position {X=171,Y=171,Width=653,Height=541}, is maximized False
+2023-03-21T17:26:02.570Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:26:02.570Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:26:02.600Z { Version: "5.6.0.3404" }: [DBG] Ensure Showing Windowed Menu
+2023-03-21T17:26:02.617Z { Version: "5.6.0.3404" }: [DBG] Setting Min Size (653,541.5)
+2023-03-21T17:26:02.634Z { Version: "5.6.0.3404" }: [DBG] Session window activated
+2023-03-21T17:26:02.635Z { Version: "5.6.0.3404" }: [DBG] Publishing session window focus event
+2023-03-21T17:26:02.740Z { Version: "5.6.0.3404" }: [DBG] Attached Keyboard Hook
+2023-03-21T17:26:02.818Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:26:02.818Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:26:02.821Z { Version: "5.6.0.3404" }: [DBG] Hide Main Window.
+2023-03-21T17:26:02.841Z { Version: "5.6.0.3404" }: [INF] PCoIP Log File Name: Pcoip_2023_03_21_17_03_02
+2023-03-21T17:26:02.841Z { Version: "5.6.0.3404" }: [INF] PCoIP Log File Location: C:\Users\Yoga\AppData\Local\Amazon Web Services\Amazon WorkSpaces\logs\pcoip\Pcoip_2023_03_21_17_03_02.log
+2023-03-21T17:26:02.901Z { Version: "5.6.0.3404" }: [DBG] Completed timer on screen changing size
+2023-03-21T17:26:02.963Z { Version: "5.6.0.3404" }: [DBG] Setting WSE Client Properties (DeviceId: FacUiS4DjzTASgAdbblAaleDAjA9lSJti_ar6Z4zAm8, ProductVersion: 5.6.0.3404, Platform: Windows, PlatformVersion: [64 bit OS] 10.0.22621.0, WindowHandlesCount: 1) Succeeded
+2023-03-21T17:26:03.017Z { Version: "5.6.0.3404" }: [DBG] Performance Metrics --> CPU:0.87% IdleCPU:0, MEM:225.6MB, ScreenSize:0, FrameRate:0, RTT:0
+2023-03-21T17:26:03.018Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Streaming::InSessionStatistics=1
+2023-03-21T17:26:03.030Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:26:03.030Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:26:03.030Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:26:03.030Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:26:03.032Z { Version: "5.6.0.3404" }: [DBG] WorkspaceStateChange: Streaming
+2023-03-21T17:26:03.063Z { Version: "5.6.0.3404" }: [INF] After <ConstructPcoipSession> Elapsed:616ms, CPU:3.73% Memory:232,096.000kb
+2023-03-21T17:26:03.063Z { Version: "5.6.0.3404" }: [DBG] Construct Pcoip Session succeeded.
+2023-03-21T17:26:03.065Z { Version: "5.6.0.3404" }: [DBG] Getting topologies
+2023-03-21T17:26:03.068Z { Version: "5.6.0.3404" }: [DBG] Topologies changed
+2023-03-21T17:26:05.004Z { Version: "5.6.0.3404" }: [DBG] Ensure Showing Windowed Menu
+2023-03-21T17:26:05.312Z { Version: "5.6.0.3404" }: [DBG] Completed timer on screen changing size
+2023-03-21T17:26:05.312Z { Version: "5.6.0.3404" }: [DBG] Getting topologies
+2023-03-21T17:26:05.313Z { Version: "5.6.0.3404" }: [DBG] Topologies changed
+2023-03-21T17:26:05.332Z { Version: "5.6.0.3404" }: [DBG] PcoipClientConnectionCallback Connection Changed to PCOIP_CLIENT_CONNECT_STATE_CONNECTED with PCOIP_DISCONNECT_CAUSE_NONE
+2023-03-21T17:26:05.334Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays Before Platform Adjustment Topology:{X=0,Y=0,Width=1440,Height=803}, Primary:True, Rotation:Degree0
+2023-03-21T17:26:05.334Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays Before Protocol Adjustment Topology:{X=0,Y=0,Width=1440,Height=803}, Primary:True, Rotation:Degree0
+2023-03-21T17:26:05.334Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays After Protocol Adjustment  Topology:{X=0,Y=0,Width=1440,Height=803}, Primary:True, Rotation:Degree0
+2023-03-21T17:26:05.335Z { Version: "5.6.0.3404" }: [DBG] Topology request {X=0,Y=0,Width=1440,Height=803}
+2023-03-21T17:26:06.618Z { Version: "5.6.0.3404" }: [INF] Host Updated Lock Keys, CAPS:False| NUM:False| SCROLL:False
+2023-03-21T17:26:06.772Z { Version: "5.6.0.3404" }: [DBG] TopologyCallback Called [21-03-2023 22:56:06]
+2023-03-21T17:26:06.772Z { Version: "5.6.0.3404" }: [DBG] Display[0] {X=0,Y=0,Width=1440,Height=803}
+2023-03-21T17:26:06.782Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Session::Error=0
+2023-03-21T17:26:06.782Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Session::Fault=0
+2023-03-21T17:26:07.358Z { Version: "5.6.0.3404" }: [INF] PCoIP Workspace StreamingSuccess
+2023-03-21T17:26:07.358Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Streaming::Error=0
+2023-03-21T17:26:07.359Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Streaming::Fault=0
+2023-03-21T17:26:07.359Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> ConnectAttempt::Fault=0
+2023-03-21T17:26:08.496Z { Version: "5.6.0.3404" }: [DBG] Sent Metrics Request to https://skylight-client-ds.us-west-2.amazonaws.com/put-metrics: 
+2023-03-21T17:26:09.982Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> SSIG::Error=0
+2023-03-21T17:26:09.982Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Streaming::Time=2062
+2023-03-21T17:26:09.983Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> SSIG::Fault=0
+2023-03-21T17:26:09.983Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> SSIG::Time=2438
+2023-03-21T17:26:18.499Z { Version: "5.6.0.3404" }: [DBG] Sent Metrics Request to https://skylight-client-ds.us-west-2.amazonaws.com/put-metrics: 
+2023-03-21T17:26:33.030Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Session::SessionRtt=279
+2023-03-21T17:26:33.063Z { Version: "5.6.0.3404" }: [DBG] Performance Metrics --> CPU:0.29% IdleCPU:91.45, MEM:350.2MB, ScreenSize:1156320, FrameRate:3, RTT:279
+2023-03-21T17:26:33.063Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Streaming::InSessionStatistics=1
+2023-03-21T17:26:38.497Z { Version: "5.6.0.3404" }: [DBG] Sent Metrics Request to https://skylight-client-ds.us-west-2.amazonaws.com/put-metrics: 
+2023-03-21T17:26:49.763Z { Version: "5.6.0.3404" }: [DBG] Session window deactivated
+2023-03-21T17:26:49.763Z { Version: "5.6.0.3404" }: [DBG] Detached Keyboard Hook
+2023-03-21T17:26:54.276Z { Version: "5.6.0.3404" }: [DBG] Session window activated
+2023-03-21T17:26:54.276Z { Version: "5.6.0.3404" }: [DBG] Publishing session window focus event
+2023-03-21T17:26:54.279Z { Version: "5.6.0.3404" }: [DBG] Attached Keyboard Hook
+2023-03-21T17:26:54.607Z { Version: "5.6.0.3404" }: [DBG] Session window deactivated
+2023-03-21T17:26:54.608Z { Version: "5.6.0.3404" }: [DBG] Detached Keyboard Hook
+2023-03-21T17:26:58.968Z { Version: "5.6.0.3404" }: [DBG] Session window activated
+2023-03-21T17:26:58.968Z { Version: "5.6.0.3404" }: [DBG] Publishing session window focus event
+2023-03-21T17:26:58.971Z { Version: "5.6.0.3404" }: [DBG] Attached Keyboard Hook
+2023-03-21T17:27:05.692Z { Version: "5.6.0.3404" }: [DBG] Session window deactivated
+2023-03-21T17:27:05.692Z { Version: "5.6.0.3404" }: [DBG] Detached Keyboard Hook
+2023-03-21T17:27:07.854Z { Version: "5.6.0.3404" }: [DBG] Session window activated
+2023-03-21T17:27:07.855Z { Version: "5.6.0.3404" }: [DBG] Publishing session window focus event
+2023-03-21T17:27:07.856Z { Version: "5.6.0.3404" }: [DBG] Attached Keyboard Hook
+2023-03-21T17:27:27.436Z { Version: "5.6.0.3404" }: [DBG] Session window deactivated
+2023-03-21T17:27:27.436Z { Version: "5.6.0.3404" }: [DBG] Detached Keyboard Hook
+2023-03-21T17:27:42.553Z { Version: "5.6.0.3404" }: [DBG] Session window activated
+2023-03-21T17:27:42.553Z { Version: "5.6.0.3404" }: [DBG] Publishing session window focus event
+2023-03-21T17:27:42.554Z { Version: "5.6.0.3404" }: [DBG] Attached Keyboard Hook
+2023-03-21T17:27:44.723Z { Version: "5.6.0.3404" }: [INF] Saving window position {X=171,Y=171,Width=653,Height=541}, is maximized True
+2023-03-21T17:27:44.746Z { Version: "5.6.0.3404" }: [DBG] Session window deactivated
+2023-03-21T17:27:44.746Z { Version: "5.6.0.3404" }: [DBG] Detached Keyboard Hook
+2023-03-21T17:27:45.935Z { Version: "5.6.0.3404" }: [DBG] Session window activated
+2023-03-21T17:27:45.935Z { Version: "5.6.0.3404" }: [DBG] Publishing session window focus event
+2023-03-21T17:27:45.935Z { Version: "5.6.0.3404" }: [DBG] Attached Keyboard Hook
+2023-03-21T17:27:45.950Z { Version: "5.6.0.3404" }: [DBG] Session window deactivated
+2023-03-21T17:27:45.950Z { Version: "5.6.0.3404" }: [DBG] Detached Keyboard Hook
+2023-03-21T17:27:45.957Z { Version: "5.6.0.3404" }: [INF] CloseWindow called.
+2023-03-21T17:27:45.957Z { Version: "5.6.0.3404" }: [DBG] Removing window at index (0)
+2023-03-21T17:27:45.958Z { Version: "5.6.0.3404" }: [INF] Closing session, reason: UserInitiated, details: 
+2023-03-21T17:27:45.958Z { Version: "5.6.0.3404" }: [DBG] Closing In Session External Begin
+2023-03-21T17:27:45.959Z { Version: "5.6.0.3404" }: [INF] stopping no op heart beat task
+2023-03-21T17:27:46.244Z { Version: "5.6.0.3404" }: [DBG] PcoipClientConnectionCallback Connection Changed to PCOIP_CLIENT_CONNECT_STATE_UNCONNECTED with PCOIP_DISCONNECT_CAUSE_DEVICE_OSD_MANUAL_USER_DISCONNECT
+2023-03-21T17:27:46.279Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:46.279Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:46.282Z { Version: "5.6.0.3404" }: [DBG] WorkspaceStateChange: Streaming
+2023-03-21T17:27:46.288Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Session::Disconnect=1
+2023-03-21T17:27:46.289Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Session::UserDisconnect=1
+2023-03-21T17:27:46.349Z { Version: "5.6.0.3404" }: [INF] Navigating to Use Case WorkSpacesClient.Common.UseCases.SessionEndedUseCase.SessionEndedPresenter
+2023-03-21T17:27:46.368Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:46.368Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:46.370Z { Version: "5.6.0.3404" }: [DBG] WorkspaceStateChange: Processing
+2023-03-21T17:27:46.370Z { Version: "5.6.0.3404" }: [DBG] Closing In Session External End
+2023-03-21T17:27:46.376Z { Version: "5.6.0.3404" }: [INF] Closing session, reason: PCoIPDisconnectUnknown, details: PCOIP_DISCONNECT_CAUSE_DEVICE_OSD_MANUAL_USER_DISCONNECT
+2023-03-21T17:27:46.376Z { Version: "5.6.0.3404" }: [DBG] Closing In Session External Begin
+2023-03-21T17:27:46.376Z { Version: "5.6.0.3404" }: [INF] stopping no op heart beat task
+2023-03-21T17:27:46.376Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Session::Disconnect=1
+2023-03-21T17:27:46.376Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Session::ProtocolDisconnect=1
+2023-03-21T17:27:46.380Z { Version: "5.6.0.3404" }: [INF] Navigating to Use Case WorkSpacesClient.Common.UseCases.SessionEndedUseCase.SessionEndedPresenter
+2023-03-21T17:27:46.380Z { Version: "5.6.0.3404" }: [DBG] Closing In Session External End
+2023-03-21T17:27:46.381Z { Version: "5.6.0.3404" }: [DBG] EmitDisconnectMetric(protocolReasonCode: 768, protocolVersion:2.1) called.
+2023-03-21T17:27:46.384Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Session::WorkspaceDisconnect=1
+2023-03-21T17:27:46.922Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientCustomization::Error=0
+2023-03-21T17:27:46.922Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientCustomization::Fault=0
+2023-03-21T17:27:46.922Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:46.926Z { Version: "5.6.0.3404" }: [DBG] Session ended. Presenting reconnect page
+2023-03-21T17:27:47.744Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientCustomization::Error=0
+2023-03-21T17:27:47.744Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientCustomization::Fault=0
+2023-03-21T17:27:47.744Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:48.506Z { Version: "5.6.0.3404" }: [DBG] Sent Metrics Request to https://skylight-client-ds.us-west-2.amazonaws.com/put-metrics: 
+2023-03-21T17:27:49.508Z { Version: "5.6.0.3404" }: [INF] Navigating to Use Case WorkSpacesClient.Common.UseCases.BeginPreSessionUseCase.BeginPreSessionPresenter
+2023-03-21T17:27:49.544Z { Version: "5.6.0.3404" }: [INF] Before <BeginUseCase> CPU:0.4% Memory:445,752.000kb
+2023-03-21T17:27:49.544Z { Version: "5.6.0.3404" }: [INF] Resolving region for: WSpdx+JPPATZ
+2023-03-21T17:27:49.544Z { Version: "5.6.0.3404" }: [INF] Region Key obtained from code: WSpdx
+2023-03-21T17:27:49.545Z { Version: "5.6.0.3404" }: [INF] Checking for localization update
+2023-03-21T17:27:49.566Z { Version: "5.6.0.3404" }: [INF] Local language assets version: 1
+2023-03-21T17:27:49.566Z { Version: "5.6.0.3404" }: [INF] Requesting language updates from: https://ws-client-service.us-west-2.amazonaws.com/configuration/GetLocalizationAssets
+2023-03-21T17:27:49.567Z { Version: "5.6.0.3404" }: [INF] Checking for error definitions update
+2023-03-21T17:27:49.567Z { Version: "5.6.0.3404" }: [INF] Local languages version: 1 | Local error definitions version: 1
+2023-03-21T17:27:49.567Z { Version: "5.6.0.3404" }: [INF] Requesting error definition updates from: https://ws-client-service.us-west-2.amazonaws.com/configuration/GetErrorDefinition
+2023-03-21T17:27:49.586Z { Version: "5.6.0.3404" }: [DBG] GetAuthInfo Request Amzn-id: eabe1e1c-70a6-48c1-b2e3-fde09a8f787a
+2023-03-21T17:27:50.278Z { Version: "5.6.0.3404" }: [ERR] Error while making a request to : https://ws-client-service.us-west-2.amazonaws.com/configuration/GetLocalizationAssets. Message: Response status code does not indicate success: 403 (Forbidden).
+2023-03-21T17:27:50.278Z { Version: "5.6.0.3404" }: [ERR] Exception occured during locale remote configuration: HttpClient4xxNetworkError
+2023-03-21T17:27:50.278Z { Version: "5.6.0.3404" }: [INF] No changes to localization
+2023-03-21T17:27:50.278Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> LocaleUpdate::Error=0
+2023-03-21T17:27:50.278Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> LocaleUpdate::Fault=0
+2023-03-21T17:27:50.302Z { Version: "5.6.0.3404" }: [ERR] Error while making a request to : https://ws-client-service.us-west-2.amazonaws.com/configuration/GetErrorDefinition. Message: Response status code does not indicate success: 403 (Forbidden).
+2023-03-21T17:27:50.302Z { Version: "5.6.0.3404" }: [ERR] Exception occured during error-definition remote configuration: HttpClient4xxNetworkError
+2023-03-21T17:27:50.302Z { Version: "5.6.0.3404" }: [INF] No changes to error definitions
+2023-03-21T17:27:50.302Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> ErrorUpdate::Error=0
+2023-03-21T17:27:50.302Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> ErrorUpdate::Fault=0
+2023-03-21T17:27:50.755Z { Version: "5.6.0.3404" }: [DBG] Received Http WsBrokerGetAuthInfoResponse(Url: https://ws-broker-service.us-west-2.amazonaws.com/) with (SessionId: c79d8669-d4b5-44db-9204-f69001891c26, OrgName: d-92673560a3, AuthMethods: [OAUTH])
+2023-03-21T17:27:50.756Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> GetAuthInfo::Error=0
+2023-03-21T17:27:50.756Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> GetAuthInfo::Fault=0
+2023-03-21T17:27:50.765Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:50.765Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:50.767Z { Version: "5.6.0.3404" }: [DBG] WorkspaceStateChange: Authenticated
+2023-03-21T17:27:50.789Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:50.789Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:50.822Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:50.822Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:51.118Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:51.118Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:51.689Z { Version: "5.6.0.3404" }: [ERR] Error while making a request to : https://d1cbg795sa4g1u.cloudfront.net/prod/pdx/d-92673560a3/en_US/wsassets.json. Message: Response status code does not indicate success: 403 (Forbidden).
+2023-03-21T17:27:51.689Z { Version: "5.6.0.3404" }: [ERR] Exception while getting file headers from URI: https://d1cbg795sa4g1u.cloudfront.net/prod/pdx/d-92673560a3/en_US/wsassets.json. Exception: WorkSpacesClient.Common.Infrastructure.ExceptionHandler.WorkspacesClientNetworkException: HttpClient - 4xx Network error
+ ---> System.Net.Http.HttpRequestException: Response status code does not indicate success: 403 (Forbidden).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at WorkSpacesClient.Common.UseCases.CommonGateways.HttpClientWorker.HttpClientWorker.SendAsync(HttpMethod method, Uri uri, Int64 timeoutTicks)
+   --- End of inner exception stack trace ---
+   at WorkSpacesClient.Common.UseCases.CommonGateways.HttpClientWorker.HttpClientWorker.SendAsync(HttpMethod method, Uri uri, Int64 timeoutTicks)
+   at WorkSpacesClient.Common.UseCases.CommonGateways.HttpClientWorker.HttpClientWorker.SendAsync(HttpMethod method, Uri uri)
+   at WorkSpacesClient.Common.UseCases.CommonGateways.FileDownloadWorker.FileDownloadWorker.GetFileHeadersAsync(Uri uri)
+2023-03-21T17:27:51.717Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:51.717Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:51.734Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:51.734Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:52.000Z { Version: "5.6.0.3404" }: [ERR] Error while making a request to : https://d1cbg795sa4g1u.cloudfront.net/messaging/prod/pdx/d-92673560a3/en_US/wsMessagings.json. Message: Response status code does not indicate success: 403 (Forbidden).
+2023-03-21T17:27:52.000Z { Version: "5.6.0.3404" }: [ERR] Exception while getting file headers from URI: https://d1cbg795sa4g1u.cloudfront.net/messaging/prod/pdx/d-92673560a3/en_US/wsMessagings.json. Exception: WorkSpacesClient.Common.Infrastructure.ExceptionHandler.WorkspacesClientNetworkException: HttpClient - 4xx Network error
+ ---> System.Net.Http.HttpRequestException: Response status code does not indicate success: 403 (Forbidden).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at WorkSpacesClient.Common.UseCases.CommonGateways.HttpClientWorker.HttpClientWorker.SendAsync(HttpMethod method, Uri uri, Int64 timeoutTicks)
+   --- End of inner exception stack trace ---
+   at WorkSpacesClient.Common.UseCases.CommonGateways.HttpClientWorker.HttpClientWorker.SendAsync(HttpMethod method, Uri uri, Int64 timeoutTicks)
+   at WorkSpacesClient.Common.UseCases.CommonGateways.HttpClientWorker.HttpClientWorker.SendAsync(HttpMethod method, Uri uri)
+   at WorkSpacesClient.Common.UseCases.CommonGateways.FileDownloadWorker.FileDownloadWorker.GetFileHeadersAsync(Uri uri)
+2023-03-21T17:27:52.012Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:52.012Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:52.013Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientAddIns::Error=0
+2023-03-21T17:27:52.013Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientAddIns::Fault=0
+2023-03-21T17:27:52.015Z { Version: "5.6.0.3404" }: [INF] Navigating to Use Case WorkSpacesClient.Common.UseCases.Authenticate.WarpDriveAuthentication.WarpDriveAuthenticationPresenter
+2023-03-21T17:27:52.037Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:52.037Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:52.053Z { Version: "5.6.0.3404" }: [DBG] Setting proxy for embedded browser
+2023-03-21T17:27:52.053Z { Version: "5.6.0.3404" }: [DBG] Received login url: https://d-92673560a3.awsapps.com:443/login/?client_id=f6547774fae7346f&redirect_uri=https%3a%2f%2fskylight.local&locale=en_US
+2023-03-21T17:27:52.053Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:52.053Z { Version: "5.6.0.3404" }: [DBG] Got IsRememberMeDisalbeResult False
+2023-03-21T17:27:52.053Z { Version: "5.6.0.3404" }: [DBG] Initialize view for embedded browser
+2023-03-21T17:27:52.054Z { Version: "5.6.0.3404" }: [DBG] OS level proxy will be used for WebView2 browser
+2023-03-21T17:27:52.092Z { Version: "5.6.0.3404" }: [INF] After <BeginUseCase> Elapsed:2547ms, CPU:0.38% Memory:446,216.000kb
+2023-03-21T17:27:52.188Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:52.188Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:52.455Z { Version: "5.6.0.3404" }: [DBG] OS level proxy will be used for WebView2 browser
+2023-03-21T17:27:52.564Z { Version: "5.6.0.3404" }: [DBG] LoadUrl: https://d-92673560a3.awsapps.com:443/login/?client_id=f6547774fae7346f&redirect_uri=https%3a%2f%2fskylight.local&locale=en_US
+2023-03-21T17:27:52.565Z { Version: "5.6.0.3404" }: [DBG] Loading WarpDrive Page from: $https://d-92673560a3.awsapps.com/login/?client_id=f6547774fae7346f&redirect_uri=https%3a%2f%2fskylight.local&locale=en_US
+2023-03-21T17:27:52.770Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:52.770Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:52.803Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:52.803Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:52.858Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:52.858Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:52.896Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> HealthCheck::HcUnhealthy=1
+2023-03-21T17:27:53.425Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientCustomization::Error=0
+2023-03-21T17:27:53.426Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientCustomization::Fault=0
+2023-03-21T17:27:53.426Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:53.427Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:53.436Z { Version: "5.6.0.3404" }: [INF] Diagnostic process is already running, continuing without starting a new process
+2023-03-21T17:27:53.451Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:53.451Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:53.454Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientAddIns::Error=0
+2023-03-21T17:27:53.454Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientAddIns::Fault=0
+2023-03-21T17:27:53.882Z { Version: "5.6.0.3404" }: [DBG] Registry value Software\Amazon Web Services. LLC\Amazon WorkSpaces\SSOOverrideSSO Does Not Exists
+2023-03-21T17:27:53.882Z { Version: "5.6.0.3404" }: [DBG] Injecting JS to Override SSO
+2023-03-21T17:27:57.831Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> WdPageLoad::Error=0
+2023-03-21T17:27:57.831Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> WdPageLoad::Fault=0
+2023-03-21T17:27:57.831Z { Version: "5.6.0.3404" }: [DBG] WarpDrive Page Loaded in 4404 ms
+2023-03-21T17:27:57.832Z { Version: "5.6.0.3404" }: [DBG] Apply CSS to WarpDrive Page
+2023-03-21T17:27:57.832Z { Version: "5.6.0.3404" }: [DBG] Disable Context Menu in WarpDrive Page
+2023-03-21T17:27:57.832Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:57.832Z { Version: "5.6.0.3404" }: [DBG] Uncloaked WarpDrive Page
+2023-03-21T17:27:58.148Z { Version: "5.6.0.3404" }: [DBG] SocketException with UDP check on port 4172: System.Net.Sockets.SocketException (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+   at System.Net.Sockets.Socket.ReceiveFrom(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags, EndPoint& remoteEP)
+   at System.Net.Sockets.UdpClient.Receive(IPEndPoint& remoteEP)
+   at WorkSpacesClient.Common.UseCases.CommonGateways.NetworkClientWorkers.UdpClientWorker.CanConnectUdpAsync(String hostName, Int32 port, Int32 timeoutMillis)
+2023-03-21T17:27:58.416Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:58.416Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:27:58.418Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> HealthCheck::HcUnhealthy=1
+2023-03-21T17:27:58.500Z { Version: "5.6.0.3404" }: [DBG] Sent Metrics Request to https://skylight-client-ds.us-west-2.amazonaws.com/put-metrics: 
+2023-03-21T17:28:20.274Z { Version: "5.6.0.3404" }: [DBG] Username/password are used for authentication
+2023-03-21T17:28:20.286Z { Version: "5.6.0.3404" }: [DBG] Authenticate Request Session-Id: c79d8669-d4b5-44db-9204-f69001891c26 Amzn-id: 76964da5-e7e4-46e6-96fc-8db696e5e4f6
+2023-03-21T17:28:21.568Z { Version: "5.6.0.3404" }: [DBG] Received Http AuthenticateResponse(Url: https://ws-broker-service.us-west-2.amazonaws.com/)
+2023-03-21T17:28:21.578Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:28:21.578Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:28:21.579Z { Version: "5.6.0.3404" }: [DBG] WorkspaceStateChange: Authenticated
+2023-03-21T17:28:21.579Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Authenticate::Error=0
+2023-03-21T17:28:21.580Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Authenticate::Fault=0
+2023-03-21T17:28:21.580Z { Version: "5.6.0.3404" }: [INF] setting failure action in no op heart beat task
+2023-03-21T17:28:21.580Z { Version: "5.6.0.3404" }: [INF] Starting no op heart beat task
+2023-03-21T17:28:21.620Z { Version: "5.6.0.3404" }: [INF] Navigating to Use Case WorkSpacesClient.Common.UseCases.PrepareWorkspaceUseCase.PrepareWorkspacePresenter
+2023-03-21T17:28:21.654Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> WdUserAuth::Error=0
+2023-03-21T17:28:21.655Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> WdUserAuth::Fault=0
+2023-03-21T17:28:21.701Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:28:21.701Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:28:21.702Z { Version: "5.6.0.3404" }: [DBG] WorkspaceStateChange: Processing
+2023-03-21T17:28:21.703Z { Version: "5.6.0.3404" }: [DBG] GetResources Request Session-Id: c79d8669-d4b5-44db-9204-f69001891c26 Amzn-id: 1ebd182f-19b8-47ad-ab4a-812cb065147a
+2023-03-21T17:28:22.117Z { Version: "5.6.0.3404" }: [DBG] Received Http GetResourcesResponse(Url: https://ws-broker-service.us-west-2.amazonaws.com/) with [(ResourceId: ws-b8kb5w1gt, ResourceType: WORKSPACE)]
+2023-03-21T17:28:22.117Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> GetResources::Error=0
+2023-03-21T17:28:22.117Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> GetResources::Fault=0
+2023-03-21T17:28:22.118Z { Version: "5.6.0.3404" }: [DBG] Received resource, Protocol: Pcoip
+2023-03-21T17:28:22.118Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:28:22.118Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:28:22.121Z { Version: "5.6.0.3404" }: [INF] Allocating resource with resourceId/workspaceId: ws-b8kb5w1gt.
+2023-03-21T17:28:22.121Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:28:22.121Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:28:22.121Z { Version: "5.6.0.3404" }: [DBG] PerformResourceActionRequest Type: CONNECT, Protocol: PCOIP, Session-Id: c79d8669-d4b5-44db-9204-f69001891c26, Amzn-id: 536923ce-d288-4952-b7ff-7bf3e40d6ddf
+2023-03-21T17:28:22.147Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:28:22.147Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:28:22.557Z { Version: "5.6.0.3404" }: [DBG] Received Http AllocateResourceResponse(Url: $https://ws-broker-service.us-west-2.amazonaws.com/) with (ResultType: PENDING_RETRY, ResultValues.SessionId: )
+2023-03-21T17:28:22.557Z { Version: "5.6.0.3404" }: [INF] AllocateResource Action successfully performed
+2023-03-21T17:28:22.558Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:28:27.560Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:28:27.560Z { Version: "5.6.0.3404" }: [DBG] PerformResourceActionRequest Type: CONNECT, Protocol: PCOIP, Session-Id: c79d8669-d4b5-44db-9204-f69001891c26, Amzn-id: a3fc949a-7432-41ac-a36f-81fcc6369a79
+2023-03-21T17:28:27.970Z { Version: "5.6.0.3404" }: [DBG] Received Http AllocateResourceResponse(Url: $https://ws-broker-service.us-west-2.amazonaws.com/) with (ResultType: PENDING_RETRY, ResultValues.SessionId: )
+2023-03-21T17:28:27.970Z { Version: "5.6.0.3404" }: [INF] AllocateResource Action successfully performed
+2023-03-21T17:28:27.970Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:28:28.511Z { Version: "5.6.0.3404" }: [DBG] Sent Metrics Request to https://skylight-client-ds.us-west-2.amazonaws.com/put-metrics: 
+2023-03-21T17:28:32.982Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:28:32.982Z { Version: "5.6.0.3404" }: [DBG] PerformResourceActionRequest Type: CONNECT, Protocol: PCOIP, Session-Id: c79d8669-d4b5-44db-9204-f69001891c26, Amzn-id: 24f48077-29c7-4437-9648-bcf3bce87ab5
+2023-03-21T17:28:33.532Z { Version: "5.6.0.3404" }: [DBG] Received Http AllocateResourceResponse(Url: $https://ws-broker-service.us-west-2.amazonaws.com/) with (ResultType: PENDING_RETRY, ResultValues.SessionId: )
+2023-03-21T17:28:33.532Z { Version: "5.6.0.3404" }: [INF] AllocateResource Action successfully performed
+2023-03-21T17:28:33.532Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:28:38.546Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:28:38.546Z { Version: "5.6.0.3404" }: [DBG] PerformResourceActionRequest Type: CONNECT, Protocol: PCOIP, Session-Id: c79d8669-d4b5-44db-9204-f69001891c26, Amzn-id: c8c59631-0fe8-4def-ae5c-1ab6838b7e6e
+2023-03-21T17:28:38.900Z { Version: "5.6.0.3404" }: [DBG] Received Http AllocateResourceResponse(Url: $https://ws-broker-service.us-west-2.amazonaws.com/) with (ResultType: PENDING_RETRY, ResultValues.SessionId: )
+2023-03-21T17:28:38.900Z { Version: "5.6.0.3404" }: [INF] AllocateResource Action successfully performed
+2023-03-21T17:28:38.901Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:28:43.904Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:28:43.904Z { Version: "5.6.0.3404" }: [DBG] PerformResourceActionRequest Type: CONNECT, Protocol: PCOIP, Session-Id: c79d8669-d4b5-44db-9204-f69001891c26, Amzn-id: 989972ff-42d9-4394-aec2-87a0c0bc3774
+2023-03-21T17:28:44.281Z { Version: "5.6.0.3404" }: [DBG] Received Http AllocateResourceResponse(Url: $https://ws-broker-service.us-west-2.amazonaws.com/) with (ResultType: PENDING_RETRY, ResultValues.SessionId: )
+2023-03-21T17:28:44.281Z { Version: "5.6.0.3404" }: [INF] AllocateResource Action successfully performed
+2023-03-21T17:28:44.281Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:28:49.293Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:28:49.293Z { Version: "5.6.0.3404" }: [DBG] PerformResourceActionRequest Type: CONNECT, Protocol: PCOIP, Session-Id: c79d8669-d4b5-44db-9204-f69001891c26, Amzn-id: 0a24eb84-56e6-479d-abab-ea358c7e90eb
+2023-03-21T17:28:49.684Z { Version: "5.6.0.3404" }: [DBG] Received Http AllocateResourceResponse(Url: $https://ws-broker-service.us-west-2.amazonaws.com/) with (ResultType: PENDING_RETRY, ResultValues.SessionId: )
+2023-03-21T17:28:49.684Z { Version: "5.6.0.3404" }: [INF] AllocateResource Action successfully performed
+2023-03-21T17:28:49.684Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:28:54.696Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:28:54.696Z { Version: "5.6.0.3404" }: [DBG] PerformResourceActionRequest Type: CONNECT, Protocol: PCOIP, Session-Id: c79d8669-d4b5-44db-9204-f69001891c26, Amzn-id: 913873eb-16ef-42ff-afbb-1a635bdb309a
+2023-03-21T17:28:55.065Z { Version: "5.6.0.3404" }: [DBG] Received Http AllocateResourceResponse(Url: $https://ws-broker-service.us-west-2.amazonaws.com/) with (ResultType: PENDING_RETRY, ResultValues.SessionId: )
+2023-03-21T17:28:55.065Z { Version: "5.6.0.3404" }: [INF] AllocateResource Action successfully performed
+2023-03-21T17:28:55.065Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:29:00.068Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:29:00.068Z { Version: "5.6.0.3404" }: [DBG] PerformResourceActionRequest Type: CONNECT, Protocol: PCOIP, Session-Id: c79d8669-d4b5-44db-9204-f69001891c26, Amzn-id: 40fc4c8e-b577-4b0c-b603-58261f1d4d10
+2023-03-21T17:29:00.448Z { Version: "5.6.0.3404" }: [DBG] Received Http AllocateResourceResponse(Url: $https://ws-broker-service.us-west-2.amazonaws.com/) with (ResultType: PENDING_RETRY, ResultValues.SessionId: )
+2023-03-21T17:29:00.448Z { Version: "5.6.0.3404" }: [INF] AllocateResource Action successfully performed
+2023-03-21T17:29:00.448Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:29:05.461Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:29:05.461Z { Version: "5.6.0.3404" }: [DBG] PerformResourceActionRequest Type: CONNECT, Protocol: PCOIP, Session-Id: c79d8669-d4b5-44db-9204-f69001891c26, Amzn-id: f984b7d8-8abf-4927-b7da-7eab119b4c55
+2023-03-21T17:29:05.847Z { Version: "5.6.0.3404" }: [DBG] Received Http AllocateResourceResponse(Url: $https://ws-broker-service.us-west-2.amazonaws.com/) with (ResultType: PENDING_RETRY, ResultValues.SessionId: )
+2023-03-21T17:29:05.847Z { Version: "5.6.0.3404" }: [INF] AllocateResource Action successfully performed
+2023-03-21T17:29:05.847Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:29:10.858Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:29:10.858Z { Version: "5.6.0.3404" }: [DBG] PerformResourceActionRequest Type: CONNECT, Protocol: PCOIP, Session-Id: c79d8669-d4b5-44db-9204-f69001891c26, Amzn-id: 3dc08f7d-00f1-4295-b038-20fb4f92d156
+2023-03-21T17:29:11.264Z { Version: "5.6.0.3404" }: [DBG] Received Http AllocateResourceResponse(Url: $https://ws-broker-service.us-west-2.amazonaws.com/) with (ResultType: PENDING_RETRY, ResultValues.SessionId: )
+2023-03-21T17:29:11.264Z { Version: "5.6.0.3404" }: [INF] AllocateResource Action successfully performed
+2023-03-21T17:29:11.264Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:29:16.266Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:29:16.266Z { Version: "5.6.0.3404" }: [DBG] PerformResourceActionRequest Type: CONNECT, Protocol: PCOIP, Session-Id: c79d8669-d4b5-44db-9204-f69001891c26, Amzn-id: 1058bac3-f2d9-434c-bc00-7fd26469c753
+2023-03-21T17:29:16.639Z { Version: "5.6.0.3404" }: [DBG] Received Http AllocateResourceResponse(Url: $https://ws-broker-service.us-west-2.amazonaws.com/) with (ResultType: PENDING_RETRY, ResultValues.SessionId: )
+2023-03-21T17:29:16.639Z { Version: "5.6.0.3404" }: [INF] AllocateResource Action successfully performed
+2023-03-21T17:29:16.639Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:29:21.642Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:29:21.642Z { Version: "5.6.0.3404" }: [DBG] PerformResourceActionRequest Type: CONNECT, Protocol: PCOIP, Session-Id: c79d8669-d4b5-44db-9204-f69001891c26, Amzn-id: b5166c97-78c9-4dd5-a44e-f0a2d798745b
+2023-03-21T17:29:22.009Z { Version: "5.6.0.3404" }: [DBG] Received Http AllocateResourceResponse(Url: $https://ws-broker-service.us-west-2.amazonaws.com/) with (ResultType: PENDING_RETRY, ResultValues.SessionId: )
+2023-03-21T17:29:22.009Z { Version: "5.6.0.3404" }: [INF] AllocateResource Action successfully performed
+2023-03-21T17:29:22.009Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:29:27.010Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:29:27.010Z { Version: "5.6.0.3404" }: [DBG] PerformResourceActionRequest Type: CONNECT, Protocol: PCOIP, Session-Id: c79d8669-d4b5-44db-9204-f69001891c26, Amzn-id: 8f5f00ee-1424-4a47-b8c4-6a30fd302770
+2023-03-21T17:29:27.375Z { Version: "5.6.0.3404" }: [DBG] Received Http AllocateResourceResponse(Url: $https://ws-broker-service.us-west-2.amazonaws.com/) with (ResultType: PENDING_RETRY, ResultValues.SessionId: )
+2023-03-21T17:29:27.376Z { Version: "5.6.0.3404" }: [INF] AllocateResource Action successfully performed
+2023-03-21T17:29:27.376Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:29:32.388Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:29:32.388Z { Version: "5.6.0.3404" }: [DBG] PerformResourceActionRequest Type: CONNECT, Protocol: PCOIP, Session-Id: c79d8669-d4b5-44db-9204-f69001891c26, Amzn-id: 234395ac-b432-43c2-a122-c6685aec778d
+2023-03-21T17:29:32.795Z { Version: "5.6.0.3404" }: [DBG] Received Http AllocateResourceResponse(Url: $https://ws-broker-service.us-west-2.amazonaws.com/) with (ResultType: PENDING_RETRY, ResultValues.SessionId: )
+2023-03-21T17:29:32.795Z { Version: "5.6.0.3404" }: [INF] AllocateResource Action successfully performed
+2023-03-21T17:29:32.796Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:29:37.797Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:29:37.797Z { Version: "5.6.0.3404" }: [DBG] PerformResourceActionRequest Type: CONNECT, Protocol: PCOIP, Session-Id: c79d8669-d4b5-44db-9204-f69001891c26, Amzn-id: b9751a9a-62e2-488b-99a2-5e5585d1f6bb
+2023-03-21T17:29:38.179Z { Version: "5.6.0.3404" }: [DBG] Received Http AllocateResourceResponse(Url: $https://ws-broker-service.us-west-2.amazonaws.com/) with (ResultType: PENDING_RETRY, ResultValues.SessionId: )
+2023-03-21T17:29:38.179Z { Version: "5.6.0.3404" }: [INF] AllocateResource Action successfully performed
+2023-03-21T17:29:38.180Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:29:43.183Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:29:43.183Z { Version: "5.6.0.3404" }: [DBG] PerformResourceActionRequest Type: CONNECT, Protocol: PCOIP, Session-Id: c79d8669-d4b5-44db-9204-f69001891c26, Amzn-id: b6e926f5-1119-4d3d-9312-104da5f06321
+2023-03-21T17:29:43.551Z { Version: "5.6.0.3404" }: [DBG] Received Http AllocateResourceResponse(Url: $https://ws-broker-service.us-west-2.amazonaws.com/) with (ResultType: PENDING_RETRY, ResultValues.SessionId: )
+2023-03-21T17:29:43.551Z { Version: "5.6.0.3404" }: [INF] AllocateResource Action successfully performed
+2023-03-21T17:29:43.551Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:29:48.564Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:29:48.564Z { Version: "5.6.0.3404" }: [DBG] PerformResourceActionRequest Type: CONNECT, Protocol: PCOIP, Session-Id: c79d8669-d4b5-44db-9204-f69001891c26, Amzn-id: 674c6be7-af23-4b59-85e0-09a171d9213c
+2023-03-21T17:29:48.964Z { Version: "5.6.0.3404" }: [DBG] Received Http AllocateResourceResponse(Url: $https://ws-broker-service.us-west-2.amazonaws.com/) with (ResultType: PENDING_RETRY, ResultValues.SessionId: )
+2023-03-21T17:29:48.965Z { Version: "5.6.0.3404" }: [INF] AllocateResource Action successfully performed
+2023-03-21T17:29:48.965Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:29:53.990Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:29:53.990Z { Version: "5.6.0.3404" }: [DBG] PerformResourceActionRequest Type: CONNECT, Protocol: PCOIP, Session-Id: c79d8669-d4b5-44db-9204-f69001891c26, Amzn-id: 1b227f5c-0774-4f61-ade5-5a287574e3e6
+2023-03-21T17:29:54.368Z { Version: "5.6.0.3404" }: [DBG] Received Http AllocateResourceResponse(Url: $https://ws-broker-service.us-west-2.amazonaws.com/) with (ResultType: PENDING_RETRY, ResultValues.SessionId: )
+2023-03-21T17:29:54.368Z { Version: "5.6.0.3404" }: [INF] AllocateResource Action successfully performed
+2023-03-21T17:29:54.368Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:29:59.377Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:29:59.377Z { Version: "5.6.0.3404" }: [DBG] PerformResourceActionRequest Type: CONNECT, Protocol: PCOIP, Session-Id: c79d8669-d4b5-44db-9204-f69001891c26, Amzn-id: f4bcde6b-361d-485a-8481-ff108aa611f3
+2023-03-21T17:29:59.834Z { Version: "5.6.0.3404" }: [DBG] Received Http AllocateResourceResponse(Url: $https://ws-broker-service.us-west-2.amazonaws.com/) with (ResultType: PENDING_RETRY, ResultValues.SessionId: )
+2023-03-21T17:29:59.834Z { Version: "5.6.0.3404" }: [INF] AllocateResource Action successfully performed
+2023-03-21T17:29:59.834Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:30:04.843Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:30:04.843Z { Version: "5.6.0.3404" }: [DBG] PerformResourceActionRequest Type: CONNECT, Protocol: PCOIP, Session-Id: c79d8669-d4b5-44db-9204-f69001891c26, Amzn-id: 7aa35fb6-af5e-4e4d-96f6-8adc650efaf9
+2023-03-21T17:30:05.217Z { Version: "5.6.0.3404" }: [DBG] Received Http AllocateResourceResponse(Url: $https://ws-broker-service.us-west-2.amazonaws.com/) with (ResultType: PENDING_RETRY, ResultValues.SessionId: )
+2023-03-21T17:30:05.217Z { Version: "5.6.0.3404" }: [INF] AllocateResource Action successfully performed
+2023-03-21T17:30:05.217Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:30:10.218Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:30:10.218Z { Version: "5.6.0.3404" }: [DBG] PerformResourceActionRequest Type: CONNECT, Protocol: PCOIP, Session-Id: c79d8669-d4b5-44db-9204-f69001891c26, Amzn-id: 07cf6e4c-77f8-4e6e-bb1f-ef23b4f6d637
+2023-03-21T17:30:10.588Z { Version: "5.6.0.3404" }: [DBG] Received Http AllocateResourceResponse(Url: $https://ws-broker-service.us-west-2.amazonaws.com/) with (ResultType: PENDING_RETRY, ResultValues.SessionId: )
+2023-03-21T17:30:10.588Z { Version: "5.6.0.3404" }: [INF] AllocateResource Action successfully performed
+2023-03-21T17:30:10.588Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:30:15.601Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:30:15.601Z { Version: "5.6.0.3404" }: [DBG] PerformResourceActionRequest Type: CONNECT, Protocol: PCOIP, Session-Id: c79d8669-d4b5-44db-9204-f69001891c26, Amzn-id: 06a332d7-8c48-4d68-b338-e3bdfee8c3c7
+2023-03-21T17:30:15.975Z { Version: "5.6.0.3404" }: [DBG] Received Http AllocateResourceResponse(Url: $https://ws-broker-service.us-west-2.amazonaws.com/) with (ResultType: PENDING_RETRY, ResultValues.SessionId: )
+2023-03-21T17:30:15.975Z { Version: "5.6.0.3404" }: [INF] AllocateResource Action successfully performed
+2023-03-21T17:30:15.975Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:30:20.984Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:30:20.984Z { Version: "5.6.0.3404" }: [DBG] PerformResourceActionRequest Type: CONNECT, Protocol: PCOIP, Session-Id: c79d8669-d4b5-44db-9204-f69001891c26, Amzn-id: 50420c1c-8a0d-4fb6-aa55-ec455e451f1d
+2023-03-21T17:30:21.351Z { Version: "5.6.0.3404" }: [DBG] Received Http AllocateResourceResponse(Url: $https://ws-broker-service.us-west-2.amazonaws.com/) with (ResultType: PENDING_RETRY, ResultValues.SessionId: )
+2023-03-21T17:30:21.351Z { Version: "5.6.0.3404" }: [INF] AllocateResource Action successfully performed
+2023-03-21T17:30:21.351Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:30:22.113Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:22.113Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:22.115Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> HealthCheck::HcUnhealthy=1
+2023-03-21T17:30:22.600Z { Version: "5.6.0.3404" }: [INF] Navigating to Use Case WorkSpacesClient.Common.UseCases.SessionEndedUseCase.SessionEndedPresenter
+2023-03-21T17:30:22.612Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:22.612Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:22.613Z { Version: "5.6.0.3404" }: [DBG] WorkspaceStateChange: Processing
+2023-03-21T17:30:23.640Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientCustomization::Error=0
+2023-03-21T17:30:23.640Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientCustomization::Fault=0
+2023-03-21T17:30:23.640Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:23.641Z { Version: "5.6.0.3404" }: [DBG] Session ended. Presenting reconnect page
+2023-03-21T17:30:24.484Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientCustomization::Error=0
+2023-03-21T17:30:24.484Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientCustomization::Fault=0
+2023-03-21T17:30:24.484Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:24.531Z { Version: "5.6.0.3404" }: [INF] Navigating to Use Case WorkSpacesClient.Common.UseCases.BeginPreSessionUseCase.BeginPreSessionPresenter
+2023-03-21T17:30:24.577Z { Version: "5.6.0.3404" }: [INF] Before <BeginUseCase> CPU:0.35% Memory:291,372.000kb
+2023-03-21T17:30:24.577Z { Version: "5.6.0.3404" }: [INF] Resolving region for: WSpdx+JPPATZ
+2023-03-21T17:30:24.577Z { Version: "5.6.0.3404" }: [INF] Region Key obtained from code: WSpdx
+2023-03-21T17:30:24.577Z { Version: "5.6.0.3404" }: [INF] Checking for localization update
+2023-03-21T17:30:24.596Z { Version: "5.6.0.3404" }: [INF] Local language assets version: 1
+2023-03-21T17:30:24.596Z { Version: "5.6.0.3404" }: [INF] Requesting language updates from: https://ws-client-service.us-west-2.amazonaws.com/configuration/GetLocalizationAssets
+2023-03-21T17:30:24.596Z { Version: "5.6.0.3404" }: [INF] Checking for error definitions update
+2023-03-21T17:30:24.596Z { Version: "5.6.0.3404" }: [INF] Local languages version: 1 | Local error definitions version: 1
+2023-03-21T17:30:24.596Z { Version: "5.6.0.3404" }: [INF] Requesting error definition updates from: https://ws-client-service.us-west-2.amazonaws.com/configuration/GetErrorDefinition
+2023-03-21T17:30:24.616Z { Version: "5.6.0.3404" }: [DBG] GetAuthInfo Request Amzn-id: 334f5869-353d-4879-aaba-a083e0a16b3f
+2023-03-21T17:30:24.935Z { Version: "5.6.0.3404" }: [DBG] Received Http WsBrokerGetAuthInfoResponse(Url: https://ws-broker-service.us-west-2.amazonaws.com/) with (SessionId: 5bc83a9c-156c-40d5-9775-890c61c89aa1, OrgName: d-92673560a3, AuthMethods: [OAUTH])
+2023-03-21T17:30:24.935Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> GetAuthInfo::Error=0
+2023-03-21T17:30:24.935Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> GetAuthInfo::Fault=0
+2023-03-21T17:30:24.947Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:24.947Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:24.949Z { Version: "5.6.0.3404" }: [DBG] WorkspaceStateChange: Authenticated
+2023-03-21T17:30:24.964Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:24.964Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:24.991Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:24.991Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:25.274Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:25.274Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:25.324Z { Version: "5.6.0.3404" }: [ERR] Error while making a request to : https://ws-client-service.us-west-2.amazonaws.com/configuration/GetLocalizationAssets. Message: Response status code does not indicate success: 403 (Forbidden).
+2023-03-21T17:30:25.325Z { Version: "5.6.0.3404" }: [ERR] Exception occured during locale remote configuration: HttpClient4xxNetworkError
+2023-03-21T17:30:25.325Z { Version: "5.6.0.3404" }: [INF] No changes to localization
+2023-03-21T17:30:25.325Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> LocaleUpdate::Error=0
+2023-03-21T17:30:25.325Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> LocaleUpdate::Fault=0
+2023-03-21T17:30:25.337Z { Version: "5.6.0.3404" }: [ERR] Error while making a request to : https://ws-client-service.us-west-2.amazonaws.com/configuration/GetErrorDefinition. Message: Response status code does not indicate success: 403 (Forbidden).
+2023-03-21T17:30:25.337Z { Version: "5.6.0.3404" }: [ERR] Exception occured during error-definition remote configuration: HttpClient4xxNetworkError
+2023-03-21T17:30:25.337Z { Version: "5.6.0.3404" }: [INF] No changes to error definitions
+2023-03-21T17:30:25.337Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> ErrorUpdate::Error=0
+2023-03-21T17:30:25.337Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> ErrorUpdate::Fault=0
+2023-03-21T17:30:25.820Z { Version: "5.6.0.3404" }: [ERR] Error while making a request to : https://d1cbg795sa4g1u.cloudfront.net/prod/pdx/d-92673560a3/en_US/wsassets.json. Message: Response status code does not indicate success: 403 (Forbidden).
+2023-03-21T17:30:25.821Z { Version: "5.6.0.3404" }: [ERR] Exception while getting file headers from URI: https://d1cbg795sa4g1u.cloudfront.net/prod/pdx/d-92673560a3/en_US/wsassets.json. Exception: WorkSpacesClient.Common.Infrastructure.ExceptionHandler.WorkspacesClientNetworkException: HttpClient - 4xx Network error
+ ---> System.Net.Http.HttpRequestException: Response status code does not indicate success: 403 (Forbidden).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at WorkSpacesClient.Common.UseCases.CommonGateways.HttpClientWorker.HttpClientWorker.SendAsync(HttpMethod method, Uri uri, Int64 timeoutTicks)
+   --- End of inner exception stack trace ---
+   at WorkSpacesClient.Common.UseCases.CommonGateways.HttpClientWorker.HttpClientWorker.SendAsync(HttpMethod method, Uri uri, Int64 timeoutTicks)
+   at WorkSpacesClient.Common.UseCases.CommonGateways.HttpClientWorker.HttpClientWorker.SendAsync(HttpMethod method, Uri uri)
+   at WorkSpacesClient.Common.UseCases.CommonGateways.FileDownloadWorker.FileDownloadWorker.GetFileHeadersAsync(Uri uri)
+2023-03-21T17:30:25.856Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:25.856Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:25.874Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:25.874Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:26.160Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:26.160Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:26.368Z { Version: "5.6.0.3404" }: [ERR] PerformResourceActionConnect was cancelled.
+2023-03-21T17:30:26.368Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> StartConnect::Cancel=1
+2023-03-21T17:30:26.368Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> StartConnect::Error=0
+2023-03-21T17:30:26.368Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> StartConnect::Fault=0
+2023-03-21T17:30:26.369Z { Version: "5.6.0.3404" }: [DBG] PrepareWorkSpaces canceled
+2023-03-21T17:30:26.420Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:26.420Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:26.746Z { Version: "5.6.0.3404" }: [ERR] Error while making a request to : https://d1cbg795sa4g1u.cloudfront.net/messaging/prod/pdx/d-92673560a3/en_US/wsMessagings.json. Message: Response status code does not indicate success: 403 (Forbidden).
+2023-03-21T17:30:26.746Z { Version: "5.6.0.3404" }: [ERR] Exception while getting file headers from URI: https://d1cbg795sa4g1u.cloudfront.net/messaging/prod/pdx/d-92673560a3/en_US/wsMessagings.json. Exception: WorkSpacesClient.Common.Infrastructure.ExceptionHandler.WorkspacesClientNetworkException: HttpClient - 4xx Network error
+ ---> System.Net.Http.HttpRequestException: Response status code does not indicate success: 403 (Forbidden).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at WorkSpacesClient.Common.UseCases.CommonGateways.HttpClientWorker.HttpClientWorker.SendAsync(HttpMethod method, Uri uri, Int64 timeoutTicks)
+   --- End of inner exception stack trace ---
+   at WorkSpacesClient.Common.UseCases.CommonGateways.HttpClientWorker.HttpClientWorker.SendAsync(HttpMethod method, Uri uri, Int64 timeoutTicks)
+   at WorkSpacesClient.Common.UseCases.CommonGateways.HttpClientWorker.HttpClientWorker.SendAsync(HttpMethod method, Uri uri)
+   at WorkSpacesClient.Common.UseCases.CommonGateways.FileDownloadWorker.FileDownloadWorker.GetFileHeadersAsync(Uri uri)
+2023-03-21T17:30:26.755Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:26.755Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:26.757Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientAddIns::Error=0
+2023-03-21T17:30:26.757Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientAddIns::Fault=0
+2023-03-21T17:30:26.758Z { Version: "5.6.0.3404" }: [INF] Navigating to Use Case WorkSpacesClient.Common.UseCases.Authenticate.WarpDriveAuthentication.WarpDriveAuthenticationPresenter
+2023-03-21T17:30:26.796Z { Version: "5.6.0.3404" }: [DBG] Setting proxy for embedded browser
+2023-03-21T17:30:26.796Z { Version: "5.6.0.3404" }: [DBG] Received login url: https://d-92673560a3.awsapps.com:443/login/?client_id=f6547774fae7346f&redirect_uri=https%3a%2f%2fskylight.local&locale=en_US
+2023-03-21T17:30:26.796Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:26.796Z { Version: "5.6.0.3404" }: [DBG] Got IsRememberMeDisalbeResult False
+2023-03-21T17:30:26.796Z { Version: "5.6.0.3404" }: [DBG] Initialize view for embedded browser
+2023-03-21T17:30:26.797Z { Version: "5.6.0.3404" }: [DBG] OS level proxy will be used for WebView2 browser
+2023-03-21T17:30:26.836Z { Version: "5.6.0.3404" }: [INF] After <BeginUseCase> Elapsed:2260ms, CPU:0.43% Memory:291,652.000kb
+2023-03-21T17:30:26.980Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:26.980Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:27.000Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:27.000Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:27.024Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:27.024Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:27.028Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> HealthCheck::HcUnhealthy=1
+2023-03-21T17:30:27.103Z { Version: "5.6.0.3404" }: [DBG] OS level proxy will be used for WebView2 browser
+2023-03-21T17:30:27.170Z { Version: "5.6.0.3404" }: [DBG] LoadUrl: https://d-92673560a3.awsapps.com:443/login/?client_id=f6547774fae7346f&redirect_uri=https%3a%2f%2fskylight.local&locale=en_US
+2023-03-21T17:30:27.170Z { Version: "5.6.0.3404" }: [DBG] Loading WarpDrive Page from: $https://d-92673560a3.awsapps.com/login/?client_id=f6547774fae7346f&redirect_uri=https%3a%2f%2fskylight.local&locale=en_US
+2023-03-21T17:30:27.803Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> HealthCheck::HcUnhealthy=1
+2023-03-21T17:30:28.035Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientCustomization::Error=0
+2023-03-21T17:30:28.035Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientCustomization::Fault=0
+2023-03-21T17:30:28.036Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:28.037Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:28.047Z { Version: "5.6.0.3404" }: [INF] Diagnostic process is already running, continuing without starting a new process
+2023-03-21T17:30:28.055Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:28.055Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:28.057Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientAddIns::Error=0
+2023-03-21T17:30:28.057Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientAddIns::Fault=0
+2023-03-21T17:30:28.357Z { Version: "5.6.0.3404" }: [DBG] Registry value Software\Amazon Web Services. LLC\Amazon WorkSpaces\SSOOverrideSSO Does Not Exists
+2023-03-21T17:30:28.357Z { Version: "5.6.0.3404" }: [DBG] Injecting JS to Override SSO
+2023-03-21T17:30:28.502Z { Version: "5.6.0.3404" }: [DBG] Sent Metrics Request to https://skylight-client-ds.us-west-2.amazonaws.com/put-metrics: 
+2023-03-21T17:30:31.641Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> WdPageLoad::Error=0
+2023-03-21T17:30:31.642Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> WdPageLoad::Fault=0
+2023-03-21T17:30:31.642Z { Version: "5.6.0.3404" }: [DBG] WarpDrive Page Loaded in 3605 ms
+2023-03-21T17:30:31.642Z { Version: "5.6.0.3404" }: [DBG] Apply CSS to WarpDrive Page
+2023-03-21T17:30:31.642Z { Version: "5.6.0.3404" }: [DBG] Disable Context Menu in WarpDrive Page
+2023-03-21T17:30:31.642Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:31.642Z { Version: "5.6.0.3404" }: [DBG] Uncloaked WarpDrive Page
+2023-03-21T17:30:38.512Z { Version: "5.6.0.3404" }: [DBG] Sent Metrics Request to https://skylight-client-ds.us-west-2.amazonaws.com/put-metrics: 
+2023-03-21T17:30:44.340Z { Version: "5.6.0.3404" }: [DBG] Username/password are used for authentication
+2023-03-21T17:30:44.355Z { Version: "5.6.0.3404" }: [DBG] Authenticate Request Session-Id: 5bc83a9c-156c-40d5-9775-890c61c89aa1 Amzn-id: 68b83e3d-a0db-4410-a89a-e6cd6c4eef7f
+2023-03-21T17:30:45.557Z { Version: "5.6.0.3404" }: [DBG] Received Http AuthenticateResponse(Url: https://ws-broker-service.us-west-2.amazonaws.com/)
+2023-03-21T17:30:45.567Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:45.567Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:45.569Z { Version: "5.6.0.3404" }: [DBG] WorkspaceStateChange: Authenticated
+2023-03-21T17:30:45.569Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Authenticate::Error=0
+2023-03-21T17:30:45.569Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Authenticate::Fault=0
+2023-03-21T17:30:45.569Z { Version: "5.6.0.3404" }: [INF] setting failure action in no op heart beat task
+2023-03-21T17:30:45.569Z { Version: "5.6.0.3404" }: [INF] Starting no op heart beat task
+2023-03-21T17:30:45.585Z { Version: "5.6.0.3404" }: [INF] Navigating to Use Case WorkSpacesClient.Common.UseCases.PrepareWorkspaceUseCase.PrepareWorkspacePresenter
+2023-03-21T17:30:45.641Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> WdUserAuth::Error=0
+2023-03-21T17:30:45.642Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> WdUserAuth::Fault=0
+2023-03-21T17:30:45.642Z { Version: "5.6.0.3404" }: [WRN] LoginTimeTracker received unexpected Start since it is already in progress (operation: Session, isReconnect: False, loginType: Username)
+2023-03-21T17:30:45.685Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:45.685Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:45.687Z { Version: "5.6.0.3404" }: [DBG] WorkspaceStateChange: Processing
+2023-03-21T17:30:45.687Z { Version: "5.6.0.3404" }: [DBG] GetResources Request Session-Id: 5bc83a9c-156c-40d5-9775-890c61c89aa1 Amzn-id: 22d7dbf5-40ac-4015-93b2-51a1ffcc13af
+2023-03-21T17:30:46.106Z { Version: "5.6.0.3404" }: [DBG] Received Http GetResourcesResponse(Url: https://ws-broker-service.us-west-2.amazonaws.com/) with [(ResourceId: ws-b8kb5w1gt, ResourceType: WORKSPACE)]
+2023-03-21T17:30:46.106Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> GetResources::Error=0
+2023-03-21T17:30:46.106Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> GetResources::Fault=0
+2023-03-21T17:30:46.113Z { Version: "5.6.0.3404" }: [DBG] Received resource, Protocol: Pcoip
+2023-03-21T17:30:46.114Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:30:46.114Z { Version: "5.6.0.3404" }: [WRN] Using Default Enum value for type: WorkSpacesClient.Common.Constants.WSPendingAction and Value 
+2023-03-21T17:30:46.114Z { Version: "5.6.0.3404" }: [INF] Allocating resource with resourceId/workspaceId: ws-b8kb5w1gt.
+2023-03-21T17:30:46.114Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:30:46.114Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:30:46.114Z { Version: "5.6.0.3404" }: [DBG] PerformResourceActionRequest Type: CONNECT, Protocol: PCOIP, Session-Id: 5bc83a9c-156c-40d5-9775-890c61c89aa1, Amzn-id: c88c5151-a860-43ac-ac69-3e28ffddcf3a
+2023-03-21T17:30:46.132Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:46.132Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:46.527Z { Version: "5.6.0.3404" }: [DBG] Received Http AllocateResourceResponse(Url: $https://ws-broker-service.us-west-2.amazonaws.com/) with (ResultType: SUCCESS_REDIRECT, ResultValues.SessionId: 1d96992cdc8ee46c6885c27f87e04e4e)
+2023-03-21T17:30:46.527Z { Version: "5.6.0.3404" }: [INF] AllocateResource Action successfully performed
+2023-03-21T17:30:46.535Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Connect::Cancel=0
+2023-03-21T17:30:46.536Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Connect::Error=0
+2023-03-21T17:30:46.536Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Connect::Fault=0
+2023-03-21T17:30:46.553Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:46.553Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:46.556Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientAddIns::Error=0
+2023-03-21T17:30:46.556Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientAddIns::Fault=0
+2023-03-21T17:30:46.559Z { Version: "5.6.0.3404" }: [INF] Navigating to Use Case WorkSpacesClient.Common.UseCases.SessionProvisionUseCase.SessionProvisionPresenter
+2023-03-21T17:30:46.581Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:46.581Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:46.583Z { Version: "5.6.0.3404" }: [DBG] WorkspaceStateChange: Processing
+2023-03-21T17:30:46.669Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:46.669Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:46.672Z { Version: "5.6.0.3404" }: [DBG] WorkspaceStateChange: Processing
+2023-03-21T17:30:46.672Z { Version: "5.6.0.3404" }: [INF] Found Timezone of India Standard Time
+2023-03-21T17:30:46.672Z { Version: "5.6.0.3404" }: [DBG] Provision Session Request: gw:467e7af0147142d8447e0abcb6e7d39a | 35.80.95.99 | 4172
+2023-03-21T17:30:47.526Z { Version: "5.6.0.3404" }: [DBG] StreamProtocol: Tls12
+2023-03-21T17:30:48.497Z { Version: "5.6.0.3404" }: [DBG] Sent Metrics Request to https://skylight-client-ds.us-west-2.amazonaws.com/put-metrics: 
+2023-03-21T17:30:55.443Z { Version: "5.6.0.3404" }: [DBG] Provision Session Response Received
+2023-03-21T17:30:55.443Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> SessionProvision::Error=0
+2023-03-21T17:30:55.444Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> SessionProvision::Fault=0
+2023-03-21T17:30:55.444Z { Version: "5.6.0.3404" }: [DBG] Construct Pcoip Session started.
+2023-03-21T17:30:55.473Z { Version: "5.6.0.3404" }: [INF] Before <ConstructPcoipSession> CPU:0.16% Memory:286,956.000kb
+2023-03-21T17:30:55.473Z { Version: "5.6.0.3404" }: [DBG] Entering windowed mode
+2023-03-21T17:30:55.473Z { Version: "5.6.0.3404" }: [INF] Getting window position {X=171,Y=171,Width=653,Height=541}, is maximized True
+2023-03-21T17:30:55.485Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:55.485Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:55.510Z { Version: "5.6.0.3404" }: [DBG] Ensure Showing Windowed Menu
+2023-03-21T17:30:55.534Z { Version: "5.6.0.3404" }: [DBG] Setting Min Size (653,541.5)
+2023-03-21T17:30:55.549Z { Version: "5.6.0.3404" }: [DBG] Session window activated
+2023-03-21T17:30:55.550Z { Version: "5.6.0.3404" }: [DBG] Publishing session window focus event
+2023-03-21T17:30:55.550Z { Version: "5.6.0.3404" }: [DBG] Attached Keyboard Hook
+2023-03-21T17:30:55.561Z { Version: "5.6.0.3404" }: [DBG] Ensure Showing Windowed Menu
+2023-03-21T17:30:55.635Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:55.635Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:55.639Z { Version: "5.6.0.3404" }: [DBG] Hide Main Window.
+2023-03-21T17:30:55.658Z { Version: "5.6.0.3404" }: [INF] PCoIP Log File Name: Pcoip_2023_03_21_17_03_55
+2023-03-21T17:30:55.658Z { Version: "5.6.0.3404" }: [INF] PCoIP Log File Location: C:\Users\Yoga\AppData\Local\Amazon Web Services\Amazon WorkSpaces\logs\pcoip\Pcoip_2023_03_21_17_03_55.log
+2023-03-21T17:30:55.658Z { Version: "5.6.0.3404" }: [DBG] Setting WSE Client Properties (DeviceId: FacUiS4DjzTASgAdbblAaleDAjA9lSJti_ar6Z4zAm8, ProductVersion: 5.6.0.3404, Platform: Windows, PlatformVersion: [64 bit OS] 10.0.22621.0, WindowHandlesCount: 1) Succeeded
+2023-03-21T17:30:55.718Z { Version: "5.6.0.3404" }: [DBG] Performance Metrics --> CPU:1.67% IdleCPU:89.72, MEM:280.3MB, ScreenSize:0, FrameRate:0, RTT:0
+2023-03-21T17:30:55.718Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Streaming::InSessionStatistics=1
+2023-03-21T17:30:55.731Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:55.731Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:55.732Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:55.732Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:30:55.735Z { Version: "5.6.0.3404" }: [DBG] WorkspaceStateChange: Streaming
+2023-03-21T17:30:55.813Z { Version: "5.6.0.3404" }: [INF] After <ConstructPcoipSession> Elapsed:291ms, CPU:4.09% Memory:287,060.000kb
+2023-03-21T17:30:55.814Z { Version: "5.6.0.3404" }: [DBG] Construct Pcoip Session succeeded.
+2023-03-21T17:30:55.874Z { Version: "5.6.0.3404" }: [DBG] Completed timer on screen changing size
+2023-03-21T17:30:55.919Z { Version: "5.6.0.3404" }: [DBG] Getting topologies
+2023-03-21T17:30:55.919Z { Version: "5.6.0.3404" }: [DBG] Topologies changed
+2023-03-21T17:30:58.053Z { Version: "5.6.0.3404" }: [DBG] PcoipClientConnectionCallback Connection Changed to PCOIP_CLIENT_CONNECT_STATE_CONNECTED with PCOIP_DISCONNECT_CAUSE_NONE
+2023-03-21T17:30:58.053Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays Before Platform Adjustment Topology:{X=0,Y=0,Width=1440,Height=803}, Primary:True, Rotation:Degree0
+2023-03-21T17:30:58.053Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays Before Protocol Adjustment Topology:{X=0,Y=0,Width=1440,Height=803}, Primary:True, Rotation:Degree0
+2023-03-21T17:30:58.053Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays After Protocol Adjustment  Topology:{X=0,Y=0,Width=1440,Height=803}, Primary:True, Rotation:Degree0
+2023-03-21T17:30:58.053Z { Version: "5.6.0.3404" }: [DBG] Topology request {X=0,Y=0,Width=1440,Height=803}
+2023-03-21T17:30:58.504Z { Version: "5.6.0.3404" }: [DBG] Sent Metrics Request to https://skylight-client-ds.us-west-2.amazonaws.com/put-metrics: 
+2023-03-21T17:30:59.164Z { Version: "5.6.0.3404" }: [INF] Host Updated Lock Keys, CAPS:False| NUM:False| SCROLL:False
+2023-03-21T17:30:59.748Z { Version: "5.6.0.3404" }: [DBG] TopologyCallback Called [21-03-2023 23:00:59]
+2023-03-21T17:30:59.748Z { Version: "5.6.0.3404" }: [DBG] Display[0] {X=0,Y=0,Width=1440,Height=803}
+2023-03-21T17:30:59.752Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Session::Error=0
+2023-03-21T17:30:59.752Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Session::Fault=0
+2023-03-21T17:31:00.526Z { Version: "5.6.0.3404" }: [INF] PCoIP Workspace StreamingSuccess
+2023-03-21T17:31:00.526Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Streaming::Error=0
+2023-03-21T17:31:00.526Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Streaming::Fault=0
+2023-03-21T17:31:00.526Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> ConnectAttempt::Fault=0
+2023-03-21T17:31:02.679Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Streaming::Time=2484
+2023-03-21T17:31:02.679Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> SSIG::Error=0
+2023-03-21T17:31:02.679Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> SSIG::Fault=0
+2023-03-21T17:31:02.679Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> SSIG::Time=2375
+2023-03-21T17:31:08.497Z { Version: "5.6.0.3404" }: [DBG] Sent Metrics Request to https://skylight-client-ds.us-west-2.amazonaws.com/put-metrics: 
+2023-03-21T17:31:15.458Z { Version: "5.6.0.3404" }: [DBG] Ensure Showing Windowed Menu
+2023-03-21T17:31:15.762Z { Version: "5.6.0.3404" }: [DBG] Completed timer on screen changing size
+2023-03-21T17:31:15.763Z { Version: "5.6.0.3404" }: [DBG] Getting topologies
+2023-03-21T17:31:15.763Z { Version: "5.6.0.3404" }: [DBG] Topologies changed
+2023-03-21T17:31:15.763Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays Before Platform Adjustment Topology:{X=0,Y=0,Width=640,Height=480}, Primary:True, Rotation:Degree0
+2023-03-21T17:31:15.763Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays Before Protocol Adjustment Topology:{X=0,Y=0,Width=640,Height=480}, Primary:True, Rotation:Degree0
+2023-03-21T17:31:15.763Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays After Protocol Adjustment  Topology:{X=0,Y=0,Width=640,Height=480}, Primary:True, Rotation:Degree0
+2023-03-21T17:31:15.763Z { Version: "5.6.0.3404" }: [DBG] Topology request {X=0,Y=0,Width=640,Height=480}
+2023-03-21T17:31:19.369Z { Version: "5.6.0.3404" }: [DBG] Ensure Showing Windowed Menu
+2023-03-21T17:31:19.670Z { Version: "5.6.0.3404" }: [DBG] Completed timer on screen changing size
+2023-03-21T17:31:19.671Z { Version: "5.6.0.3404" }: [DBG] Getting topologies
+2023-03-21T17:31:19.671Z { Version: "5.6.0.3404" }: [DBG] Topologies changed
+2023-03-21T17:31:19.671Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays Before Platform Adjustment Topology:{X=0,Y=0,Width=1440,Height=803}, Primary:True, Rotation:Degree0
+2023-03-21T17:31:19.671Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays Before Protocol Adjustment Topology:{X=0,Y=0,Width=1440,Height=803}, Primary:True, Rotation:Degree0
+2023-03-21T17:31:19.671Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays After Protocol Adjustment  Topology:{X=0,Y=0,Width=1440,Height=803}, Primary:True, Rotation:Degree0
+2023-03-21T17:31:19.671Z { Version: "5.6.0.3404" }: [DBG] Topology request {X=0,Y=0,Width=1440,Height=803}
+2023-03-21T17:31:25.732Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Session::SessionRtt=277
+2023-03-21T17:31:25.765Z { Version: "5.6.0.3404" }: [DBG] Performance Metrics --> CPU:0.13% IdleCPU:92.17, MEM:442.1MB, ScreenSize:1156320, FrameRate:0, RTT:277
+2023-03-21T17:31:25.765Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Streaming::InSessionStatistics=1
+2023-03-21T17:31:28.500Z { Version: "5.6.0.3404" }: [DBG] Sent Metrics Request to https://skylight-client-ds.us-west-2.amazonaws.com/put-metrics: 
+2023-03-21T17:31:31.969Z { Version: "5.6.0.3404" }: [DBG] TopologyCallback Called [21-03-2023 23:01:31]
+2023-03-21T17:31:31.969Z { Version: "5.6.0.3404" }: [DBG] Display[0] {X=0,Y=0,Width=640,Height=480}
+2023-03-21T17:31:46.390Z { Version: "5.6.0.3404" }: [DBG] TopologyCallback Called [21-03-2023 23:01:46]
+2023-03-21T17:31:46.390Z { Version: "5.6.0.3404" }: [DBG] Display[0] {X=0,Y=0,Width=1440,Height=803}
+2023-03-21T17:31:56.813Z { Version: "5.6.0.3404" }: [DBG] Session window deactivated
+2023-03-21T17:31:56.813Z { Version: "5.6.0.3404" }: [DBG] Detached Keyboard Hook
+2023-03-21T17:32:00.543Z { Version: "5.6.0.3404" }: [DBG] Session window activated
+2023-03-21T17:32:00.543Z { Version: "5.6.0.3404" }: [DBG] Publishing session window focus event
+2023-03-21T17:32:00.544Z { Version: "5.6.0.3404" }: [DBG] Attached Keyboard Hook
+2023-03-21T17:32:03.552Z { Version: "5.6.0.3404" }: [DBG] Ensure Showing Windowed Menu
+2023-03-21T17:32:03.857Z { Version: "5.6.0.3404" }: [DBG] Completed timer on screen changing size
+2023-03-21T17:32:03.859Z { Version: "5.6.0.3404" }: [DBG] Getting topologies
+2023-03-21T17:32:03.859Z { Version: "5.6.0.3404" }: [DBG] Topologies changed
+2023-03-21T17:32:03.859Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays Before Platform Adjustment Topology:{X=0,Y=0,Width=640,Height=480}, Primary:True, Rotation:Degree0
+2023-03-21T17:32:03.859Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays Before Protocol Adjustment Topology:{X=0,Y=0,Width=640,Height=480}, Primary:True, Rotation:Degree0
+2023-03-21T17:32:03.859Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays After Protocol Adjustment  Topology:{X=0,Y=0,Width=640,Height=480}, Primary:True, Rotation:Degree0
+2023-03-21T17:32:03.859Z { Version: "5.6.0.3404" }: [DBG] Topology request {X=0,Y=0,Width=640,Height=480}
+2023-03-21T17:32:06.397Z { Version: "5.6.0.3404" }: [DBG] TopologyCallback Called [21-03-2023 23:02:06]
+2023-03-21T17:32:06.397Z { Version: "5.6.0.3404" }: [DBG] Display[0] {X=0,Y=0,Width=640,Height=480}
+2023-03-21T17:32:27.707Z { Version: "5.6.0.3404" }: [DBG] Session window deactivated
+2023-03-21T17:32:27.707Z { Version: "5.6.0.3404" }: [DBG] Detached Keyboard Hook
+2023-03-21T17:32:34.119Z { Version: "5.6.0.3404" }: [DBG] Session window activated
+2023-03-21T17:32:34.119Z { Version: "5.6.0.3404" }: [DBG] Publishing session window focus event
+2023-03-21T17:32:34.120Z { Version: "5.6.0.3404" }: [DBG] Attached Keyboard Hook
+2023-03-21T17:32:45.557Z { Version: "5.6.0.3404" }: [DBG] Ensure Showing Windowed Menu
+2023-03-21T17:32:45.858Z { Version: "5.6.0.3404" }: [DBG] Completed timer on screen changing size
+2023-03-21T17:32:45.858Z { Version: "5.6.0.3404" }: [DBG] Getting topologies
+2023-03-21T17:32:45.858Z { Version: "5.6.0.3404" }: [DBG] Topologies changed
+2023-03-21T17:32:45.858Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays Before Platform Adjustment Topology:{X=0,Y=0,Width=1440,Height=803}, Primary:True, Rotation:Degree0
+2023-03-21T17:32:45.858Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays Before Protocol Adjustment Topology:{X=0,Y=0,Width=1440,Height=803}, Primary:True, Rotation:Degree0
+2023-03-21T17:32:45.858Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays After Protocol Adjustment  Topology:{X=0,Y=0,Width=1440,Height=803}, Primary:True, Rotation:Degree0
+2023-03-21T17:32:45.858Z { Version: "5.6.0.3404" }: [DBG] Topology request {X=0,Y=0,Width=1440,Height=803}
+2023-03-21T17:33:14.434Z { Version: "5.6.0.3404" }: [DBG] TopologyCallback Called [21-03-2023 23:03:14]
+2023-03-21T17:33:14.434Z { Version: "5.6.0.3404" }: [DBG] Display[0] {X=0,Y=0,Width=1440,Height=803}
+2023-03-21T17:33:34.986Z { Version: "5.6.0.3404" }: [DBG] Sync LockKey CapsLock From False --> True
+2023-03-21T17:33:35.105Z { Version: "5.6.0.3404" }: [DBG] Sync LockKey CapsLock From False --> True
+2023-03-21T17:33:35.252Z { Version: "5.6.0.3404" }: [DBG] Sync LockKey CapsLock From False --> True
+2023-03-21T17:33:35.357Z { Version: "5.6.0.3404" }: [DBG] Sync LockKey CapsLock From False --> True
+2023-03-21T17:33:35.478Z { Version: "5.6.0.3404" }: [DBG] Sync LockKey CapsLock From False --> True
+2023-03-21T17:33:35.502Z { Version: "5.6.0.3404" }: [DBG] Sync LockKey CapsLock From False --> True
+2023-03-21T17:33:35.505Z { Version: "5.6.0.3404" }: [DBG] Sync LockKey CapsLock From False --> True
+2023-03-21T17:33:35.535Z { Version: "5.6.0.3404" }: [INF] Host Updated Lock Keys, CAPS:True| NUM:False| SCROLL:False
+2023-03-21T17:34:52.105Z { Version: "5.6.0.3404" }: [DBG] Session window deactivated
+2023-03-21T17:34:52.105Z { Version: "5.6.0.3404" }: [DBG] Detached Keyboard Hook
+2023-03-21T17:35:20.160Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:35:20.160Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:35:20.729Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:35:20.729Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:35:20.736Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> HealthCheck::HcUnhealthy=1
+2023-03-21T17:35:23.763Z { Version: "5.6.0.3404" }: [INF] Diagnostics upload process watcher event was raised at 23:05:23.763
+2023-03-21T17:35:23.763Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:35:23.773Z { Version: "5.6.0.3404" }: [INF] Diagnostic process is already running, continuing without starting a new process
+2023-03-21T17:35:28.503Z { Version: "5.6.0.3404" }: [DBG] Sent Metrics Request to https://skylight-client-ds.us-west-2.amazonaws.com/put-metrics: 
+2023-03-21T17:36:25.784Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Session::SessionRtt=283
+2023-03-21T17:36:25.831Z { Version: "5.6.0.3404" }: [DBG] Performance Metrics --> CPU:0.12% IdleCPU:92.24, MEM:450.1MB, ScreenSize:1156320, FrameRate:2, RTT:283
+2023-03-21T17:36:25.831Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Streaming::InSessionStatistics=1
+2023-03-21T17:36:28.497Z { Version: "5.6.0.3404" }: [DBG] Sent Metrics Request to https://skylight-client-ds.us-west-2.amazonaws.com/put-metrics: 
+2023-03-21T17:40:20.150Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:40:20.150Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:40:20.717Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:40:20.717Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T17:40:20.722Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> HealthCheck::HcUnhealthy=1
+2023-03-21T17:40:28.519Z { Version: "5.6.0.3404" }: [DBG] Sent Metrics Request to https://skylight-client-ds.us-west-2.amazonaws.com/put-metrics: 
+2023-03-21T17:41:25.845Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Session::SessionRtt=280
+2023-03-21T17:41:25.875Z { Version: "5.6.0.3404" }: [DBG] Performance Metrics --> CPU:0.07% IdleCPU:94.24, MEM:450.6MB, ScreenSize:1156320, FrameRate:0, RTT:280
+2023-03-21T17:41:25.875Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Streaming::InSessionStatistics=1
+2023-03-21T17:41:28.512Z { Version: "5.6.0.3404" }: [DBG] Sent Metrics Request to https://skylight-client-ds.us-west-2.amazonaws.com/put-metrics: 
+2023-03-21T18:01:21.249Z { Version: "5.6.0.3404" }: [DBG] PcoipClientConnectionCallback Connection Changed to PCOIP_CLIENT_CONNECT_STATE_RECONNECTING with PCOIP_DISCONNECT_CAUSE_NONE
+2023-03-21T18:01:21.274Z { Version: "5.6.0.3404" }: [DBG] Ensure Showing Windowed Menu
+2023-03-21T18:01:21.576Z { Version: "5.6.0.3404" }: [DBG] Completed timer on screen changing size
+2023-03-21T18:01:21.576Z { Version: "5.6.0.3404" }: [DBG] Getting topologies
+2023-03-21T18:01:21.576Z { Version: "5.6.0.3404" }: [DBG] Topologies changed
+2023-03-21T18:01:26.348Z { Version: "5.6.0.3404" }: [DBG] PcoipClientConnectionCallback Connection Changed to PCOIP_CLIENT_CONNECT_STATE_RECONNECTING with PCOIP_DISCONNECT_CAUSE_NONE
+2023-03-21T18:01:30.742Z { Version: "5.6.0.3404" }: [DBG] PcoipClientConnectionCallback Connection Changed to PCOIP_CLIENT_CONNECT_STATE_CONNECTED with PCOIP_DISCONNECT_CAUSE_NONE
+2023-03-21T18:01:30.742Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays Before Platform Adjustment Topology:{X=0,Y=0,Width=1296,Height=814}, Primary:True, Rotation:Degree0
+2023-03-21T18:01:30.742Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays Before Protocol Adjustment Topology:{X=0,Y=0,Width=1296,Height=814}, Primary:True, Rotation:Degree0
+2023-03-21T18:01:30.742Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays After Protocol Adjustment  Topology:{X=0,Y=0,Width=1296,Height=814}, Primary:True, Rotation:Degree0
+2023-03-21T18:01:30.742Z { Version: "5.6.0.3404" }: [DBG] Topology request {X=0,Y=0,Width=1296,Height=814}
+2023-03-21T18:01:30.744Z { Version: "5.6.0.3404" }: [DBG] PcoipClientConnectionCallback Connection Changed to PCOIP_CLIENT_CONNECT_STATE_CONNECTED with PCOIP_DISCONNECT_CAUSE_NONE
+2023-03-21T18:01:30.747Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays Before Platform Adjustment Topology:{X=0,Y=0,Width=1296,Height=814}, Primary:True, Rotation:Degree0
+2023-03-21T18:01:30.747Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays Before Protocol Adjustment Topology:{X=0,Y=0,Width=1296,Height=814}, Primary:True, Rotation:Degree0
+2023-03-21T18:01:30.747Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays After Protocol Adjustment  Topology:{X=0,Y=0,Width=1296,Height=814}, Primary:True, Rotation:Degree0
+2023-03-21T18:01:30.747Z { Version: "5.6.0.3404" }: [DBG] Topology request {X=0,Y=0,Width=1296,Height=814}
+2023-03-21T18:01:31.586Z { Version: "5.6.0.3404" }: [DBG] TopologyCallback Called [21-03-2023 23:31:31]
+2023-03-21T18:01:31.586Z { Version: "5.6.0.3404" }: [DBG] Display[0] {X=0,Y=0,Width=1440,Height=803}
+2023-03-21T18:01:32.015Z { Version: "5.6.0.3404" }: [INF] Host Updated Lock Keys, CAPS:True| NUM:False| SCROLL:False
+2023-03-21T18:01:32.016Z { Version: "5.6.0.3404" }: [DBG] Sync LockKey CapsLock From True --> False
+2023-03-21T18:01:32.519Z { Version: "5.6.0.3404" }: [INF] Host Updated Lock Keys, CAPS:False| NUM:False| SCROLL:False
+2023-03-21T18:01:34.464Z { Version: "5.6.0.3404" }: [DBG] TopologyCallback Called [21-03-2023 23:31:34]
+2023-03-21T18:01:34.464Z { Version: "5.6.0.3404" }: [DBG] Display[0] {X=0,Y=0,Width=1296,Height=814}
+2023-03-21T18:01:58.232Z { Version: "5.6.0.3404" }: [DBG] Session window activated
+2023-03-21T18:01:58.232Z { Version: "5.6.0.3404" }: [DBG] Publishing session window focus event
+2023-03-21T18:01:58.233Z { Version: "5.6.0.3404" }: [DBG] Attached Keyboard Hook
+2023-03-21T18:01:58.239Z { Version: "5.6.0.3404" }: [DBG] Ensure Showing Windowed Menu
+2023-03-21T18:01:58.549Z { Version: "5.6.0.3404" }: [DBG] Completed timer on screen changing size
+2023-03-21T18:01:58.551Z { Version: "5.6.0.3404" }: [DBG] Getting topologies
+2023-03-21T18:01:58.551Z { Version: "5.6.0.3404" }: [DBG] Topologies changed
+2023-03-21T18:01:58.551Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays Before Platform Adjustment Topology:{X=0,Y=0,Width=1440,Height=803}, Primary:True, Rotation:Degree0
+2023-03-21T18:01:58.551Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays Before Protocol Adjustment Topology:{X=0,Y=0,Width=1440,Height=803}, Primary:True, Rotation:Degree0
+2023-03-21T18:01:58.551Z { Version: "5.6.0.3404" }: [INF] Window Locations: displays After Protocol Adjustment  Topology:{X=0,Y=0,Width=1440,Height=803}, Primary:True, Rotation:Degree0
+2023-03-21T18:01:58.551Z { Version: "5.6.0.3404" }: [DBG] Topology request {X=0,Y=0,Width=1440,Height=803}
+2023-03-21T18:02:01.573Z { Version: "5.6.0.3404" }: [INF] Saving window position {X=710,Y=139,Width=653,Height=541}, is maximized True
+2023-03-21T18:02:01.584Z { Version: "5.6.0.3404" }: [DBG] Session window deactivated
+2023-03-21T18:02:01.584Z { Version: "5.6.0.3404" }: [DBG] Detached Keyboard Hook
+2023-03-21T18:02:02.741Z { Version: "5.6.0.3404" }: [DBG] Session window activated
+2023-03-21T18:02:02.741Z { Version: "5.6.0.3404" }: [DBG] Publishing session window focus event
+2023-03-21T18:02:02.742Z { Version: "5.6.0.3404" }: [DBG] Attached Keyboard Hook
+2023-03-21T18:02:02.756Z { Version: "5.6.0.3404" }: [DBG] Session window deactivated
+2023-03-21T18:02:02.756Z { Version: "5.6.0.3404" }: [DBG] Detached Keyboard Hook
+2023-03-21T18:02:02.762Z { Version: "5.6.0.3404" }: [INF] CloseWindow called.
+2023-03-21T18:02:02.762Z { Version: "5.6.0.3404" }: [DBG] Removing window at index (0)
+2023-03-21T18:02:02.762Z { Version: "5.6.0.3404" }: [INF] Closing session, reason: UserInitiated, details: 
+2023-03-21T18:02:02.762Z { Version: "5.6.0.3404" }: [DBG] Closing In Session External Begin
+2023-03-21T18:02:02.762Z { Version: "5.6.0.3404" }: [INF] stopping no op heart beat task
+2023-03-21T18:02:03.033Z { Version: "5.6.0.3404" }: [DBG] PcoipClientConnectionCallback Connection Changed to PCOIP_CLIENT_CONNECT_STATE_UNCONNECTED with PCOIP_DISCONNECT_CAUSE_DEVICE_OSD_MANUAL_USER_DISCONNECT
+2023-03-21T18:02:03.046Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T18:02:03.047Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T18:02:03.048Z { Version: "5.6.0.3404" }: [DBG] WorkspaceStateChange: Streaming
+2023-03-21T18:02:03.048Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Session::Disconnect=1
+2023-03-21T18:02:03.048Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Session::UserDisconnect=1
+2023-03-21T18:02:03.104Z { Version: "5.6.0.3404" }: [INF] Navigating to Use Case WorkSpacesClient.Common.UseCases.SessionEndedUseCase.SessionEndedPresenter
+2023-03-21T18:02:03.114Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T18:02:03.114Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T18:02:03.115Z { Version: "5.6.0.3404" }: [DBG] WorkspaceStateChange: Processing
+2023-03-21T18:02:03.115Z { Version: "5.6.0.3404" }: [DBG] Closing In Session External End
+2023-03-21T18:02:03.124Z { Version: "5.6.0.3404" }: [INF] Closing session, reason: PCoIPDisconnectUnknown, details: PCOIP_DISCONNECT_CAUSE_DEVICE_OSD_MANUAL_USER_DISCONNECT
+2023-03-21T18:02:03.124Z { Version: "5.6.0.3404" }: [DBG] Closing In Session External Begin
+2023-03-21T18:02:03.124Z { Version: "5.6.0.3404" }: [INF] stopping no op heart beat task
+2023-03-21T18:02:03.124Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Session::Disconnect=1
+2023-03-21T18:02:03.124Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Session::ProtocolDisconnect=1
+2023-03-21T18:02:03.128Z { Version: "5.6.0.3404" }: [INF] Navigating to Use Case WorkSpacesClient.Common.UseCases.SessionEndedUseCase.SessionEndedPresenter
+2023-03-21T18:02:03.128Z { Version: "5.6.0.3404" }: [DBG] Closing In Session External End
+2023-03-21T18:02:03.128Z { Version: "5.6.0.3404" }: [DBG] EmitDisconnectMetric(protocolReasonCode: 768, protocolVersion:2.1) called.
+2023-03-21T18:02:03.128Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Session::WorkspaceDisconnect=1
+2023-03-21T18:02:04.122Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientCustomization::Error=0
+2023-03-21T18:02:04.122Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientCustomization::Fault=0
+2023-03-21T18:02:04.122Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T18:02:04.122Z { Version: "5.6.0.3404" }: [DBG] Session ended. Presenting reconnect page
+2023-03-21T18:02:05.016Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientCustomization::Error=0
+2023-03-21T18:02:05.016Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientCustomization::Fault=0
+2023-03-21T18:02:05.016Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T18:02:07.130Z { Version: "5.6.0.3404" }: [DBG] Sent Metrics Request to https://skylight-client-ds.us-west-2.amazonaws.com/put-metrics: 
+2023-03-21T18:02:08.244Z { Version: "5.6.0.3404" }: [INF] Exiting application
+2023-03-21T18:02:08.244Z { Version: "5.6.0.3404" }: [INF] stopping no op heart beat task
+2023-03-21T18:02:08.244Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Session::Disconnect=1
+2023-03-21T18:02:08.244Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Session::UserDisconnect=1
+2023-03-21T18:02:08.261Z { Version: "5.6.0.3404" }: [INF] Navigating to Use Case WorkSpacesClient.Common.UseCases.SessionEndedUseCase.SessionEndedPresenter
+2023-03-21T18:02:09.884Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T18:02:09.884Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T18:02:09.888Z { Version: "5.6.0.3404" }: [DBG] WorkspaceStateChange: SafeTerminate
+2023-03-21T18:02:09.888Z { Version: "5.6.0.3404" }: [DBG] App Exit with Code: 0
+2023-03-21T18:02:09.888Z { Version: "5.6.0.3404" }: [DBG] Killing the current Process

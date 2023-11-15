@@ -1,0 +1,10 @@
+POST  http://localhost:4004/v2/catalog/PostDoc
+Content-Type: application/json
+
+{
+    "Plant" : "3000",
+    "Period": "202306",
+    "CCode": "CCA1",
+    "DocumentDate": "\/Date(1689033600000)\/",
+    "PostingDate": "\/Date(1689033600000)\/"
+}

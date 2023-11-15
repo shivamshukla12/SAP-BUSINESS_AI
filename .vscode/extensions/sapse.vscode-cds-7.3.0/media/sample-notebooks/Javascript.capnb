@@ -1,0 +1,26 @@
+[
+    {
+        "kind": 1,
+        "language": "markdown",
+        "value": "# The *Javascript* cell\n\nThe *Javascript* cell in your CAP Notebook executes your cell content in *Javascript*:<br>\n\n- When executed, the command is run in an underlying (node) subprocess (see [Single command](#single-command) example).\n- Can fire multiple commands from the same cell (split by new lines, see [Multiple commands](#multiple-commands) example).\n- Output is returned to the CAP Notebook.\n\n## Examples\n\n### [Single command](#single-command)\n\nSimply write into the *Javascript* code cell just like you would in any [*Node.js*](https://nodejs.org) script.\n\nThe following cell prints `\"Hello, world!\"` on the output when executed:",
+        "outputs": []
+    },
+    {
+        "kind": 2,
+        "language": "javascript",
+        "value": "console.log(\"Hello, world!\");",
+        "outputs": []
+    },
+    {
+        "kind": 1,
+        "language": "markdown",
+        "value": "### [Multiple commands](#multiple-commands)\n\nYou can also fire off multiple *Javascript* commands on one code cell by just starting a new line as you would in any *Javascript* scsript file. The following cell demonstrates this via a simple example where the cell prints the `\"Hello, world!\"` statements again, but using three separate commands:",
+        "outputs": []
+    },
+    {
+        "kind": 2,
+        "language": "javascript",
+        "value": "const howToGreet = \"Hello\";\nconst whomToGreet =\"world\";\n\nconsole.log(`${howToGreet}, ${whomToGreet}!`);",
+        "outputs": []
+    }
+]

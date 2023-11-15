@@ -1,0 +1,12 @@
+{
+  "cds": {
+    "provides": {
+      "CatalogService": {
+        "kind": "odata",
+        "credentials": {
+          "url": "http://localhost:4004/catalog"
+        }
+      }
+    }
+  }
+}

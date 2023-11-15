@@ -1,0 +1,736 @@
+{
+	"name": "vscode-cds",
+	"version": "7.3.0",
+	"author": "SAP SE (https://www.sap.com)",
+	"publisher": "SAPSE",
+	"license": "SEE LICENSE IN LICENSE.txt",
+	"displayName": "SAP CDS Language Support",
+	"description": "Language support for SAP CDS for Visual Studio Code",
+	"qna": false,
+	"bugs": {
+		"url": "https://cap.cloud.sap/docs/ask-question-vscode"
+	},
+	"keywords": [
+		"CAP",
+		"CDS",
+		"LSP",
+		"SAP",
+		"language",
+		"editor",
+		"SAP BTP",
+		"Cloud Platform"
+	],
+	"homepage": "https://cap.cloud.sap",
+	"files": [
+		"media",
+		"lib",
+		"schemas",
+		"syntaxes",
+		"lsp-lib",
+		"CHANGELOG.md",
+		"LICENSE.txt",
+		"package.json",
+		"package.nls.json",
+		"README.md"
+	],
+	"icon": "media/cap-logo.png",
+	"engines": {
+		"vscode": "^1.80.0",
+		"node": ">=16.11.1"
+	},
+	"categories": [
+		"Programming Languages",
+		"Formatters",
+		"Other"
+	],
+	"dependencies": {
+		"@sap/cds-lsp": "7.3.0",
+		"adm-zip": "0.5.1",
+		"axios": "1.4.0",
+		"tree-kill": "1.2.2",
+		"vscode-languageclient": "8.1.0"
+	},
+	"activationEvents": [
+		"onUri",
+		"onNotebook:cap-notebook",
+		"onWebviewPanel:cds.capNotebook",
+		"onWebviewPanel:cds.welcomePage",
+		"onLanguage:json"
+	],
+	"main": "./lib/src/extension",
+	"contributes": {
+		"notebooks": [
+			{
+				"type": "cap-notebook",
+				"displayName": "CAP Notebook",
+				"selector": [
+					{
+						"filenamePattern": "*.capnb"
+					}
+				]
+			}
+		],
+		"jsonValidation": [
+			{
+				"fileMatch": [
+					".cdsrc.json",
+					".cdsrc-private.json"
+				],
+				"url": "cdsJsonSchema://schemas/cds-rc.json"
+			},
+			{
+				"fileMatch": "package.json",
+				"url": "cdsJsonSchema://schemas/cds-package.json"
+			},
+			{
+				"fileMatch": ".cdsprettier.json",
+				"url": "./node_modules/@sap/cds-lsp/schemas/cds-prettier.json"
+			}
+		],
+		"commands": [
+			{
+				"category": "CDS",
+				"command": "cds.restartLsp",
+				"title": "%cds.restartLsp.command.title%"
+			},
+			{
+				"category": "CDS",
+				"command": "cds.lsp.traces.startRecording",
+				"title": "%cds.lsp.traces.startRecording.command.title%"
+			},
+			{
+				"category": "CDS",
+				"command": "cds.lsp.traces.startRecording.detailed",
+				"title": "%cds.lsp.traces.startRecording.detailed.command.title%"
+			},
+			{
+				"category": "CDS",
+				"command": "cds.analyzeDependencies",
+				"title": "%cds.analyzeDependencies.command.title%"
+			},
+			{
+				"category": "CDS",
+				"command": "cds.2source",
+				"title": "%cds.previewGotoSource.command.title%"
+			},
+			{
+				"category": "CDS",
+				"subcategory": "preview",
+				"command": "cds.2json",
+				"title": "%cds.previewAsJson.command.title%"
+			},
+			{
+				"category": "CDS",
+				"subcategory": "preview",
+				"command": "cds.2yaml",
+				"title": "%cds.previewAsYaml.command.title%"
+			},
+			{
+				"category": "CDS",
+				"subcategory": "preview",
+				"command": "cds.2hdbtable",
+				"title": "%cds.previewAsHdbtable.command.title%"
+			},
+			{
+				"category": "CDS",
+				"subcategory": "preview",
+				"command": "cds.2edmx-v2",
+				"title": "%cds.previewAsEdmxV2.command.title%"
+			},
+			{
+				"category": "CDS",
+				"subcategory": "preview",
+				"command": "cds.2edmx-v4",
+				"title": "%cds.previewAsEdmxV4.command.title%"
+			},
+			{
+				"category": "CDS",
+				"subcategory": "preview",
+				"command": "cds.2sql",
+				"title": "%cds.previewAsSql.command.title%"
+			},
+			{
+				"category": "CDS",
+				"subcategory": "preview",
+				"command": "cds.4odata",
+				"title": "%cds.previewAsOdata.command.title%"
+			},
+			{
+				"command": "cds.showConfiguration",
+				"title": "%cds.showConfiguration.command.title%",
+				"category": "CDS"
+			},
+			{
+				"command": "cds.showWelcomePage",
+				"title": "%cds.showWelcomePage.command.title%",
+				"category": "CDS"
+			},
+			{
+				"command": "cds.installCdsDk",
+				"title": "%cds.installCdsDk.command.title%",
+				"category": "CDS"
+			},
+			{
+				"command": "cds.showCapNotebookPage",
+				"title": "%cds.showCapNotebookPage.command.title%",
+				"category": "CDS"
+			},
+			{
+				"command": "cds.resetCapNotebookCwd",
+				"title": "%cds.resetCapNotebookCwd.command.title%",
+				"category": "CDS"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "cds.2yaml",
+				"key": "ctrl+alt+L",
+				"mac": "shift+cmd+l",
+				"when": "resourceScheme != cds-preview && resourceFilename =~ /(csn.json|\\.cds$)/i"
+			}
+		],
+		"menus": {
+			"notebook/toolbar": [
+				{
+					"command": "cds.resetCapNotebookCwd",
+					"when": "notebookType == cap-notebook"
+				}
+			],
+			"commandPalette": [
+				{
+					"command": "cds.analyzeDependencies",
+					"when": "false"
+				},
+				{
+					"command": "cds.resetCapNotebookCwd",
+					"when": "notebookType == cap-notebook"
+				},
+				{
+					"command": "cds.2source",
+					"group": "CDS1",
+					"when": "resourceScheme == cds-preview"
+				},
+				{
+					"command": "cds.2json",
+					"group": "CDS1",
+					"when": "resourceScheme != cds-preview && resourceFilename =~ /(\\.cds$|\\.yaml$)/i"
+				},
+				{
+					"command": "cds.2hdbtable",
+					"group": "CDS1",
+					"when": "resourceScheme != cds-preview && resourceFilename =~ /(csn.json|\\.cds$|\\.yaml$)/i"
+				},
+				{
+					"command": "cds.2yaml",
+					"group": "CDS1",
+					"when": "resourceScheme != cds-preview && resourceFilename =~ /(csn.json|\\.cds$)/i"
+				},
+				{
+					"command": "cds.2edmx-v2",
+					"group": "CDS1",
+					"when": "resourceScheme != cds-preview && resourceFilename =~ /(csn.json|\\.cds$|\\.yaml$)/i"
+				},
+				{
+					"command": "cds.2edmx-v4",
+					"group": "CDS1",
+					"when": "resourceScheme != cds-preview && resourceFilename =~ /(csn.json|\\.cds$|\\.yaml$)/i"
+				},
+				{
+					"command": "cds.2sql",
+					"group": "CDS1",
+					"when": "resourceScheme != cds-preview && resourceFilename =~ /(csn.json|\\.cds$|\\.yaml$)/i"
+				},
+				{
+					"command": "cds.4odata",
+					"group": "CDS1",
+					"when": "resourceScheme != cds-preview && resourceFilename =~ /(csn.json|\\.cds$|\\.yaml$)/i"
+				}
+			],
+			"editor/context": [
+				{
+					"command": "cds.analyzeDependencies",
+					"group": "CDS1",
+					"when": "resourceFilename =~ /\\.cds$/i"
+				},
+				{
+					"submenu": "cds.preview",
+					"group": "CDS1",
+					"when": "resourceScheme != cds-preview && resourceFilename =~ /(csn.json|\\.cds$|\\.yaml$)/i"
+				},
+				{
+					"command": "cds.2source",
+					"group": "CDS1",
+					"when": "resourceScheme == cds-preview"
+				}
+			],
+			"explorer/context": [
+				{
+					"command": "cds.analyzeDependencies",
+					"group": "CDS1",
+					"when": "resourceFilename =~ /\\.cds$/i"
+				},
+				{
+					"command": "cds.analyzeDependencies",
+					"group": "CDS1",
+					"when": "explorerResourceIsFolder"
+				},
+				{
+					"submenu": "cds.preview",
+					"group": "CDS1",
+					"when": "resourceScheme != cds-preview && resourceFilename =~ /(csn.json|\\.cds$|\\.yaml$)/i"
+				},
+				{
+					"command": "cds.showConfiguration",
+					"group": "YourGroup@1",
+					"when": "resourceLangId == cds"
+				},
+				{
+					"command": "cds.showConfiguration",
+					"group": "YourGroup@1",
+					"when": "resourceFilename =~ /\\.cdsprettier.json/"
+				}
+			],
+			"cds.preview": [
+				{
+					"command": "cds.2json",
+					"group": "CDS1",
+					"when": "resourceScheme != cds-preview && resourceFilename =~ /(\\.cds$|\\.yaml$)/i"
+				},
+				{
+					"command": "cds.2hdbtable",
+					"group": "CDS1",
+					"when": "resourceScheme != cds-preview && resourceFilename =~ /(csn.json|\\.cds$|\\.yaml$)/i"
+				},
+				{
+					"command": "cds.2yaml",
+					"group": "CDS1",
+					"when": "resourceScheme != cds-preview && resourceFilename =~ /(csn.json|\\.cds$)/i"
+				},
+				{
+					"command": "cds.2edmx-v2",
+					"group": "CDS1",
+					"when": "resourceScheme != cds-preview && resourceFilename =~ /(csn.json|\\.cds$|\\.yaml$)/i"
+				},
+				{
+					"command": "cds.2edmx-v4",
+					"group": "CDS1",
+					"when": "resourceScheme != cds-preview && resourceFilename =~ /(csn.json|\\.cds$|\\.yaml$)/i"
+				},
+				{
+					"command": "cds.2sql",
+					"group": "CDS1",
+					"when": "resourceScheme != cds-preview && resourceFilename =~ /(csn.json|\\.cds$|\\.yaml$)/i"
+				},
+				{
+					"command": "cds.4odata",
+					"group": "CDS1",
+					"when": "resourceScheme != cds-preview && resourceFilename =~ /(csn.json|\\.cds$|\\.yaml$)/i"
+				}
+			]
+		},
+		"submenus": [
+			{
+				"id": "cds.preview",
+				"label": "%cds.previewSubMenu.label%"
+			}
+		],
+		"languages": [
+			{
+				"id": "cds",
+				"aliases": [
+					"CDS",
+					"CDS Repl"
+				],
+				"extensions": [
+					".cds"
+				],
+				"configuration": "./node_modules/@sap/cds-lsp/syntaxes/cds.configuration.json",
+				"icon": {
+					"dark": "./media/cap-logo.svg",
+					"light": "./media/cap-logo.svg"
+				}
+			},
+			{
+				"id": "cds server",
+				"aliases": [
+					"CDS Server"
+				],
+				"icon": {
+					"dark": "./media/it-host.svg",
+					"light": "./media/it-host.svg"
+				}
+			},
+			{
+				"id": "json",
+				"extensions": [
+					".csn"
+				]
+			},
+			{
+				"id": "terminal",
+				"aliases": [
+					"Terminal"
+				]
+			},
+			{
+				"id": "shell",
+				"aliases": [
+					"Shell"
+				],
+				"icon": {
+					"dark": "./media/command-line-interfaces.svg",
+					"light": "./media/command-line-interfaces.svg"
+				}
+			},
+			{
+				"id": "capnb",
+				"aliases": [
+					"CAP Notebook"
+				],
+				"extensions": [
+					".capnb"
+				],
+				"icon": {
+					"dark": "./media/cap-logo.svg",
+					"light": "./media/cap-logo.svg"
+				}
+			},
+			{
+				"id": "csv (semicolon)",
+				"aliases": [
+					"CSV (semicolon)"
+				]
+			}
+		],
+		"grammars": [
+			{
+				"language": "cds",
+				"scopeName": "source.cds",
+				"path": "./node_modules/@sap/cds-lsp/syntaxes/cds.tmLanguage.json"
+			},
+			{
+				"language": "shell",
+				"scopeName": "source.shell",
+				"path": "./syntaxes/shell-unix-bash.tmLanguage.json"
+			},
+			{
+				"language": "terminal",
+				"scopeName": "source.shell",
+				"path": "./syntaxes/shell-unix-bash.tmLanguage.json"
+			}
+		],
+		"configuration": {
+			"id": "cdx",
+			"order": 20,
+			"type": "object",
+			"title": "CDS Code Editor",
+			"properties": {
+				"cds.typeGenerator.enabled": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "%cds.typeGenerator.enabled.desc.markdown%",
+					"restartLsp": true,
+					"order": 1
+				},
+				"cds.typeGenerator.outputPath": {
+					"type": "string",
+					"default": "@cds-models",
+					"markdownDescription": "%cds.typeGenerator.outputPath.desc.markdown%",
+					"order": 2
+				},
+				"cds.typeGenerator.command": {
+					"type": "string",
+					"default": "${typerBinary} \"${targetFile}\" --outputDirectory \"${outputDirectory}\"",
+					"markdownDescription": "%cds.typeGenerator.command.desc.markdown%",
+					"restartLsp": true,
+					"order": 3
+				},
+				"cds.enableDynamicLsp": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "%cds.enableDynamicLsp.desc.markdown%"
+				},
+				"cds.resetNotebookCwdOnRunAll": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "%cds.capbook.resetCwdOnRunAll.desc.markdown%"
+				},
+				"cds.releaseNotes.showAutomatically": {
+					"type": "boolean",
+					"default": true,
+					"description": "%cds.releaseNotes.showAutomatically.desc%"
+				},
+				"cds.preview.refreshOnSave": {
+					"type": "boolean",
+					"default": true,
+					"description": "%cds.preview.refreshOnSave.desc%"
+				},
+				"cds.preview.sideBySide": {
+					"type": "boolean",
+					"default": true,
+					"description": "%cds.preview.sideBySide.desc%"
+				},
+				"cds.checkDevKitInstalled": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "%cds.checkDevKitInstalled.desc.markdown%"
+				},
+				"cds.compiler.detectLocalSapCdsInstallation": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "%cds.compiler.detectLocalSapCdsInstallation.desc.markdown%",
+					"restartLsp": true
+				},
+				"cds.compiler.markMissingI18nDefault": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "%cds.compiler.markMissingI18nDefault.desc.markdown%"
+				},
+				"cds.compiler.showInternalErrors": {
+					"type": "boolean",
+					"default": true,
+					"description": "%cds.compiler.showInternalErrors.desc%"
+				},
+				"cds.completion.annotations.omitRedundantTypesInSnippets": {
+					"type": "boolean",
+					"default": false,
+					"description": "%cds.completion.annotations.omitRedundantTypesInSnippets.desc%"
+				},
+				"cds.completion.showDocumentation": {
+					"type": "boolean",
+					"default": true,
+					"description": "%cds.completion.showDocumentation.desc%"
+				},
+				"cds.completion.docFiles": {
+					"scope": "window",
+					"type": "array",
+					"description": "%cds.completion.docFiles.desc%",
+					"items": {
+						"type": "string"
+					},
+					"default": [
+						"README.md"
+					]
+				},
+				"cds.completion.formatSnippets": {
+					"type": "boolean",
+					"default": false,
+					"description": "%cds.completion.formatSnippets.desc%"
+				},
+				"cds.completion.workspaceSymbols.maxProposals": {
+					"type": "number",
+					"description": "%cds.completion.workspaceSymbols.maxProposals.desc%",
+					"default": -1
+				},
+				"cds.completion.workspaceSymbols.minPrefixLength": {
+					"type": "number",
+					"description": "%cds.completion.workspaceSymbols.minPrefixLength.desc%",
+					"default": -1
+				},
+				"cds.contributions.registry": {
+					"type": "string",
+					"description": "%cds.contributions.registry.desc%",
+					"default": "https://registry.npmjs.org"
+				},
+				"cds.contributions.enablement.longRunning.detect": {
+					"type": "boolean",
+					"markdownDescription": "%cds.contributions.enablement.longRunning.detect.desc.markdown%",
+					"default": true
+				},
+				"cds.contributions.enablement.longRunning.maxMillis": {
+					"type": "number",
+					"description": "%cds.contributions.enablement.longRunning.maxMillis.desc%",
+					"default": 3000
+				},
+				"cds.contributions.enablement.longRunning.repeats": {
+					"type": "number",
+					"description": "%cds.contributions.enablement.longRunning.repeats.desc%",
+					"default": 5
+				},
+				"cds.contributions.enablement.longRunning.timeFrameSeconds": {
+					"type": "number",
+					"description": "%cds.contributions.enablement.longRunning.timeFrameSeconds.desc%",
+					"default": 120
+				},
+				"cds.contributions.enablement.odata": {
+					"type": "boolean",
+					"description": "%cds.contributions.enablement.odata.desc%",
+					"default": true,
+					"restartLsp": true
+				},
+				"cds.diagnosticsSeverity": {
+					"type": "string",
+					"enum": [
+						"Error",
+						"Warning",
+						"Info",
+						"Debug"
+					],
+					"default": "Warning",
+					"restartLsp": true,
+					"scope": "window",
+					"markdownDescription": "%cds.diagnosticsSeverity.desc.markdown%"
+				},
+				"cds.outline.semantical": {
+					"type": "boolean",
+					"description": "%cds.outline.semantical.desc%",
+					"default": false
+				},
+				"cds.quickfix.importArtifact": {
+					"type": "boolean",
+					"markdownDescription": "%cds.quickfix.importArtifact.desc.markdown%",
+					"default": false
+				},
+				"cds.semanticHighlighting.enabled": {
+					"type": "boolean",
+					"description": "%cds.semanticHighlighting.enabled.desc%",
+					"default": false,
+					"restartLsp": true
+				},
+				"cds.trace.server": {
+					"type": "string",
+					"scope": "window",
+					"enum": [
+						"off",
+						"messages",
+						"verbose"
+					],
+					"default": "off",
+					"markdownDescription": "%cds.trace.server.desc.markdown%"
+				},
+				"cds.trace.components": {
+					"scope": "window",
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string",
+								"enum": [
+									"*",
+									"adapter",
+									"cdsenv",
+									"completion",
+									"contribution",
+									"docs",
+									"format",
+									"model",
+									"requests",
+									"util",
+									"workspace",
+									"build",
+									"lsp",
+									"WelcomePage",
+									"Install cds-dk",
+									"FilePreview",
+									"DynamicJsonSchema",
+									"DynamicLsp"
+								]
+							},
+							"level": {
+								"type": "string",
+								"enum": [
+									"off",
+									"error",
+									"warning",
+									"info",
+									"verbose",
+									"debug"
+								]
+							}
+						}
+					},
+					"default": []
+				},
+				"cds.trace.logfiles.count": {
+					"type": "number",
+					"scope": "window",
+					"default": "3",
+					"description": "%cds.trace.logfiles.count.desc%"
+				},
+				"cds.trace.logfiles.maxSize": {
+					"type": "number",
+					"scope": "window",
+					"default": "20000000",
+					"description": "%cds.trace.logfiles.maxSize.desc%"
+				},
+				"cds.whereused.showGenericAnnotations": {
+					"type": "boolean",
+					"default": false,
+					"scope": "window",
+					"markdownDescription": "%cds.whereused.showGenericAnnotations.desc.markdown%"
+				},
+				"cds.whereused.showStringConstants": {
+					"type": "boolean",
+					"default": false,
+					"scope": "window",
+					"markdownDescription": "%cds.whereused.showStringConstants.desc.markdown%"
+				},
+				"cds.workspace.debounceFastChanges": {
+					"type": "boolean",
+					"default": true,
+					"scope": "window",
+					"description": "%cds.workspace.debounceFastChanges.desc%"
+				},
+				"cds.workspace.scanCsn": {
+					"type": "string",
+					"enum": [
+						"Off",
+						"ByFileExtension",
+						"InspectJson"
+					],
+					"default": "ByFileExtension",
+					"scope": "window",
+					"markdownDescription": "%cds.workspace.scanCsn.desc.markdown%"
+				},
+				"cds.workspace.scanDependentModules": {
+					"type": "boolean",
+					"default": false,
+					"scope": "window",
+					"description": "%cds.workspace.scanDependentModules.desc%"
+				},
+				"cds.workspaceSymbols.caseInsensitive": {
+					"type": "boolean",
+					"default": false,
+					"scope": "window",
+					"markdownDescription": "%cds.workspaceSymbols.caseInsensitive.desc.markdown%"
+				},
+				"cds.workspaceSymbols.lazy": {
+					"type": "boolean",
+					"default": false,
+					"scope": "window",
+					"markdownDescription": "%cds.workspaceSymbols.lazy.desc.markdown%"
+				},
+				"cds.workspaceValidationMode": {
+					"type": "string",
+					"enum": [
+						"ActiveEditorOnly",
+						"OpenEditorsOnly",
+						"OpenEditorsAndDirectSources",
+						"OpenEditorsDirectSourcesAndDirectDependencies"
+					],
+					"default": "ActiveEditorOnly",
+					"scope": "window",
+					"markdownDescription": "%cds.workspaceValidationMode.desc.markdown%"
+				},
+				"cds.workspaceValidationOptimistic": {
+					"type": "boolean",
+					"default": true,
+					"scope": "window",
+					"markdownDescription": "%cds.workspaceValidationOptimistic.desc.markdown%"
+				}
+			}
+		}
+	},
+	"__metadata": {
+		"id": "8b89f196-f169-42cd-9cde-a56c0009f4d7",
+		"publisherId": "a17c53d7-5315-4db5-a571-feab995abf60",
+		"publisherDisplayName": "SAP SE",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": true,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1696998665799,
+		"preRelease": false
+	}
+}

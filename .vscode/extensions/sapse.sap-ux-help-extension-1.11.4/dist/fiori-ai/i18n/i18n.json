@@ -1,0 +1,12 @@
+{
+    "CHAT_PROJECT_EXPLORER_VIEw_OPEN_FILE_COMMAND_TITLE": "Open File",
+    "GEN_PRO_APP": "Generating Fiori app '{{appName}}'",
+    "GEN_PRO_APPLY_DATA_MODEL": "Applying data model",
+    "GEN_PRO_CREATE_CAP": "Creating new CAP project",
+    "GEN_PRO_ERROR": "Error while generating project: {{-error}}",
+    "GEN_PRO_ERROR_OPEN_TERMINAL": "Can not open terminal and start project",
+    "GEN_PRO_NO_OPEN_WORKSPACE": "No workspace opened, please open workspace",
+    "GEN_PRO_NPM_INSTALL": "Installing node modules",
+    "GEN_PRO_SELECT_WORKSPACE": "Select workspace root directory",
+    "GEN_PRO_START_APP": "Starting Fiori app"
+}

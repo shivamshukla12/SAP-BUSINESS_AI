@@ -1,0 +1,26 @@
+[
+    {
+        "kind": 1,
+        "language": "markdown",
+        "value": "# The *CDS* cell\n\nThe *CDS* cell in your CAP Notebook executes your cell content in the [`cds repl`](https://cap.cloud.sap/docs/tools/?q=cds+repl#cds-repl):<br>\n\n- When executed, the command is run in an underlying `cds repl` subprocess (see [Single command](#single-command) example).\n- Used to interact with the CAP's [Node.js APIs](https://cap.cloud.sap/docs/node.js/cds-facade) (split by new lines, see [Multiple commands](#multiple-commands) example).\n- Output is returned to the CAP Notebook.\n\n## Examples\n\n### [Single command](#single-command)\n\nSimply write into the *CDS* code cell just like you would in your [`cds repl`](https://cap.cloud.sap/docs/tools/?q=cds+repl#cds-repl).\n\nThe following cell prints the `cds` object in the output when executed:",
+        "outputs": []
+    },
+    {
+        "kind": 2,
+        "language": "cds",
+        "value": "cds",
+        "outputs": []
+    },
+    {
+        "kind": 1,
+        "language": "markdown",
+        "value": "### [Multiple commands](#multiple-commands)\n\nYou can also fire off multiple Javascript commands on one code cell by just starting a new line as you would in any *Javascript* scsript file. The following cell demonstrates via by an [example for services](https://cap.cloud.sap/docs/node.js/cds-reflect#services), where the cell prints the name of the `CatalogService` after consuming the model from `CDL` and getting th `services` from the [reflected model](https://cap.cloud.sap/docs/node.js/cds-reflect#cds-linked):",
+        "outputs": []
+    },
+    {
+        "kind": 2,
+        "language": "cds",
+        "value": "let csn = CDL`\n  service CatalogService {}\n  service AdminService {}\n`\nlet m = cds.linked (csn)\nlet [ CatalogService, AdminService ] = m.services\n\nCatalogService.name",
+        "outputs": []
+    }
+]

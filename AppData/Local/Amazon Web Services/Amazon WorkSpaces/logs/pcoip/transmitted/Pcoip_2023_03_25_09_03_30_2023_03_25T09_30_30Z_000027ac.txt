@@ -1,0 +1,262 @@
+2023-03-25T09:30:30.122Z 00000000-0000-0000-0000-000000000000 LVL:0 RC:   0          COMMON :Setting pcoip.event_filter_mode to 2
+2023-03-25T09:30:30.123Z 00000000-0000-0000-0000-000000000000 LVL:0 RC:   0          CLIENT : Teradici Module Name = Anyware PCoIP Desktop Client Core SDK, External product version = 22.09.3, Internal product version = release/22.09.3@c873a095ce
+2023-03-25T09:30:30.123Z 00000000-0000-0000-0000-000000000000 LVL:0 RC:   0          CLIENT :Teradici Module Name = Anyware PCoIP Desktop Client PCOIP_CORE_API, Version Number = 13, Internal product version = release/22.09.3@c873a095ce
+2023-03-25T09:30:30.123Z 00000000-0000-0000-0000-000000000000 LVL:1 RC:   0          CLIENT :Teradici Module Name = Anyware PCoIP Desktop Client unneeded initialization
+2023-03-25T09:30:30.123Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0        MGMT_USB :tera_mgmt_usb_register_device_status_cback_with_history updated cback 0
+2023-03-25T09:30:30.123Z 00000000-0000-0000-0000-000000000000 LVL:0 RC:   0          COMMON :Setting pcoip.event_filter_mode to 2
+2023-03-25T09:30:30.123Z 00000000-0000-0000-0000-000000000000 LVL:0 RC:   0        MGMT_SYS :Session Port found as '4172'
+2023-03-25T09:30:30.123Z 00000000-0000-0000-0000-000000000000 LVL:0 RC:   0        MGMT_SYS :Session Addr found as '35.80.95.72'
+2023-03-25T09:30:30.123Z 00000000-0000-0000-0000-000000000000 LVL:0 RC:   0        MGMT_SYS :Session SNI received as 'pcoip-default-sni'
+2023-03-25T09:30:30.123Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             PRI :pri_client_set_tag: Version 1 format. ssig_tag is set
+2023-03-25T09:30:30.123Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          COMMON :parse_janus_session_tag: session tag flags = 0x5A81
+2023-03-25T09:30:30.123Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             PRI :tera_pri_client_set_tag: Client Session ID Tag: 'Qv9frNTWfJwA' Value:42ff5facd4d67c9c
+2023-03-25T09:30:30.123Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :Reset TX control block
+2023-03-25T09:30:30.123Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :Reset RX control block
+2023-03-25T09:30:30.123Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :tera_mgmt_pcoip_data_prep_connection: We DON'T log stats updates.
+2023-03-25T09:30:30.126Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             DDC :(tera_ddc_get_edid_internal) Attached monitor found ............
+2023-03-25T09:30:30.126Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             DDC :mon[0].StateFlags = 0x00000003
+2023-03-25T09:30:30.126Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             DDC :Found a match for '{4d36e96e-e325-11ce-bfc1-08002be10318}\0000'
+2023-03-25T09:30:30.126Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             DDC :EDID found
+2023-03-25T09:30:53.917Z 00000000-0000-0000-0000-000000000000 LVL:1 RC:-500       MGMT_SSIG :(fsm_connect_client_version_neg_trusted): No Message Received in allotted time!
+2023-03-25T09:30:54.202Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          COMMON :SOCKET_TRACE: tera_sock_socket_close() closed socket 14904 - currently 1 sockets.
+2023-03-25T09:30:54.202Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          COMMON :SOCKET_TRACE: Not reinitializing - currently 1 sockets in use.
+2023-03-25T09:30:54.202Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :Determined address type from target IP address provided (35.80.95.72): 2
+2023-03-25T09:30:54.202Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          COMMON :SOCKET_TRACE: tera_sock_socket_close() closed socket 22760 - currently 0 sockets.
+2023-03-25T09:30:54.203Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SSIG :ERROR - could not get user msg for 89 : 9
+2023-03-25T09:30:54.203Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             PRI :tera_pri_client_set_tag: Old or MAC format. ssig_tag is set
+2023-03-25T09:30:54.203Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             PRI :tera_pri_client_set_tag: Client Session ID: 'ssig:70-A8-D3-8F-1A-A1'
+2023-03-25T09:30:54.209Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :Not using interface: 0 Addr: fe80::625f:7336:c385:453e Desc: Intel(R) Wi-Fi 6E AX211 160MHz MAC: 70-A8-D3-8F-1A-A1
+2023-03-25T09:30:54.209Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :Found an IPv4 interface: 1 Addr: 10.207.86.151 Desc: Intel(R) Wi-Fi 6E AX211 160MHz MAC: 70-A8-D3-8F-1A-A1
+2023-03-25T09:30:54.209Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0        MGMT_ENV :Setting ENV variable[  3]: pcoip.mac_addr = 70-A8-D3-8F-1A-A1
+2023-03-25T09:30:54.209Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :Selected interface address: 10.207.86.151
+2023-03-25T09:30:54.209Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0        MGMT_ENV :Setting ENV variable[  4]: pcoip.ip_address = 10.207.86.151
+2023-03-25T09:30:54.209Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0        MGMT_ENV :Setting ENV variable[  6]: pcoip.subnet_mask = 
+2023-03-25T09:30:54.209Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :Client is configured to choose its own UDP port
+2023-03-25T09:30:54.209Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :tera_vgmac_open_pcoip_sock(): single ip mode, ipv4:'10.207.86.151'
+2023-03-25T09:30:54.209Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          COMMON :SOCKET_TRACE: tera_sock_socket() added socket 20964 - currently 1 sockets.
+2023-03-25T09:30:54.209Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :PCoIP socket has been bound to local IP 10.207.86.151 [UDP] port 50002 (bind), socket 20964
+2023-03-25T09:30:54.209Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :UDP port selected is base=50002, range=4096, set=50002
+2023-03-25T09:30:54.209Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0        MGMT_ENV :Setting ENV variable[ 10]: pcoip.udp_port = 50002
+2023-03-25T09:30:54.209Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :init_crypto_cipher: pcoip crypto library supports AES-256-GCM encryption
+2023-03-25T09:30:54.209Z 00000000-0000-0000-0000-000000000000 LVL:1 RC:   0        MGMT_SYS :SESSION_ACTIVE: UNRECOGNIZED EVENT: 0x4 (MGMT_UI)!
+2023-03-25T09:30:54.250Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :Tx thread info: bw limit = 9216, avg tx = 0.4, avg rx = 0.8 (kbit/s)
+2023-03-25T09:30:54.250Z 00000000-0000-0000-0000-000000000000 LVL:1 RC:   0           VGMAC :Stat frms: R=000197/000055/000185  T=000000/000000/000442 (A/I/O) Loss=0.00%/0.00% (R/T)
+2023-03-25T09:30:54.250Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :Memory stat: available physical memory = 4139MB/16108MB
+2023-03-25T09:30:55.206Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SESS :MgmtSess::Impl::reconnect_processing: Trying to reconnect - Attempt #20
+2023-03-25T09:30:55.206Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SESS :MgmtSess::Impl::reconnect_processing: Setting resume timeout to 105919 ms
+2023-03-25T09:30:55.207Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SESS :MgmtSess::Impl::callReconnectingCallback: TERA_MGMT_SESS_RECONNECT_STATE_RECONNECTING
+2023-03-25T09:30:55.207Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          CLIENT :Connection State Notification: ConnectState: 3, DisconnectCause: 0x0, AuthState 2, Callback: Registered
+2023-03-25T09:30:55.210Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             PRI :pri_client_set_tag: Version 1 format. ssig_tag is set
+2023-03-25T09:30:55.210Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          COMMON :parse_janus_session_tag: session tag flags = 0x5A81
+2023-03-25T09:30:55.210Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             PRI :tera_pri_client_set_tag: Client Session ID Tag: 'Qv9frNTWfJwA' Value:42ff5facd4d67c9c
+2023-03-25T09:30:55.210Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :Reset TX control block
+2023-03-25T09:30:55.210Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :Reset RX control block
+2023-03-25T09:30:55.210Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :tera_mgmt_pcoip_data_prep_connection: We DON'T log stats updates.
+2023-03-25T09:30:55.210Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          COMMON :SOCKET_TRACE: tera_sock_socket_close() closed socket 20964 - currently 0 sockets.
+2023-03-25T09:30:55.210Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :Determined address type from target IP address provided (35.80.95.72): 2
+2023-03-25T09:30:55.211Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             DDC :(tera_ddc_get_edid_internal) Attached monitor found ............
+2023-03-25T09:30:55.211Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             DDC :mon[0].StateFlags = 0x00000003
+2023-03-25T09:30:55.211Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             DDC :Found a match for '{4d36e96e-e325-11ce-bfc1-08002be10318}\0000'
+2023-03-25T09:30:55.211Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             DDC :EDID found
+2023-03-25T09:30:55.217Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :Not using interface: 0 Addr: fe80::625f:7336:c385:453e Desc: Intel(R) Wi-Fi 6E AX211 160MHz MAC: 70-A8-D3-8F-1A-A1
+2023-03-25T09:30:55.217Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :Found an IPv4 interface: 1 Addr: 10.207.86.151 Desc: Intel(R) Wi-Fi 6E AX211 160MHz MAC: 70-A8-D3-8F-1A-A1
+2023-03-25T09:30:55.217Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0        MGMT_ENV :Setting ENV variable[  3]: pcoip.mac_addr = 70-A8-D3-8F-1A-A1
+2023-03-25T09:30:55.217Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :Selected interface address: 10.207.86.151
+2023-03-25T09:30:55.217Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0        MGMT_ENV :Setting ENV variable[  4]: pcoip.ip_address = 10.207.86.151
+2023-03-25T09:30:55.217Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0        MGMT_ENV :Setting ENV variable[  6]: pcoip.subnet_mask = 
+2023-03-25T09:30:55.217Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :Client is configured to choose its own UDP port
+2023-03-25T09:30:55.217Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :tera_vgmac_open_pcoip_sock(): single ip mode, ipv4:'10.207.86.151'
+2023-03-25T09:30:55.217Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          COMMON :SOCKET_TRACE: tera_sock_socket() added socket 22896 - currently 1 sockets.
+2023-03-25T09:30:55.217Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :PCoIP socket has been bound to local IP 10.207.86.151 [UDP] port 50002 (bind), socket 22896
+2023-03-25T09:30:55.217Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :UDP port selected is base=50002, range=4096, set=50002
+2023-03-25T09:30:55.217Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0        MGMT_ENV :Setting ENV variable[ 10]: pcoip.udp_port = 50002
+2023-03-25T09:30:55.217Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :init_crypto_cipher: pcoip crypto library supports AES-256-GCM encryption
+2023-03-25T09:30:55.217Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SSIG :ERROR - could not get user msg for 89 : 1
+2023-03-25T09:30:55.217Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          COMMON :SOCKET_TRACE: tera_sock_socket() added socket 21056 - currently 2 sockets.
+2023-03-25T09:30:55.217Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0      MGMT_SCHAN :(scnet_client_open_ssl): setting the host name to ask for in SNI to pcoip-default-sni
+2023-03-25T09:30:55.880Z 00000000-0000-0000-0000-000000000000 LVL:1 RC:-500     CERTIFICATE :tera_certificate_utility_commpare_with_legacy: making X.509 cert from legacy certificate object failed.
+2023-03-25T09:30:55.881Z 00000000-0000-0000-0000-000000000000 LVL:1 RC:-500     CERTIFICATE :tera_certificate_utility_commpare_with_legacy: making X.509 cert from legacy certificate object failed.
+2023-03-25T09:30:56.113Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :Tx thread info: round trip time (ms) = 333, variance =  42, rto = 475, last = 297, max =   0
+2023-03-25T09:30:56.188Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :(scnet_client_open_ssl): Certificate sent by the Janus server to open the SSL connection:
+2023-03-25T09:30:56.188Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Signature Algorithm: sha384WithRSAEncryption 
+2023-03-25T09:30:56.188Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Issuer: C=US,ST=Washington,L=Seattle,O=Amazon Web Services,OU=SoftPCoIP,contentType=SecurityGateway,CN=35.80.95.72 
+2023-03-25T09:30:56.188Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Not Before: Mar  7 04:10:09 2023 GMT 
+2023-03-25T09:30:56.188Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Not After : Mar  5 04:10:09 2028 GMT 
+2023-03-25T09:30:56.188Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Subject: C=US,ST=Washington,L=Seattle,O=Amazon Web Services,OU=SoftPCoIP,contentType=SecurityGateway,CN=35.80.95.72 
+2023-03-25T09:30:56.188Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Subject Public Key Info: 
+2023-03-25T09:30:56.188Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Public Key Algorithm: rsaEncryption 
+2023-03-25T09:30:56.188Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> RSA Public-Key: (1024 bit) 
+2023-03-25T09:30:56.188Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           SCNET :(scnet_validate_by_thumbprint_hash): thumbprint hash comparison succeeded
+2023-03-25T09:30:56.188Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           SCNET :(scnet_client_open): Connected to 35.80.95.72:4172
+2023-03-25T09:30:56.189Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0        MGMT_ENV :Setting ENV variable[  4]: pcoip.ip_address = 10.207.86.151
+2023-03-25T09:30:56.189Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SSIG :ERROR - could not get user msg for 89 : 14
+2023-03-25T09:30:56.495Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SSIG :(fsma_connect_client_get_xml_version): parsed spi_preference of 0 from PCOIP_VERSION
+2023-03-25T09:30:56.495Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SSIG :(fsma_connect_client_get_xml_version): PCOIP_VERSION has MITM devices present:1 (salsa will be disabled)
+2023-03-25T09:30:56.495Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SSIG :(fsma_connect_client_get_xml_version): MITM[0] in message, name="35.80.95.72", version=1.0, spi=0 (0 is unspecified)
+2023-03-25T09:30:56.495Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0            PSDP :pcoip_video_4: pcoip image codec list is supported
+2023-03-25T09:30:56.803Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SSIG :ERROR - could not get user msg for 89 : 5
+2023-03-25T09:30:57.109Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          COMMON :SOCKET_TRACE: tera_sock_socket_close() closed socket 21056 - currently 1 sockets.
+2023-03-25T09:30:57.110Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SESS :MgmtSess::Impl::handle_events_omni_state: Processing EVENT_SSIG_OPEN_INVALID, reason: 1045
+2023-03-25T09:30:57.110Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SSIG :ERROR - could not get user msg for 89 : 9
+2023-03-25T09:30:57.110Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             PRI :tera_pri_client_set_tag: Old or MAC format. ssig_tag is set
+2023-03-25T09:30:57.110Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             PRI :tera_pri_client_set_tag: Client Session ID: 'ssig:70-A8-D3-8F-1A-A1'
+2023-03-25T09:30:57.111Z 00000000-0000-0000-0000-000000000000 LVL:1 RC:-503       MGMT_SESS :MgmtSess::Impl::reconnect_processing: Invalid message [msg->event_type = 0x2b]
+2023-03-25T09:31:01.118Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SESS :MgmtSess::Impl::reconnect_processing: Trying to reconnect - Attempt #21
+2023-03-25T09:31:01.118Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SESS :MgmtSess::Impl::reconnect_processing: Setting resume timeout to 100008 ms
+2023-03-25T09:31:01.119Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SESS :MgmtSess::Impl::callReconnectingCallback: TERA_MGMT_SESS_RECONNECT_STATE_RECONNECTING
+2023-03-25T09:31:01.119Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          CLIENT :Connection State Notification: ConnectState: 3, DisconnectCause: 0x0, AuthState 2, Callback: Registered
+2023-03-25T09:31:01.119Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             PRI :pri_client_set_tag: Version 1 format. ssig_tag is set
+2023-03-25T09:31:01.119Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          COMMON :parse_janus_session_tag: session tag flags = 0x5A81
+2023-03-25T09:31:01.119Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             PRI :tera_pri_client_set_tag: Client Session ID Tag: 'Qv9frNTWfJwA' Value:42ff5facd4d67c9c
+2023-03-25T09:31:01.119Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :Reset TX control block
+2023-03-25T09:31:01.119Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :Reset RX control block
+2023-03-25T09:31:01.119Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :tera_mgmt_pcoip_data_prep_connection: We DON'T log stats updates.
+2023-03-25T09:31:01.119Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          COMMON :SOCKET_TRACE: tera_sock_socket_close() closed socket 22896 - currently 0 sockets.
+2023-03-25T09:31:01.119Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :Determined address type from target IP address provided (35.80.95.72): 2
+2023-03-25T09:31:01.121Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             DDC :(tera_ddc_get_edid_internal) Attached monitor found ............
+2023-03-25T09:31:01.121Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             DDC :mon[0].StateFlags = 0x00000003
+2023-03-25T09:31:01.121Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             DDC :Found a match for '{4d36e96e-e325-11ce-bfc1-08002be10318}\0000'
+2023-03-25T09:31:01.121Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             DDC :EDID found
+2023-03-25T09:31:01.126Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :Not using interface: 0 Addr: fe80::625f:7336:c385:453e Desc: Intel(R) Wi-Fi 6E AX211 160MHz MAC: 70-A8-D3-8F-1A-A1
+2023-03-25T09:31:01.126Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :Found an IPv4 interface: 1 Addr: 10.207.86.151 Desc: Intel(R) Wi-Fi 6E AX211 160MHz MAC: 70-A8-D3-8F-1A-A1
+2023-03-25T09:31:01.126Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0        MGMT_ENV :Setting ENV variable[  3]: pcoip.mac_addr = 70-A8-D3-8F-1A-A1
+2023-03-25T09:31:01.126Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :Selected interface address: 10.207.86.151
+2023-03-25T09:31:01.126Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0        MGMT_ENV :Setting ENV variable[  4]: pcoip.ip_address = 10.207.86.151
+2023-03-25T09:31:01.126Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0        MGMT_ENV :Setting ENV variable[  6]: pcoip.subnet_mask = 
+2023-03-25T09:31:01.126Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :Client is configured to choose its own UDP port
+2023-03-25T09:31:01.126Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :tera_vgmac_open_pcoip_sock(): single ip mode, ipv4:'10.207.86.151'
+2023-03-25T09:31:01.126Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          COMMON :SOCKET_TRACE: tera_sock_socket() added socket 15184 - currently 1 sockets.
+2023-03-25T09:31:01.126Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :PCoIP socket has been bound to local IP 10.207.86.151 [UDP] port 50002 (bind), socket 15184
+2023-03-25T09:31:01.126Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :UDP port selected is base=50002, range=4096, set=50002
+2023-03-25T09:31:01.126Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0        MGMT_ENV :Setting ENV variable[ 10]: pcoip.udp_port = 50002
+2023-03-25T09:31:01.126Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :init_crypto_cipher: pcoip crypto library supports AES-256-GCM encryption
+2023-03-25T09:31:01.127Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SSIG :ERROR - could not get user msg for 89 : 1
+2023-03-25T09:31:01.127Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          COMMON :SOCKET_TRACE: tera_sock_socket() added socket 22988 - currently 2 sockets.
+2023-03-25T09:31:01.127Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0      MGMT_SCHAN :(scnet_client_open_ssl): setting the host name to ask for in SNI to pcoip-default-sni
+2023-03-25T09:31:01.820Z 00000000-0000-0000-0000-000000000000 LVL:1 RC:-500     CERTIFICATE :tera_certificate_utility_commpare_with_legacy: making X.509 cert from legacy certificate object failed.
+2023-03-25T09:31:01.821Z 00000000-0000-0000-0000-000000000000 LVL:1 RC:-500     CERTIFICATE :tera_certificate_utility_commpare_with_legacy: making X.509 cert from legacy certificate object failed.
+2023-03-25T09:31:02.128Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :(scnet_client_open_ssl): Certificate sent by the Janus server to open the SSL connection:
+2023-03-25T09:31:02.128Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Signature Algorithm: sha384WithRSAEncryption 
+2023-03-25T09:31:02.128Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Issuer: C=US,ST=Washington,L=Seattle,O=Amazon Web Services,OU=SoftPCoIP,contentType=SecurityGateway,CN=35.80.95.72 
+2023-03-25T09:31:02.128Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Not Before: Mar  7 04:10:09 2023 GMT 
+2023-03-25T09:31:02.128Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Not After : Mar  5 04:10:09 2028 GMT 
+2023-03-25T09:31:02.128Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Subject: C=US,ST=Washington,L=Seattle,O=Amazon Web Services,OU=SoftPCoIP,contentType=SecurityGateway,CN=35.80.95.72 
+2023-03-25T09:31:02.128Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Subject Public Key Info: 
+2023-03-25T09:31:02.128Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Public Key Algorithm: rsaEncryption 
+2023-03-25T09:31:02.128Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> RSA Public-Key: (1024 bit) 
+2023-03-25T09:31:02.128Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           SCNET :(scnet_validate_by_thumbprint_hash): thumbprint hash comparison succeeded
+2023-03-25T09:31:02.128Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           SCNET :(scnet_client_open): Connected to 35.80.95.72:4172
+2023-03-25T09:31:02.128Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0        MGMT_ENV :Setting ENV variable[  4]: pcoip.ip_address = 10.207.86.151
+2023-03-25T09:31:02.128Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SSIG :ERROR - could not get user msg for 89 : 14
+2023-03-25T09:31:54.425Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :Tx thread info: bw limit = 9216, avg tx = 0.4, avg rx = 0.8 (kbit/s)
+2023-03-25T09:31:54.425Z 00000000-0000-0000-0000-000000000000 LVL:1 RC:   0           VGMAC :Stat frms: R=000197/000055/000185  T=000000/000000/000442 (A/I/O) Loss=0.00%/0.00% (R/T)
+2023-03-25T09:31:54.425Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :Memory stat: available physical memory = 4110MB/16108MB
+2023-03-25T09:31:57.356Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :Tx thread info: round trip time (ms) = 333, variance =  42, rto = 475, last = 297, max =   0
+2023-03-25T09:32:02.117Z 00000000-0000-0000-0000-000000000000 LVL:1 RC:-500       MGMT_SSIG :(fsm_connect_client_version_neg_trusted): No Message Received in allotted time!
+2023-03-25T09:32:02.118Z 00000000-0000-0000-0000-000000000000 LVL:1 RC:-500          COMMON :poll_sockets failed to generate 1 callbacks!
+2023-03-25T09:32:02.118Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          COMMON :SOCKET_TRACE: tera_sock_socket_close() closed socket 22988 - currently 1 sockets.
+2023-03-25T09:32:02.118Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SSIG :ERROR - could not get user msg for 89 : 9
+2023-03-25T09:32:02.118Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             PRI :tera_pri_client_set_tag: Old or MAC format. ssig_tag is set
+2023-03-25T09:32:02.118Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             PRI :tera_pri_client_set_tag: Client Session ID: 'ssig:70-A8-D3-8F-1A-A1'
+2023-03-25T09:32:03.122Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SESS :MgmtSess::Impl::reconnect_processing: Trying to reconnect - Attempt #22
+2023-03-25T09:32:03.122Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SESS :MgmtSess::Impl::reconnect_processing: Setting resume timeout to 38004 ms
+2023-03-25T09:32:03.123Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SESS :MgmtSess::Impl::callReconnectingCallback: TERA_MGMT_SESS_RECONNECT_STATE_RECONNECTING
+2023-03-25T09:32:03.123Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          CLIENT :Connection State Notification: ConnectState: 3, DisconnectCause: 0x0, AuthState 2, Callback: Registered
+2023-03-25T09:32:03.124Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             PRI :pri_client_set_tag: Version 1 format. ssig_tag is set
+2023-03-25T09:32:03.124Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          COMMON :parse_janus_session_tag: session tag flags = 0x5A81
+2023-03-25T09:32:03.124Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             PRI :tera_pri_client_set_tag: Client Session ID Tag: 'Qv9frNTWfJwA' Value:42ff5facd4d67c9c
+2023-03-25T09:32:03.124Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :Reset TX control block
+2023-03-25T09:32:03.124Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :Reset RX control block
+2023-03-25T09:32:03.124Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :tera_mgmt_pcoip_data_prep_connection: We DON'T log stats updates.
+2023-03-25T09:32:03.124Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          COMMON :SOCKET_TRACE: tera_sock_socket_close() closed socket 15184 - currently 0 sockets.
+2023-03-25T09:32:03.124Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :Determined address type from target IP address provided (35.80.95.72): 2
+2023-03-25T09:32:03.125Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             DDC :(tera_ddc_get_edid_internal) Attached monitor found ............
+2023-03-25T09:32:03.125Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             DDC :mon[0].StateFlags = 0x00000003
+2023-03-25T09:32:03.125Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             DDC :Found a match for '{4d36e96e-e325-11ce-bfc1-08002be10318}\0000'
+2023-03-25T09:32:03.125Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             DDC :EDID found
+2023-03-25T09:32:03.130Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :Not using interface: 0 Addr: fe80::625f:7336:c385:453e Desc: Intel(R) Wi-Fi 6E AX211 160MHz MAC: 70-A8-D3-8F-1A-A1
+2023-03-25T09:32:03.130Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :Found an IPv4 interface: 1 Addr: 10.207.86.151 Desc: Intel(R) Wi-Fi 6E AX211 160MHz MAC: 70-A8-D3-8F-1A-A1
+2023-03-25T09:32:03.130Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0        MGMT_ENV :Setting ENV variable[  3]: pcoip.mac_addr = 70-A8-D3-8F-1A-A1
+2023-03-25T09:32:03.130Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :Selected interface address: 10.207.86.151
+2023-03-25T09:32:03.130Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0        MGMT_ENV :Setting ENV variable[  4]: pcoip.ip_address = 10.207.86.151
+2023-03-25T09:32:03.130Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0        MGMT_ENV :Setting ENV variable[  6]: pcoip.subnet_mask = 
+2023-03-25T09:32:03.130Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :Client is configured to choose its own UDP port
+2023-03-25T09:32:03.131Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :tera_vgmac_open_pcoip_sock(): single ip mode, ipv4:'10.207.86.151'
+2023-03-25T09:32:03.131Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          COMMON :SOCKET_TRACE: tera_sock_socket() added socket 24424 - currently 1 sockets.
+2023-03-25T09:32:03.131Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :PCoIP socket has been bound to local IP 10.207.86.151 [UDP] port 50002 (bind), socket 24424
+2023-03-25T09:32:03.131Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :UDP port selected is base=50002, range=4096, set=50002
+2023-03-25T09:32:03.131Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0        MGMT_ENV :Setting ENV variable[ 10]: pcoip.udp_port = 50002
+2023-03-25T09:32:03.131Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :init_crypto_cipher: pcoip crypto library supports AES-256-GCM encryption
+2023-03-25T09:32:03.131Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SSIG :ERROR - could not get user msg for 89 : 1
+2023-03-25T09:32:03.131Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          COMMON :SOCKET_TRACE: tera_sock_socket() added socket 24652 - currently 2 sockets.
+2023-03-25T09:32:03.131Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0      MGMT_SCHAN :(scnet_client_open_ssl): setting the host name to ask for in SNI to pcoip-default-sni
+2023-03-25T09:32:03.772Z 00000000-0000-0000-0000-000000000000 LVL:1 RC:-500     CERTIFICATE :tera_certificate_utility_commpare_with_legacy: making X.509 cert from legacy certificate object failed.
+2023-03-25T09:32:03.772Z 00000000-0000-0000-0000-000000000000 LVL:1 RC:-500     CERTIFICATE :tera_certificate_utility_commpare_with_legacy: making X.509 cert from legacy certificate object failed.
+2023-03-25T09:32:04.080Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :(scnet_client_open_ssl): Certificate sent by the Janus server to open the SSL connection:
+2023-03-25T09:32:04.080Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Signature Algorithm: sha384WithRSAEncryption 
+2023-03-25T09:32:04.080Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Issuer: C=US,ST=Washington,L=Seattle,O=Amazon Web Services,OU=SoftPCoIP,contentType=SecurityGateway,CN=35.80.95.72 
+2023-03-25T09:32:04.080Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Not Before: Mar  7 04:10:09 2023 GMT 
+2023-03-25T09:32:04.080Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Not After : Mar  5 04:10:09 2028 GMT 
+2023-03-25T09:32:04.080Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Subject: C=US,ST=Washington,L=Seattle,O=Amazon Web Services,OU=SoftPCoIP,contentType=SecurityGateway,CN=35.80.95.72 
+2023-03-25T09:32:04.080Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Subject Public Key Info: 
+2023-03-25T09:32:04.080Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Public Key Algorithm: rsaEncryption 
+2023-03-25T09:32:04.080Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> RSA Public-Key: (1024 bit) 
+2023-03-25T09:32:04.080Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           SCNET :(scnet_validate_by_thumbprint_hash): thumbprint hash comparison succeeded
+2023-03-25T09:32:04.080Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           SCNET :(scnet_client_open): Connected to 35.80.95.72:4172
+2023-03-25T09:32:04.080Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0        MGMT_ENV :Setting ENV variable[  4]: pcoip.ip_address = 10.207.86.151
+2023-03-25T09:32:04.080Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SSIG :ERROR - could not get user msg for 89 : 14
+2023-03-25T09:32:05.411Z 00000000-0000-0000-0000-000000000000 LVL:1 RC:   0       MGMT_SSIG :(fsm_connect_client_version_neg_trusted): Received FAIL code = 1034: Received invalid PCOIP HELLO
+2023-03-25T09:32:05.411Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          COMMON :SOCKET_TRACE: tera_sock_socket_close() closed socket 24652 - currently 1 sockets.
+2023-03-25T09:32:05.411Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SESS :MgmtSess::Impl::handle_events_omni_state: Processing EVENT_SSIG_OPEN_INVALID, reason: 1036
+2023-03-25T09:32:05.411Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SSIG :ERROR - could not get user msg for 89 : 9
+2023-03-25T09:32:05.411Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             PRI :tera_pri_client_set_tag: Old or MAC format. ssig_tag is set
+2023-03-25T09:32:05.411Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             PRI :tera_pri_client_set_tag: Client Session ID: 'ssig:70-A8-D3-8F-1A-A1'
+2023-03-25T09:32:05.413Z 00000000-0000-0000-0000-000000000000 LVL:1 RC:-503       MGMT_SESS :MgmtSess::Impl::reconnect_processing: Invalid message [msg->event_type = 0x3]
+2023-03-25T09:32:08.418Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SESS :MgmtSess::Impl::reconnect_processing: Trying to reconnect - Attempt #23
+2023-03-25T09:32:08.418Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SESS :MgmtSess::Impl::reconnect_processing: Setting resume timeout to 32707 ms
+2023-03-25T09:32:08.420Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SESS :MgmtSess::Impl::callReconnectingCallback: TERA_MGMT_SESS_RECONNECT_STATE_RECONNECTING
+2023-03-25T09:32:08.420Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          CLIENT :Connection State Notification: ConnectState: 3, DisconnectCause: 0x0, AuthState 2, Callback: Registered
+2023-03-25T09:32:08.420Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             PRI :pri_client_set_tag: Version 1 format. ssig_tag is set
+2023-03-25T09:32:08.420Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          COMMON :parse_janus_session_tag: session tag flags = 0x5A81
+2023-03-25T09:32:08.420Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             PRI :tera_pri_client_set_tag: Client Session ID Tag: 'Qv9frNTWfJwA' Value:42ff5facd4d67c9c
+2023-03-25T09:32:08.420Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :Reset TX control block
+2023-03-25T09:32:08.420Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :Reset RX control block
+2023-03-25T09:32:08.420Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :tera_mgmt_pcoip_data_prep_connection: We DON'T log stats updates.
+2023-03-25T09:32:08.420Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          COMMON :SOCKET_TRACE: tera_sock_socket_close() closed socket 24424 - currently 0 sockets.
+2023-03-25T09:32:08.420Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :Determined address type from target IP address provided (35.80.95.72): 2
+2023-03-25T09:32:08.422Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             DDC :(tera_ddc_get_edid_internal) Attached monitor found ............
+2023-03-25T09:32:08.423Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             DDC :mon[0].StateFlags = 0x00000003
+2023-03-25T09:32:08.423Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             DDC :Found a match for '{4d36e96e-e325-11ce-bfc1-08002be10318}\0000'
+2023-03-25T09:32:08.423Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0             DDC :EDID found
+2023-03-25T09:32:08.428Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :Not using interface: 0 Addr: fe80::625f:7336:c385:453e Desc: Intel(R) Wi-Fi 6E AX211 160MHz MAC: 70-A8-D3-8F-1A-A1
+2023-03-25T09:32:08.428Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :Found an IPv4 interface: 1 Addr: 10.207.86.151 Desc: Intel(R) Wi-Fi 6E AX211 160MHz MAC: 70-A8-D3-8F-1A-A1
+2023-03-25T09:32:08.428Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0        MGMT_ENV :Setting ENV variable[  3]: pcoip.mac_addr = 70-A8-D3-8F-1A-A1
+2023-03-25T09:32:08.428Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :Selected interface address: 10.207.86.151
+2023-03-25T09:32:08.428Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0        MGMT_ENV :Setting ENV variable[  4]: pcoip.ip_address = 10.207.86.151
+2023-03-25T09:32:08.428Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0        MGMT_ENV :Setting ENV variable[  6]: pcoip.subnet_mask = 
+2023-03-25T09:32:08.428Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :Client is configured to choose its own UDP port
+2023-03-25T09:32:08.428Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :tera_vgmac_open_pcoip_sock(): single ip mode, ipv4:'10.207.86.151'
+2023-03-25T09:32:08.428Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          COMMON :SOCKET_TRACE: tera_sock_socket() added socket 24424 - currently 1 sockets.
+2023-03-25T09:32:08.428Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           VGMAC :PCoIP socket has been bound to local IP 10.207.86.151 [UDP] port 50002 (bind), socket 24424
+2023-03-25T09:32:08.428Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :UDP port selected is base=50002, range=4096, set=50002
+2023-03-25T09:32:08.428Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0        MGMT_ENV :Setting ENV variable[ 10]: pcoip.udp_port = 50002
+2023-03-25T09:32:08.428Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0 MGMT_PCOIP_DATA :init_crypto_cipher: pcoip crypto library supports AES-256-GCM encryption
+2023-03-25T09:32:08.429Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SSIG :ERROR - could not get user msg for 89 : 1
+2023-03-25T09:32:08.429Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          COMMON :SOCKET_TRACE: tera_sock_socket() added socket 24524 - currently 2 sockets.
+2023-03-25T09:32:08.429Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0      MGMT_SCHAN :(scnet_client_open_ssl): setting the host name to ask for in SNI to pcoip-default-sni
+2023-03-25T09:32:09.073Z 00000000-0000-0000-0000-000000000000 LVL:1 RC:-500     CERTIFICATE :tera_certificate_utility_commpare_with_legacy: making X.509 cert from legacy certificate object failed.
+2023-03-25T09:32:09.073Z 00000000-0000-0000-0000-000000000000 LVL:1 RC:-500     CERTIFICATE :tera_certificate_utility_commpare_with_legacy: making X.509 cert from legacy certificate object failed.
+2023-03-25T09:32:09.404Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :(scnet_client_open_ssl): Certificate sent by the Janus server to open the SSL connection:
+2023-03-25T09:32:09.404Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Signature Algorithm: sha384WithRSAEncryption 
+2023-03-25T09:32:09.404Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Issuer: C=US,ST=Washington,L=Seattle,O=Amazon Web Services,OU=SoftPCoIP,contentType=SecurityGateway,CN=35.80.95.72 
+2023-03-25T09:32:09.404Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Not Before: Mar  7 04:10:09 2023 GMT 
+2023-03-25T09:32:09.404Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Not After : Mar  5 04:10:09 2028 GMT 
+2023-03-25T09:32:09.404Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Subject: C=US,ST=Washington,L=Seattle,O=Amazon Web Services,OU=SoftPCoIP,contentType=SecurityGateway,CN=35.80.95.72 
+2023-03-25T09:32:09.404Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Subject Public Key Info: 
+2023-03-25T09:32:09.404Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> Public Key Algorithm: rsaEncryption 
+2023-03-25T09:32:09.404Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0     CERTIFICATE :   --> RSA Public-Key: (1024 bit) 
+2023-03-25T09:32:09.404Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           SCNET :(scnet_validate_by_thumbprint_hash): thumbprint hash comparison succeeded
+2023-03-25T09:32:09.404Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0           SCNET :(scnet_client_open): Connected to 35.80.95.72:4172
+2023-03-25T09:32:09.405Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0        MGMT_ENV :Setting ENV variable[  4]: pcoip.ip_address = 10.207.86.151
+2023-03-25T09:32:09.405Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0       MGMT_SSIG :ERROR - could not get user msg for 89 : 14
+2023-03-25T09:32:11.262Z 00000000-0000-0000-0000-000000000000 LVL:2 RC:   0          CLIENT :tera_pcoip_client_set_frame_buffer_v2(): display 0 buffer 00000000 (width = 0 height = 0 rotation = 0)

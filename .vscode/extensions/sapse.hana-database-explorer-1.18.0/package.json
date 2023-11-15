@@ -1,0 +1,612 @@
+{
+	"name": "hana-database-explorer",
+	"displayName": "SAP HANA Database Explorer",
+	"description": "SAP HANA Database Explorer for Visual Studio Code",
+	"version": "1.18.0",
+	"publisher": "SAPSE",
+	"license": "SEE LICENSE IN LICENSE.txt",
+	"engines": {
+		"vscode": "^1.67.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onStartupFinished",
+		"onUri"
+	],
+	"main": "./dist/extension.js",
+	"icon": "resources/dbx_icon_128.png",
+	"contributes": {
+		"customEditors": [
+			{
+				"viewType": "hana-database-explorer.SQLConsole",
+				"displayName": "SAP HANA SQL Console",
+				"selector": [
+					{
+						"filenamePattern": "*.{sql,dsql}"
+					}
+				],
+				"priority": "default"
+			}
+		],
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "sap-db-explorer",
+					"title": "SAP HANA Database Explorer",
+					"icon": "resources/dbx.svg"
+				}
+			]
+		},
+		"views": {
+			"sap-db-explorer": [
+				{
+					"id": "DatabaseList",
+					"name": "Database List",
+					"visibility": "visible"
+				},
+				{
+					"id": "CatalogBrowser",
+					"name": "Catalog Browser",
+					"visibility": "visible"
+				}
+			]
+		},
+		"viewsWelcome": [
+			{
+				"view": "CatalogBrowser",
+				"contents": "Please select a database artifact type of a connection in the database list."
+			}
+		],
+		"commands": [
+			{
+				"command": "databaseExplorer.viewDependencyGraph",
+				"title": "Open Dependency Viewer",
+				"category": "SAP HANA"
+			},
+			{
+				"command": "extension.dbx",
+				"title": "Open Database Explorer",
+				"category": "SAP HANA",
+				"icon": {
+					"light": "resources/dbExplorer_l.svg",
+					"dark": "resources/dbExplorer_d.svg"
+				}
+			},
+			{
+				"command": "databaseExplorer.addDatabase",
+				"title": "Add SAP HANA Database",
+				"category": "SAP HANA",
+				"icon": "$(add)"
+			},
+			{
+				"command": "databaseExplorer.refresh",
+				"title": "Refresh Database List",
+				"category": "SAP HANA",
+				"icon": "$(refresh)"
+			},
+			{
+				"command": "databaseExplorer.refreshCatalogBrowser",
+				"title": "Refresh Catalog Browser",
+				"category": "SAP HANA",
+				"icon": "$(refresh)"
+			},
+			{
+				"command": "sqlConsole.openSQLConsole",
+				"title": "Open SAP HANA SQL Console",
+				"category": "SAP HANA",
+				"icon": "$(console)"
+			},
+			{
+				"command": "sqlConsole.openStatementOverview",
+				"title": "Open SAP HANA Statement Overview",
+				"category": "SAP HANA",
+				"icon": "$(preview)"
+			},
+			{
+				"command": "sqlConsole.openSQLConsoleAsAdmin",
+				"title": "Open SAP HANA SQL Console (Admin)",
+				"category": "SAP HANA",
+				"icon": "$(terminal-powershell)"
+			},
+			{
+				"command": "databaseExplorer.openInDatabaseExplorer",
+				"title": "Open Database in Database Explorer",
+				"category": "SAP HANA",
+				"icon": {
+					"light": "resources/dbExplorer_l.svg",
+					"dark": "resources/dbExplorer_d.svg"
+				}
+			},
+			{
+				"command": "databaseExplorer.removeDatabase",
+				"title": "Remove Database",
+				"category": "SAP HANA"
+			},
+			{
+				"command": "databaseExplorer.editDatabase",
+				"title": "Edit Database",
+				"category": "SAP HANA"
+			},
+			{
+				"command": "databaseExplorer.setDatabaseFilter",
+				"title": "Select Database",
+				"category": "SAP HANA",
+				"icon": "$(filter)"
+			},
+			{
+				"command": "databaseExplorer.setDatabaseFilterFilterActive",
+				"title": "Select Database (Selection modified)",
+				"category": "SAP HANA",
+				"icon": "$(filter-filled)"
+			},
+			{
+				"command": "databaseExplorer.setSchemaFilter",
+				"title": "Apply filter",
+				"category": "SAP HANA",
+				"icon": "$(filter)"
+			},
+			{
+				"command": "databaseExplorer.setSchemaFilterFilterActive",
+				"title": "Apply filter (Selection modified)",
+				"category": "SAP HANA",
+				"icon": "$(filter-filled)"
+			},
+			{
+				"command": "databaseExplorer.copyObjectName",
+				"title": "Copy Name",
+				"category": "SAP HANA"
+			},
+			{
+				"command": "databaseExplorer.copyObjectFullName",
+				"title": "Copy Full Name",
+				"category": "SAP HANA"
+			},
+			{
+				"command": "databaseExplorer.generateCreateStatement",
+				"title": "Generate CREATE Statement",
+				"category": "SAP HANA"
+			},
+			{
+				"command": "databaseExplorer.copyCreateStatement",
+				"title": "Copy CREATE Statement",
+				"category": "SAP HANA"
+			},
+			{
+				"command": "databaseExplorer.openData",
+				"title": "Open Data",
+				"category": "SAP HANA"
+			},
+			{
+				"command": "databaseExplorer.generateSelectStatement",
+				"title": "Generate SELECT Statement",
+				"category": "SAP HANA"
+			},
+			{
+				"command": "databaseExplorer.generateCallStatement",
+				"title": "Generate CALL Statement",
+				"category": "SAP HANA"
+			},
+			{
+				"command": "databaseExplorer.generateCallStatementWithUI",
+				"title": "Generate CALL Statement with UI",
+				"category": "SAP HANA"
+			},
+			{
+				"command": "databaseExplorer.openMetadataComponentFromContext",
+				"title": "Open",
+				"category": "SAP HANA"
+			},
+			{
+				"command": "databaseExplorer.about",
+				"title": "About SAP HANA Database Explorer",
+				"category": "SAP HANA",
+				"icon": "$(question)"
+			}
+		],
+		"menus": {
+			"view/title": [
+				{
+					"command": "databaseExplorer.addDatabase",
+					"when": "view == DatabaseList && sap-database-explorer.isVsCode",
+					"group": "navigation@0"
+				},
+				{
+					"command": "databaseExplorer.refresh",
+					"when": "view == DatabaseList",
+					"group": "navigation@2"
+				},
+				{
+					"command": "databaseExplorer.about",
+					"when": "view == DatabaseList",
+					"group": "inline@0"
+				},
+				{
+					"command": "databaseExplorer.setDatabaseFilter",
+					"when": "view == DatabaseList && !sap-database-explorer.databaseFilterActive && sap-database-explorer:vsc-dbx.databaseFilter",
+					"group": "navigation@1"
+				},
+				{
+					"command": "databaseExplorer.setDatabaseFilterFilterActive",
+					"when": "view == DatabaseList && sap-database-explorer.databaseFilterActive && sap-database-explorer:vsc-dbx.databaseFilter",
+					"group": "navigation@1"
+				},
+				{
+					"command": "databaseExplorer.refreshCatalogBrowser",
+					"when": "view == CatalogBrowser",
+					"group": "navigation@1"
+				},
+				{
+					"command": "databaseExplorer.setSchemaFilter",
+					"when": "view == CatalogBrowser && sap-database-explorer.schemaFilterAvailable && !sap-database-explorer.schemaFilterActive",
+					"group": "navigation@0"
+				},
+				{
+					"command": "databaseExplorer.setSchemaFilterFilterActive",
+					"when": "view == CatalogBrowser && sap-database-explorer.schemaFilterAvailable && sap-database-explorer.schemaFilterActive",
+					"group": "navigation@0"
+				}
+			],
+			"explorer/context": [],
+			"view/item/context": [
+				{
+					"command": "sqlConsole.openSQLConsole",
+					"when": "view == DatabaseList && viewItem == sap_database || viewItem == sap_database_dbexplorer || viewItem == sap_database_dbexplorer_hdi || viewItem == sap_database_temp",
+					"group": "inline@9"
+				},
+				{
+					"command": "sqlConsole.openStatementOverview",
+					"when": "view == DatabaseList && sap-database-explorer.isVsCode && vsc-hana-supportability.isInstalled && viewItem == sap_database_temp",
+					"group": "inline@8"
+				},
+				{
+					"command": "sqlConsole.openSQLConsoleAsAdmin",
+					"when": "view == DatabaseList && viewItem == sap_database_dbexplorer_hdi && sap-database-explorer:vsc_dbx_hdi_admin_connection",
+					"group": "inline@7"
+				},
+				{
+					"command": "extension.dbx",
+					"when": "view == DatabaseList  && viewItem == 'SAP HANA Database Explorer Connections'",
+					"group": "inline"
+				},
+				{
+					"command": "databaseExplorer.openInDatabaseExplorer",
+					"when": "view == DatabaseList && viewItem == sap_database_dbexplorer || viewItem == sap_database_dbexplorer_filecontainer || viewItem == sap_database_dbexplorer_hdi",
+					"group": "inline@1"
+				},
+				{
+					"command": "databaseExplorer.removeDatabase",
+					"when": "view == DatabaseList && sap-database-explorer.isVsCode && viewItem == sap_database || viewItem == sap_database_temp"
+				},
+				{
+					"command": "databaseExplorer.editDatabase",
+					"when": "view == DatabaseList && viewItem == sap_database  && sap-database-explorer.isVsCode"
+				},
+				{
+					"command": "databaseExplorer.copyObjectName",
+					"when": "view == CatalogBrowser && viewItem != '' && viewItem != message && sap-database-explorer:vsc_dbx_copy_object_names",
+					"group": "copy@1"
+				},
+				{
+					"command": "databaseExplorer.copyObjectFullName",
+					"when": "view == CatalogBrowser && viewItem != '' && viewItem != message && sap-database-explorer:vsc_dbx_copy_object_names",
+					"group": "copy@2"
+				},
+				{
+					"command": "databaseExplorer.generateCreateStatement",
+					"when": "view == CatalogBrowser && viewItem != '' && viewItem != message && viewItem != Adapters && viewItem != AgentGroups && viewItem != Agents && viewItem != GraphWorkspaces && viewItem != SchedulerJobs && viewItem != RemoteSources && viewItem != RemoteSubscriptions && sap-database-explorer:vsc_dbx_create_statement",
+					"group": "create@1"
+				},
+				{
+					"command": "databaseExplorer.copyCreateStatement",
+					"when": "view == CatalogBrowser && viewItem != '' && viewItem != message && viewItem != Adapters && viewItem != AgentGroups && viewItem != Agents && viewItem != GraphWorkspaces && viewItem != SchedulerJobs && viewItem != RemoteSources && viewItem != RemoteSubscriptions && sap-database-explorer:vsc_dbx_create_statement",
+					"group": "create@2"
+				},
+				{
+					"command": "databaseExplorer.viewDependencyGraph",
+					"when": "view == DatabaseList && viewItem == sap_database && sap-database-explorer:vsc_dependency_viewer || viewItem == sap_database_dbexplorer && sap-database-explorer:vsc_dependency_viewer || viewItem == sap_database_dbexplorer_hdi && sap-database-explorer:vsc_dependency_viewer || viewItem == sap_database_temp && sap-database-explorer:vsc_dependency_viewer",
+					"group": "launch@1"
+				},
+				{
+					"command": "databaseExplorer.viewDependencyGraph",
+					"when": "view == CatalogBrowser && viewItem != '' && viewItem != message && viewItem != Adapters && viewItem != AgentGroups && viewItem != Agents && viewItem != GraphWorkspaces && viewItem != RemoteSources && viewItem != RemoteSubscriptions && sap-database-explorer:vsc_dependency_viewer",
+					"group": "launch@1"
+				},
+				{
+					"command": "databaseExplorer.openData",
+					"when": "view == CatalogBrowser && sap-database-explorer:vsc_dbx_select_statement && viewItem == Tables || view == CatalogBrowser && sap-database-explorer:vsc_dbx_select_statement && viewItem == Views || view == CatalogBrowser && sap-database-explorer:vsc_dbx_select_statement && viewItem == ColumnViews || view == CatalogBrowser && sap-database-explorer:vsc_dbx_select_statement && viewItem == Synonyms || view == CatalogBrowser && sap-database-explorer:vsc_dbx_select_statement && viewItem == PublicSynonyms",
+					"group": "1_open@2"
+				},
+				{
+					"command": "databaseExplorer.generateSelectStatement",
+					"when": "view == CatalogBrowser && sap-database-explorer:vsc_dbx_select_statement && viewItem == Tables || view == CatalogBrowser && sap-database-explorer:vsc_dbx_select_statement && viewItem == Views || view == CatalogBrowser && sap-database-explorer:vsc_dbx_select_statement && viewItem == ColumnViews || view == CatalogBrowser && sap-database-explorer:vsc_dbx_select_statement && viewItem == Synonyms || view == CatalogBrowser && sap-database-explorer:vsc_dbx_select_statement && viewItem == PublicSynonyms || view == CatalogBrowser && sap-database-explorer:vsc_dbx_select_statement && viewItem == Functions || view == CatalogBrowser && sap-database-explorer:vsc_dbx_select_statement && viewItem == SynonymFunctions",
+					"group": "create@3"
+				},
+				{
+					"command": "databaseExplorer.generateCallStatement",
+					"when": "view == CatalogBrowser && sap-database-explorer:vsc_dbx_select_statement && viewItem == Procedures || view == CatalogBrowser && sap-database-explorer:vsc_dbx_select_statement && viewItem == SynonymProcedures",
+					"group": "create@3"
+				},
+				{
+					"command": "databaseExplorer.generateCallStatementWithUI",
+					"when": "view == CatalogBrowser && sap-database-explorer:vsc_dbx_select_statement && viewItem == Procedures || view == CatalogBrowser && sap-database-explorer:vsc_dbx_select_statement && viewItem == SynonymProcedures",
+					"group": "create@4"
+				},
+				{
+					"command": "databaseExplorer.openMetadataComponentFromContext",
+					"when": "view == CatalogBrowser && sap-database-explorer:vsc_metadata_procedures && viewItem == Procedures || view == CatalogBrowser && sap-database-explorer:vsc_metadata_procedures && viewItem == SynonymProcedures || view == CatalogBrowser && sap-database-explorer:vsc_metadata_procedures && viewItem == Functions || view == CatalogBrowser && sap-database-explorer:vsc_metadata_procedures && viewItem == SynonymFunctions",
+					"group": "1_open@1"
+				}
+			],
+			"commandPalette": [
+				{
+					"command": "sqlConsole.openSQLConsole",
+					"when": "sap-database-explorer:vsc_db_switch"
+				},
+				{
+					"command": "databaseExplorer.viewDependencyGraph",
+					"when": "false"
+				},
+				{
+					"command": "sqlConsole.openStatementOverview",
+					"when": "false"
+				},
+				{
+					"command": "sqlConsole.openSQLConsoleAsAdmin",
+					"when": "false"
+				},
+				{
+					"command": "databaseExplorer.openInDatabaseExplorer",
+					"when": "false"
+				},
+				{
+					"command": "databaseExplorer.removeDatabase",
+					"when": "false"
+				},
+				{
+					"command": "databaseExplorer.editDatabase",
+					"when": "false"
+				},
+				{
+					"command": "databaseExplorer.openData",
+					"when": "false"
+				},
+				{
+					"command": "databaseExplorer.generateSelectStatement",
+					"when": "false"
+				},
+				{
+					"command": "databaseExplorer.generateCallStatement",
+					"when": "false"
+				},
+				{
+					"command": "databaseExplorer.generateCallStatementWithUI",
+					"when": "false"
+				},
+				{
+					"command": "databaseExplorer.addDatabase",
+					"when": "sap-database-explorer.isVsCode"
+				},
+				{
+					"command": "databaseExplorer.refresh"
+				},
+				{
+					"command": "databaseExplorer.refreshCatalogBrowser"
+				},
+				{
+					"command": "databaseExplorer.setSchemaFilter",
+					"when": "sap-database-explorer.schemaFilterAvailable && !sap-database-explorer.schemaFilterActive"
+				},
+				{
+					"command": "databaseExplorer.setSchemaFilterFilterActive",
+					"when": "sap-database-explorer.schemaFilterAvailable && sap-database-explorer.schemaFilterActive"
+				},
+				{
+					"command": "databaseExplorer.setDatabaseFilter",
+					"when": "!sap-database-explorer.databaseFilterActive && sap-database-explorer:vsc-dbx.databaseFilter"
+				},
+				{
+					"command": "databaseExplorer.setDatabaseFilterFilterActive",
+					"when": "sap-database-explorer.databaseFilterActive && sap-database-explorer:vsc-dbx.databaseFilter"
+				},
+				{
+					"command": "databaseExplorer.copyObjectName",
+					"when": "false"
+				},
+				{
+					"command": "databaseExplorer.copyObjectFullName",
+					"when": "false"
+				},
+				{
+					"command": "databaseExplorer.generateCreateStatement",
+					"when": "false"
+				},
+				{
+					"command": "databaseExplorer.copyCreateStatement",
+					"when": "false"
+				},
+				{
+					"command": "databaseExplorer.openMetadataComponentFromContext",
+					"when": "false"
+				}
+			]
+		},
+		"configuration": {
+			"title": "SAP HANA Database Explorer",
+			"properties": {
+				"SAP HANA Database Explorer.ShowDatabaseExplorerConnections": {
+					"type": "boolean",
+					"default": true,
+					"description": "Show the SAP HANA Database Explorer connections in addition to the local connections (only available in Visual Studio Code)"
+				},
+				"SAP HANA Database Explorer.URL": {
+					"type": "string",
+					"default": "https://hana-cockpit.cfapps.eu10.hana.ondemand.com/sap/hana/cst/catalog/index.html",
+					"description": "Specifies the URL of the SAP HANA Database Explorer instance to use. The URL pattern is https://hana-cockpit.cfapps.<region>.hana.ondemand.com/sap/hana/cst/catalog/index.html. Replace <region> with the cloud region of your database, for example, eu10.",
+					"format": "uri",
+					"pattern": "^https://.+",
+					"patternErrorMessage": "Enter a valid URL starting with 'https://'"
+				},
+				"SAP HANA Database Explorer.ShowXsAdvancedConnections": {
+					"type": "boolean",
+					"default": false,
+					"description": "Show the SAP HANA XS advanced connections in addition to the local connections (only available in Visual Studio Code)"
+				},
+				"SAP HANA Database Explorer.XsAdvancedHrttServiceUrl": {
+					"type": "string",
+					"default": "",
+					"description": "Specifies the URL of the \"hrtt-service\" application in the XS advanced instance to use. (only available in Visual Studio Code)",
+					"format": "uri",
+					"pattern": "^https://.+",
+					"patternErrorMessage": "Enter a valid URL starting with 'https://'"
+				},
+				"SAP HANA Database Explorer.DatabaseList": {
+					"type": "array",
+					"default": [],
+					"description": "List of manually added databases (only available in Visual Studio Code)",
+					"when": "sap-database-explorer.isVsCode"
+				},
+				"SAP HANA Database Explorer.MaxSqlResultSize": {
+					"type": "integer",
+					"default": 1000,
+					"description": "The maximum number of SQL result rows returned by a query."
+				},
+				"SAP HANA Database Explorer.LargeObjectSizeLimit": {
+					"type": "integer",
+					"default": 1,
+					"description": "Limit for large objects (LOBs) in kilobyte"
+				},
+				"SAP HANA Database Explorer.enableSapWebAnalytics": {
+					"type": "boolean",
+					"default": false,
+					"description": "Enable collecting usage analytics data for SAP HANA Database Explorer extension. If enabled, non-personally identifiable information is used to help understand the product usage and improve the tools.",
+					"scope": "resource"
+				},
+				"SAP HANA Database Explorer.displaySapWebAnalyticsStartupNotification": {
+					"type": "boolean",
+					"default": false,
+					"description": "Display a notification during startup which informs the user about the usage analytics data collection."
+				},
+				"SAP HANA Database Explorer.logging.level": {
+					"type": "string",
+					"enum": [
+						"off",
+						"fatal",
+						"error",
+						"warn",
+						"info",
+						"debug",
+						"trace"
+					],
+					"default": "error",
+					"description": "The verbosity of logging according to the following order: trace > debug > info > warn > error > fatal > off.",
+					"scope": "window"
+				},
+				"SAP HANA Database Explorer.logging.sourceLocationTracking": {
+					"type": "boolean",
+					"default": false,
+					"description": "Add the source-code location to the log entries.\nWarning: This action may slow your extension. We recommend you use it only for debugging.",
+					"scope": "window"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"compile": "shx rm -rf out && tsc -p ./ && tscpaths -p tsconfig.json -s ./src -o ./out",
+		"lint": "cd .. && npm run lint",
+		"fixlint": "cd .. && npm run fixlint",
+		"watch": "tsc -watch -p ./ && tscpaths -p tsconfig.json -s ./src -o ./out",
+		"build": "shx rm -rf dist/ && mkdir dist && npm run compile && npm run webpack",
+		"unittest": "jest --config jest-unit.json",
+		"clean": "shx rm -rf out/ && shx rm -rf dist/ && shx rm package-lock.json && shx rm -rf node_modules && npm install",
+		"prepare": "npm run build",
+		"componenttest": "vscode-test-runner",
+		"componenttest:coverage": "vscode-test-runner --coverage && nyc report",
+		"clean:coverage": "rimraf ./coverage ./.nyc_output",
+		"coverage": "npm-run-all clean:coverage componenttest:coverage",
+		"vscode:prepublish": "npm run webpack:prod",
+		"webpack": "webpack --config webpack.dev.config.js",
+		"webpack:watch": "webpack --config webpack.dev.config.js --watch",
+		"webpack:prod": "node scripts/pack.js"
+	},
+	"devDependencies": {
+		"@babel/plugin-transform-runtime": "^7.22.10",
+		"@babel/preset-env": "^7.22.10",
+		"@sap/vscode-test-runner": "0.6.0",
+		"@types/chai": "^4.3.5",
+		"@types/chai-as-promised": "7.1.6",
+		"@types/command-exists": "1.2.1",
+		"@types/jest": "^29.5.3",
+		"@types/node": "^16.18.3",
+		"@types/properties-reader": "2.1.1",
+		"@types/sinon": "^10.0.16",
+		"@types/uuid": "9.0.3",
+		"@types/vscode": "^1.67.0",
+		"@types/which": "^3.0.0",
+		"@typescript-eslint/eslint-plugin": "^6.4.0",
+		"@vscode-logging/types": "0.1.4",
+		"babel-jest": "29.6.4",
+		"chai": "^4.3.7",
+		"chai-as-promised": "7.1.1",
+		"concurrently": "8.2.1",
+		"copy-webpack-plugin": "^11.0.0",
+		"jest": "^29.6.2",
+		"jest-junit": "^16.0.0",
+		"mocha-jenkins-reporter": "0.4.8",
+		"mocha-junit-reporter": "^2.2.1",
+		"npm-run-all": "4.1.5",
+		"nyc": "15.1.0",
+		"rimraf": "5.0.1",
+		"shx": "0.3.4",
+		"sinon": "^15.2.0",
+		"string-replace-loader": "3.1.0",
+		"ts-jest": "^29.1.1",
+		"ts-loader": "^9.4.4",
+		"ts-node": "^10.9.1",
+		"tscpaths": "0.0.9",
+		"typescript": "^5.1.6",
+		"vsce": "^2.15.0",
+		"webpack": "^5.88.2",
+		"webpack-cli": "^5.1.4"
+	},
+	"dependencies": {
+		"@sap_oss/node-socketio-stream": "1.0.3",
+		"@sap/bas-sdk": "3.4.6",
+		"@sap/cf-tools": "3.2.0",
+		"@sap/hana-client": "2.17.22",
+		"@sap/hana-tooling-add-database-dialog": "1.1.1",
+		"@sap/hana-tooling-dependency-viewer": "1.1.1",
+		"@sap/hana-tooling-feature-toggles": "1.3.0",
+		"@sap/hana-tooling-procedure-metadata-dialog": "1.1.1",
+		"@sap/hana-tooling-sql-console": "1.0.233301",
+		"@sap/hana-tooling-sqlscriptanalyzer-metadata-dialog": "1.1.1",
+		"@sap/swa-for-sapbas-vsx": "1.2.15",
+		"@sap/xs-tools": "1.0.0",
+		"@vscode-logging/wrapper": "1.0.2",
+		"command-exists": "1.2.9",
+		"hdb": "0.19.5",
+		"https-proxy-agent": "7.0.0",
+		"json-2-csv": "4.1.0",
+		"node-fetch": "2.6.11",
+		"semver": "7.5.4",
+		"uuid": "9.0.0",
+		"which": "3.0.1"
+	},
+	"overrides": {
+		"@sap/swa-for-sapbas-vsx": {
+			"semver": "7.5.4"
+		}
+	},
+	"__metadata": {
+		"id": "a390422b-ab12-4330-bc44-77521bb09164",
+		"publisherId": "a17c53d7-5315-4db5-a571-feab995abf60",
+		"publisherDisplayName": "SAP SE",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": true,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1698212007342,
+		"preRelease": false
+	}
+}

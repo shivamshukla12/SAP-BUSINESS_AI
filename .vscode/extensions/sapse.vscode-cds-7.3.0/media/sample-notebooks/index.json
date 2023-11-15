@@ -1,0 +1,32 @@
+{
+    "native_shell": {
+        "title": "Shell",
+        "order": 1,
+        "icon": "command-line-interfaces"
+    },
+    "cds_server": {
+        "title": "CDS server",
+        "order": 2,
+        "icon": "it-host"
+    },
+    "javascript": {
+        "title": "Javascript",
+        "order": 3,
+        "icon": "code1"
+    },
+    "cds_repl": {
+        "title": "CDS repl",
+        "order": 4,
+        "icon": "cap"
+    },
+    "magics": {
+        "title": "Magics",
+        "order": 5,
+        "icon": "activate"
+    },
+    "java": {
+        "title": "Java",
+        "order": 6,
+        "icon": "java"
+    }
+}

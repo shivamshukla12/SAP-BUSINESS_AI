@@ -1,0 +1,22 @@
+[
+  {
+    "RegistrationCode": "WSpdx+JPPATZ",
+    "CustomDescription": null,
+    "RegionKey": "WSpdx",
+    "OrgName": "d-92673560a3",
+    "RememberMeSetting": {
+      "AdminSetting": true,
+      "LocalSetting": true
+    },
+    "LogLevelSetting": {
+      "AdminSetting": true,
+      "LocalSetting": 2
+    },
+    "DiagnosticUploadSetting": {
+      "AutoLogUploadSetting": {
+        "AdminSetting": true,
+        "LocalSetting": true
+      }
+    }
+  }
+]

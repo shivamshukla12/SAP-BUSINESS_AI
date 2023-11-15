@@ -1,0 +1,20 @@
+{
+  "serviceModeler.displayName": "SAP Fiori Tools - Service Modeler",
+  "serviceModeler.description": "Allows you to visualize OData service and its associated annotations",
+  "configuration.properties.displayServiceLinksInCDS": "Enable/disable service connectors (CDS).",
+  "configuration.properties.displayServiceLinksInEDMX": "Enable/disable service connectors in OData metadata file (EDMX).",
+  "configuration.properties.enableTelemetry": "Enable telemetry data to be captured for SAP Fiori Tools - Service Modeler. (if enabled the setting still abides by the overall 'Telemetry: enable telemetry' setting). As part of the telemetry data recording, non personally identifiable information is used to help understand product usage and improve the product.",
+  "configuration.properties.deprecation.enableTelemetry": "This setting has been deprecated. Refer to https://help.sap.com/viewer/17d50220bcd848aa854c9c182d65b699/Latest/en-US/837c23115bff43b4a245e9f01b0e80f7.html",
+  "configuration.properties.selectDefaultView.enum.compact": "Compact",
+  "configuration.properties.selectDefaultView.enum.compact.desc": "Display the graph in `Compact` mode",
+  "configuration.properties.selectDefaultView.enum.expanded": "Expanded",
+  "configuration.properties.selectDefaultView.enum.expanded.desc": "Display the graph in `Expanded` mode",
+  "configuration.properties.selectDefaultView.enum.list": "List",
+  "configuration.properties.selectDefaultView.enum.list.desc": "Display the graph in `List` mode",
+  "commands.fiori.category": "Fiori",
+  "commands.serviceModeler.title": "Open Service Modeler",
+  "commands.serviceModeler.openFileToSide.title": "Open Service Modeler to the Side",
+  "commands.serviceModeler.reLoadServiceModeler.title": "Reload Service Modeler",
+  "commands.serviceModeler.openServiceMgr.title": "Open Service Manager",
+  "commands.serviceModeler.openAnnotationFileMgr.title": "Open Annotation File Manager"
+}

@@ -1,0 +1,250 @@
+{
+	"name": "sap-ux-help-extension",
+	"displayName": "SAP Fiori Tools - Guided Development",
+	"description": "Allows you to access how-to guides and tutorials to implement SAP Fiori elements features using a guided approach.",
+	"icon": "media/Guided-Development.png",
+	"publisher": "SAPSE",
+	"version": "1.11.3",
+	"bugs": {
+		"url": "https://ask.sapfioritools.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "private"
+	},
+	"engines": {
+		"vscode": "^1.73.1"
+	},
+	"categories": [
+		"Programming Languages",
+		"Snippets"
+	],
+	"keywords": [
+		"SAP",
+		"SAP Fiori elements",
+		"Help",
+		"OData",
+		"CDS"
+	],
+	"main": "./dist/extension-min.js",
+	"private": false,
+	"scripts": {
+		"pre-commit": "lint-staged --quiet",
+		"clean:dist": "rimraf ./dist ./generators *.tsbuildinfo",
+		"clean": "rimraf ./out ./reports *.tgz *.vsix ./.webpack_cache ./.vscode-test",
+		"build": "npm-run-all -l -s clean -p build:*",
+		"build:compile": "tsc --build tsconfig.build.json --dry",
+		"build:extension": "node esbuild.js",
+		"build:copyfiles": "copyfiles --flat ./src/assets/icons/* ./dist/assets/icons",
+		"build:copyGuides": "copyfiles --up 5 ../core/dist/guidedDev/data/guides/**/images/** ./dist/data",
+		"vscode:prepublish": "yarn run build",
+		"watch": "npm-run-all -l -s clean -p watch:*",
+		"watch:compile": "tsc --build tsconfig.build.json --dry",
+		"watch:extension": "node esbuild.js --watch --minify=false --sourcemap=inline",
+		"watch:copyfiles": "copyfiles --flat ./src/assets/icons/* ./dist/assets/icons",
+		"watch:copyGuides": "copyfiles --up 5 ../core/dist/guidedDev/data/guides/**/images/** ./dist/data",
+		"test": "jest --maxWorkers=1 --ci --forceExit --detectOpenHandles --config='jest-unit.config.js'  && node ../../../scripts/scov.js reports/test/unit/coverage/lcov.info",
+		"test:integration-disabled": "cross-env CODE_VERSION=1.53.2 CODE_TESTS_WORKSPACE=./test/int/input/ovp CODE_TESTS_PATH=./dist/test/int CODE_DISABLE_EXTENSIONS=true TOOL_SUITE_TIMEOUT=180000 node ./../../tools/jest-runner-vscode/dist/test.js",
+		"lint": "eslint . --ext .ts,.tsx",
+		"lint:summary": "eslint . --ext .ts,.tsx -f summary",
+		"lint:fix": "eslint --fix",
+		"lint:fix:all": "eslint . --ext .ts,.tsx --fix",
+		"lint:report": "eslint . --ext .ts,.tsx -f multiple ",
+		"disable-test:e2e": "npm-run-all test:e2e:set test:e2e:export-guide",
+		"test:e2e:set": "mkdirp reports/test/e2e",
+		"test:e2e:export-guide": "yarn --cwd ../../../test/e2e test:e2e:help:export-guide",
+		"format:fix": "prettier --write --ignore-path ../../../.prettierignore",
+		"format:fix:all": "prettier --write '**/*.{css,scss,html,js,json,ts,tsx,yaml,yml}' '!**/{out,dist,typings,node_modules}/**' '!**/*.{svg,png,jpg,xml}' --ignore-path ../../../.prettierignore",
+		"ide-ext:package": "vsce package --yarn --failOnIssues",
+		"madge": "madge --warning --circular --extensions ts ./"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"activationEvents": [
+		"*"
+	],
+	"contributes": {
+		"configuration": {
+			"id": "sap.ux.help",
+			"type": "object",
+			"title": "%configuration.title%",
+			"properties": {
+				"sap.ux.help.enableTelemetry": {
+					"default": true,
+					"type": "boolean",
+					"description": "%configuration.properties.enableTelemetry.description%",
+					"scope": "window",
+					"markdownDeprecationMessage": "%configuration.properties.deprecation.enableTelemetry.description%",
+					"deprecationMessage": "%configuration.properties.deprecation.enableTelemetry.description%"
+				},
+				"sap.ux.help.guideDetailsMode": {
+					"type": "string",
+					"default": "%sap.ux.help.guideDetailsMode.enum.wizard%",
+					"description": "%sap.ux.help.guideDetailsMode%",
+					"enum": [
+						"%sap.ux.help.guideDetailsMode.enum.wizard%",
+						"%sap.ux.help.guideDetailsMode.enum.full%"
+					],
+					"enumDescriptions": [
+						"%sap.ux.help.guideDetailsMode.enum.wizard.desc%",
+						"%sap.ux.help.guideDetailsMode.enum.full.desc%"
+					],
+					"scope": "window"
+				},
+				"sap.ux.help.showDescriptions": {
+					"type": "string",
+					"default": "%sap.ux.help.showDescriptions.enum.enabled%",
+					"description": "%sap.ux.help.showDescriptions%",
+					"enum": [
+						"%sap.ux.help.showDescriptions.enum.disabled%",
+						"%sap.ux.help.showDescriptions.enum.enabled%"
+					],
+					"enumDescriptions": [
+						"%sap.ux.help.showDescriptions.enum.disabled.desc%",
+						"%sap.ux.help.showDescriptions.enum.enabled.desc%"
+					],
+					"scope": "window"
+				},
+				"sap.ux.help.loggingLevel": {
+					"type": "string",
+					"default": "%sap.ux.help.loggingLevel.enum.info%",
+					"description": "%sap.ux.help.loggingLevel%",
+					"enum": [
+						"%sap.ux.help.loggingLevel.enum.info%",
+						"%sap.ux.help.loggingLevel.enum.warn%",
+						"%sap.ux.help.loggingLevel.enum.error%",
+						"%sap.ux.help.loggingLevel.enum.debug%"
+					],
+					"enumDescriptions": [
+						"%sap.ux.help.loggingLevel.enum.info.desc%",
+						"%sap.ux.help.loggingLevel.enum.warn.desc%",
+						"%sap.ux.help.loggingLevel.enum.error.desc%",
+						"%sap.ux.help.loggingLevel.enum.debug.desc%"
+					],
+					"scope": "window"
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "sap.ux.help.openGuidedDevelopment",
+				"title": "%commands.help.openGuidedDevelopment.title%",
+				"category": "%commands.help.category%"
+			},
+			{
+				"command": "sap.ux.help.openGuidedDevelopmentToTheSide",
+				"title": "%commands.help.openGuidedDevelopmentToTheSide.title%",
+				"category": "%commands.help.category%"
+			},
+			{
+				"command": "sap.ux.help.openGuidedDevelopmentFromExplorer",
+				"title": "%commands.help.openGuidedDevelopmentFromExplorer.title%",
+				"category": "%commands.help.category%"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"when": "resource in sap.ux.contextMenu.appRoots || resource in sap.ux.contextMenu.webappRoots || resource in sap.ux.contextMenu.subWebappRoots",
+					"command": "sap.ux.help.openGuidedDevelopmentFromExplorer",
+					"group": "1__fiori_tools@3"
+				}
+			],
+			"commandPalette": [
+				{
+					"command": "sap.ux.help.openGuidedDevelopmentFromExplorer",
+					"when": "false"
+				}
+			]
+		}
+	},
+	"dependencies": {
+		"@sap-ux/fe-fpm-writer": "0.23.9",
+		"@sap/cds": "7.0.2",
+		"@sap/ux-extension-logger": "1.11.3",
+		"@sap/ux-help-webapp": "1.11.3",
+		"@sap/ux-specification-types": "1.108.11"
+	},
+	"devDependencies": {
+		"@sap-devx/bas-platform-types": "0.0.10",
+		"@sap-devx/guided-development-types": "0.0.12",
+		"@sap-ux/cap-config-writer": "0.1.26",
+		"@sap-ux/store": "0.3.8",
+		"@sap-ux/vocabularies-types": "0.7.4",
+		"@sap/cds-reflect": "2.13.3",
+		"@sap/ux-annotations": "1.11.3",
+		"@sap/ux-extension-project-access": "1.11.3",
+		"@sap/ux-feature-toggle": "1.11.3",
+		"@sap/ux-help-core": "1.11.3",
+		"@sap/ux-help-core-types": "1.11.3",
+		"@sap/ux-help-webapp-ide-extension-types": "1.11.3",
+		"@sap/ux-jest-runner-vscode": "1.11.3",
+		"@sap/ux-metadata": "1.11.3",
+		"@sap/ux-project-access": "1.11.3",
+		"@sap/ux-telemetry": "1.11.3",
+		"@sapux/project-spec": "1.11.3",
+		"@sapux/vsce": "1.78.2",
+		"@types/extract-zip": "1.6.2",
+		"@types/marked": "4.0.1",
+		"@types/mustache": "0.8.32",
+		"@types/normalize-path": "3.0.0",
+		"@types/vscode": "1.73.1",
+		"@ui5/flexibility-utils": "0.1.3",
+		"copyfiles": "2.1.1",
+		"cross-env": "6.0.3",
+		"datauri": "2.0.0",
+		"express": "4.17.3",
+		"extract-zip": "1.6.6",
+		"fast-glob": "3.2.12",
+		"fast-safe-stringify": "2.0.7",
+		"i18next": "19.0.2",
+		"jest-sonar": "0.2.12",
+		"lodash": "4.17.21",
+		"lodash.unset": "4.5.2",
+		"marked": "4.0.10",
+		"mustache": "3.1.0",
+		"normalize-path": "3.0.0",
+		"semver": "7.5.3",
+		"typescript": "4.9.5"
+	},
+	"files": [
+		"*.vsix",
+		"CHANGELOG.md"
+	],
+	"jestSonar": {
+		"reportFile": "test-report.xml",
+		"reportPath": "reports/test/unit"
+	},
+	"galleryBanner": {
+		"color": "#00195A",
+		"theme": "dark"
+	},
+	"eslint-formatter-multiple": {
+		"formatters": [
+			{
+				"name": "stylish",
+				"output": "console"
+			},
+			{
+				"name": "json",
+				"output": "file",
+				"path": "reports/lint/eslint.json"
+			},
+			{
+				"name": "checkstyle",
+				"output": "file",
+				"path": "reports/lint/eslint.checkstyle.xml"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "9a1a59dc-6ef7-49cf-a5d0-98e64208a84f",
+		"publisherId": "a17c53d7-5315-4db5-a571-feab995abf60",
+		"publisherDisplayName": "SAP SE",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": true,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1698433529024,
+		"preRelease": false
+	}
+}

@@ -1,0 +1,178 @@
+/* Please always choose colors based on: https://code.visualstudio.com/api/references/theme-color */
+
+body {
+    margin: auto;
+    background-image: url('./cap-logo.svg');
+    background-size: 25em;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+    overflow-y: scroll;
+}
+
+.opacity-layer {
+    background-color: var(--vscode-editor-background);
+    opacity: 0.94;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+}
+
+.subtitle {
+    font-weight: bold;
+    font-size: large;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 40px
+}
+
+.intro {
+    margin: auto;
+    max-width: 55em;
+}
+
+.tiles-container {
+    margin: auto;
+    max-width: 60em;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tile {
+    width: 9em;
+    margin: 0.5em;
+    padding-top: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden;
+    border-radius: 1em;
+    background-color: var(--vscode-welcomePage-tileBackground);
+    cursor: pointer;
+}
+
+.tile-title {
+    font-size: 1.1em;
+    padding-top: 0.5em;
+    height: 2em;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle !important;
+    pointer-events: none;
+    border-radius: 1em 1em 0 0;
+}
+
+.tile-text {
+    margin: 0.5em;
+    padding: 0.5em;
+    text-align: left;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 1em;
+    pointer-events: none;
+}
+
+.button-running {
+    cursor: not-allowed !important;
+}
+
+@keyframes pulse {
+    from {
+        opacity: 20%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+.button-running::before {
+    font-size: 0.8em;
+    opacity: 20%;
+    content: '⭐';
+    display: grid;
+    position: absolute;
+    padding-left: 0.7em;
+    animation-name: pulse;
+    animation-direction: alternate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+:hover.tile {
+    transform: scale(1.05);
+    background-color: var(--vscode-welcomePage-tileHoverBackground);
+}
+
+.sap-img {
+    content: url('./sap.svg');
+    height: 0.75em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cap-img {
+    content: url('./cap-logo.svg');
+    height: 1.25em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* resize codicons */
+.iconstyle {
+    zoom: 180%;
+    pointer-events: none;
+    padding-top: 1.2em;
+    background-color: var(--vscode-editor-foreground);
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+/* add cap logo svg to codicons */
+.icon-cap {
+    padding-top: 1.4em;
+    -webkit-mask-image: url('./cap-logo.svg');
+    mask-image: url('./cap-logo.svg');
+}
+
+.icon-java {
+    padding-top: 1.4em;
+    -webkit-mask-image: url('./tmpl_java_application.svg');
+    mask-image: url('./tmpl_java_application.svg');
+}
+
+.icon-activate {
+    -webkit-mask-image: url('./activate.svg');
+    mask-image: url('./activate.svg');
+}
+
+.icon-code1 {
+    -webkit-mask-image: url('./code1.svg');
+    mask-image: url('./code1.svg');
+}
+
+.icon-command-line-interfaces {
+    -webkit-mask-image: url('./command-line-interfaces.svg');
+    mask-image: url('./command-line-interfaces.svg');
+}
+.icon-it-host {
+    -webkit-mask-image: url('./it-host.svg');
+    mask-image: url('./it-host.svg');
+}
+
+.icon-sys-monitor {
+    -webkit-mask-image: url('./sys-monitor.svg');
+    mask-image: url('./sys-monitor.svg');
+}

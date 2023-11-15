@@ -1,0 +1,89 @@
+{
+	"name": "sap-ux-fiori-tools-extension-pack",
+	"displayName": "SAP Fiori Tools - Extension Pack",
+	"description": "An extension pack that bundles SAP Fiori tools extensions.",
+	"icon": "media/Fiori-tools.png",
+	"publisher": "SAPSE",
+	"version": "1.11.3",
+	"license": "SEE LICENSE IN LICENSE",
+	"bugs": {
+		"url": "https://ask.sapfioritools.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "private"
+	},
+	"engines": {
+		"vscode": "^1.73.1"
+	},
+	"files": [
+		"*.vsix",
+		"CHANGELOG.md"
+	],
+	"categories": [
+		"Extension Packs"
+	],
+	"keywords": [
+		"SAP",
+		"SAP Fiori elements",
+		"OData",
+		"CDS"
+	],
+	"private": false,
+	"galleryBanner": {
+		"color": "#00195A",
+		"theme": "dark"
+	},
+	"scripts": {
+		"clean:dist": "rimraf ./dist ./generators *.tsbuildinfo",
+		"clean": "rimraf *.vsix",
+		"ide-ext:package": "vsce package --yarn --failOnIssues",
+		"lint": "echo 'Lint not run'",
+		"build": "echo 'Build not run'",
+		"lint:report": "echo 'Lint report not run' || no-command -f multiple ",
+		"madge": "echo 'Madge not run'"
+	},
+	"devDependencies": {
+		"@sapux/vsce": "1.78.2",
+		"typescript": "4.9.5"
+	},
+	"extensionPack": [
+		"SAPSE.sap-ux-application-modeler-extension",
+		"SAPSE.sap-ux-help-extension",
+		"SAPSE.sap-ux-service-modeler-extension",
+		"SAPSE.sap-ux-annotation-modeler-extension",
+		"SAPOS.yeoman-ui",
+		"SAPOSS.vscode-ui5-language-assistant",
+		"SAPOSS.xml-toolkit",
+		"SAPOSS.sap-guided-answers-extension"
+	],
+	"eslint-formatter-multiple": {
+		"formatters": [
+			{
+				"name": "stylish",
+				"output": "console"
+			},
+			{
+				"name": "json",
+				"output": "file",
+				"path": "reports/lint/eslint.json"
+			},
+			{
+				"name": "checkstyle",
+				"output": "file",
+				"path": "reports/lint/eslint.checkstyle.xml"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "90e181ca-96e6-4201-b590-8300362834ac",
+		"publisherId": "a17c53d7-5315-4db5-a571-feab995abf60",
+		"publisherDisplayName": "SAP SE",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": true,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1698433529009,
+		"preRelease": false
+	}
+}

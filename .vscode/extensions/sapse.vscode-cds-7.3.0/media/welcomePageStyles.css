@@ -1,0 +1,53 @@
+/* Please always choose colors based on: https://code.visualstudio.com/api/references/theme-color */
+
+/* add logo in center, alpha channel added by opacity layer */
+body {
+    margin: auto !important;
+    background-image: url('./cap-logo.svg');
+    background-repeat: no-repeat;
+    background-size: 25em;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+    overflow-y: scroll;
+}
+
+/* add layer above background cap logo to add alpha channel */
+.opacity-layer {
+    background-color: var(--vscode-editor-background);
+    opacity: 0.94;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+}
+
+.error-msg {
+    font-size: large;
+    text-align: center;
+    padding-top: 4em;
+}
+
+/* force content into page's center */
+div.VPContent {
+    padding-top: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* switch off sidebars, headers, footers, etc */
+a.VPSkipLink,
+aside.VPSidebar,
+div.aside,
+div.edit-info,
+div.is-home,
+div.NotFound,
+div.prev-next, /* <= vitepress-beta-5, TODO remove after capire release */
+nav.prev-next, /* >= vitepress-beta-6 */
+div.VPLocalNav,
+footer,
+header.VPNav {
+    display: none !important;
+}

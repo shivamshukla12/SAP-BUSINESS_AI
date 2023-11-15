@@ -1,0 +1,26 @@
+[
+    {
+        "kind": 1,
+        "language": "markdown",
+        "value": "# The *Native Shell* cell\n\nThe *Native Shell* cell in your CAP Notebook is nothing other than your system's **default shell**:<br>\n\n- When executed, the command is run in an underlying (shell) subprocess (see [Single command](#single-command) example).\n- Can fire multiple commands from the same cell (split by new lines, see [Multiple commands](#multiple-commands) example).\n- Keep commands *system-agnostic* to keep Notebook shareable (i.e `ls || dir`).\n- Ideal for file navigation (i.e. `cd`, `find`, etc.), manipulation (i.e. `awk`, `sed`, `grep`, etc.) and *finite* CLI calls.\n- Output is returned to the CAP Notebook.\n\n## Examples\n\n### [Single command](#single-command)\n\nSimply write into the *Native Shell* code cell just like you would type into your shell and press the execute button.\n\nThe following cell prints `\"Hello, world!\"` on the output when executed:",
+        "outputs": []
+    },
+    {
+        "kind": 2,
+        "language": "shell",
+        "value": "echo \"Hello, world!\"",
+        "outputs": []
+    },
+    {
+        "kind": 1,
+        "language": "markdown",
+        "value": "### [Multiple commands](#multiple-commands)\n\nYou can also fire off multiple shell commands on one code cell by just starting a new line (equivalent to using `&&` in your underlying shell). The following cell demonstrates this via a simple example:",
+        "outputs": []
+    },
+    {
+        "kind": 2,
+        "language": "shell",
+        "value": "echo \"Hello\"\necho \"world\"",
+        "outputs": []
+    }
+]

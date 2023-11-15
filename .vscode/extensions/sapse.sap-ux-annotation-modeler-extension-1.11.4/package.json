@@ -1,0 +1,226 @@
+{
+	"name": "sap-ux-annotation-modeler-extension",
+	"displayName": "%annotationModeler.displayName%",
+	"description": "%annotationModeler.description%",
+	"publisher": "SAPSE",
+	"license": "SEE LICENSE IN LICENSE",
+	"version": "1.11.4",
+	"icon": "Annotation-XML.png",
+	"categories": [
+		"Programming Languages",
+		"Snippets",
+		"Linters"
+	],
+	"keywords": [
+		"SAP",
+		"SAP Fiori Elements",
+		"OData",
+		"Annotations",
+		"OData",
+		"CDS",
+		"EDMX"
+	],
+	"bugs": {
+		"url": "https://ask.sapfioritools.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "private"
+	},
+	"engines": {
+		"vscode": "^1.73.1"
+	},
+	"activationEvents": [
+		"onLanguage:xml"
+	],
+	"private": false,
+	"main": "./dist/extension.js",
+	"contributes": {
+		"configuration": {
+			"id": "sap.ux.annotationModeler",
+			"type": "object",
+			"title": "%annotationModeler.configuration.title%",
+			"properties": {
+				"sap.ux.annotationModeler.enableTelemetry": {
+					"default": true,
+					"type": "boolean",
+					"description": "%annotationModeler.configuration.properties.enableTelemetry.description%",
+					"scope": "window",
+					"markdownDeprecationMessage": "%annotationModeler.configuration.properties.deprecation.enableTelemetry.description%",
+					"deprecationMessage": "%annotationModeler.configuration.properties.deprecation.enableTelemetry.description%"
+				},
+				"sap.ux.annotationModeler.semanticHighlighting.enabled": {
+					"default": true,
+					"type": "boolean",
+					"description": "%annotationModeler.configuration.properties.semanticHighlighting.description%",
+					"scope": "window"
+				}
+			}
+		},
+		"languages": [
+			{
+				"id": "xml",
+				"extensions": [
+					".xml"
+				],
+				"aliases": [
+					"edmx"
+				]
+			}
+		],
+		"commands": [
+			{
+				"command": "sap.ux.annoataionModeler.startXmlServer",
+				"title": "%commands.annotationModeler.startXmlServer.title%",
+				"category": "%commands.fiori.category%"
+			}
+		],
+		"semanticTokenScopes": [
+			{
+				"language": "xml",
+				"scopes": {
+					"parameter.attribute": [
+						"entity.name.function.ts"
+					]
+				}
+			}
+		],
+		"semanticTokenModifiers": [
+			{
+				"id": "mandatory",
+				"description": "token is mandatory"
+			},
+			{
+				"id": "entity",
+				"description": "token is a metadata target type: EntityType and EntitySet"
+			},
+			{
+				"id": "i18n",
+				"description": "token is i18n string"
+			}
+		]
+	},
+	"scripts": {
+		"pre-commit": "lint-staged --quiet",
+		"clean:dist": "rimraf ./dist ./generators *.tsbuildinfo",
+		"clean": "rimraf ./out ./reports *.tgz *.vsix",
+		"compile": "tsc --build tsconfig.build.json --pretty --dry",
+		"build": "npm-run-all -l -s clean -p compile bundle",
+		"bundle": "node esbuild",
+		"vscode:prepublish": "npm-run-all bundle",
+		"watch": "npm-run-all -p watch:*",
+		"watch:extension": "node esbuild --watch --minify=false",
+		"test": "jest --maxWorkers=1 --ci --forceExit --detectOpenHandles",
+		"lint": "eslint . --ext .ts,.tsx",
+		"lint:summary": "eslint . --ext .ts,.tsx -f summary",
+		"lint:fix": "eslint --fix",
+		"lint:fix:all": "eslint . --ext .ts,.tsx --fix",
+		"lint:report": "eslint . --ext .ts,.tsx -f multiple ",
+		"madge": "madge --warning --circular --extensions ts ./",
+		"format:fix": "prettier --write --loglevel silent --ignore-path ../../../.prettierignore",
+		"format:fix:all": "prettier --write '**/*.{css,scss,html,js,json,ts,tsx,yaml,yml}' '!**/{out,dist,typings,node_modules}/**' '!**/*.{svg,png,xml}' --ignore-path ../../../.prettierignore",
+		"ide-ext:package": "vsce package --yarn --failOnIssues",
+		"dev:build": "npm-run-all dev:build:*",
+		"dev:build:ide-extension": "yarn lerna run build --scope sap-ux-annotation-modeler-extension --include-dependencies",
+		"dev:build:cds-extension": "yarn lerna run build --scope @sap/ux-cds-odata-language-server-extension --include-dependencies",
+		"dev:build:annotations": "yarn lerna run build --scope @sap/ux-annotations --include-dependencies",
+		"dev:watch": "npm-run-all -p dev:watch:*",
+		"dev:watch:ide-extension": "tsc  --build ./tsconfig.build.json --pretty --watch",
+		"dev:watch:cds-odata-language-server-extension": "cd ../cds-odata-language-server-extension && tsc  --build ./tsconfig.build.json --pretty --watch",
+		"dev:watch:xml-language-server": "cd ../xml-language-server && tsc  --build ./tsconfig.build.json --pretty --watch",
+		"dev:watch:xml-odata-language-server-extension": "cd ../xml-odata-language-server-extension && tsc  --build ./tsconfig.build.json --pretty --watch",
+		"dev:watch:annotation-service": "cd ../../lib/annotation-service && tsc  --build ./tsconfig.build.json --pretty --watch",
+		"dev:watch:annotations": "cd ../../lib/annotations && tsc  --build ./tsconfig.build.json --pretty --watch",
+		"dev:watch:cds-annotation-adapter": "cd ../../lib/cds-annotation-adapter && tsc  --build ./tsconfig.build.json --pretty --watch",
+		"dev:watch:metadata": "cd ../../lib/metadata && tsc  --build ./tsconfig.build.json --pretty --watch",
+		"dev:watch:vocabularies": "cd ../../lib/vocabularies && tsc  --build ./tsconfig.build.json --pretty --watch",
+		"dev:watch:xml-annotation-adapter": "cd ../../lib/xml-annotation-adapter && tsc  --build ./tsconfig.build.json --pretty --watch",
+		"dev:lint": "npm-run-all dev:lint:*",
+		"dev:lint:ide-extension": "npm run lint",
+		"dev:lint:cds-odata-language-server-extension": "cd ../cds-odata-language-server-extension && npm run lint",
+		"dev:lint:xml-language-server": "cd ../xml-language-server && npm run lint",
+		"dev:lint:xml-odata-language-server-extension": "cd ../xml-odata-language-server-extension && npm run lint",
+		"dev:lint:annotation-service": "cd ../../lib/annotation-service && npm run lint",
+		"dev:lint:annotations": "cd ../../lib/annotations && npm run lint",
+		"dev:lint:cds-annotation-adapter": "cd ../../lib/cds-annotation-adapter && npm run lint",
+		"dev:lint:metadata": "cd ../../lib/metadata && npm run lint",
+		"dev:lint:vocabularies": "cd ../../lib/vocabularies && npm run lint",
+		"dev:lint:xml-annotation-adapter": "cd ../../lib/xml-annotation-adapter && npm run lint",
+		"dev:madge": "echo 'Now works as \"yarn run madge\" from the root folder'",
+		"dev:test": "npm-run-all dev:test:*",
+		"dev:test:ide-extension": "npm run test",
+		"dev:test:cds-odata-language-server-extension": "cd ../cds-odata-language-server-extension && npm run test",
+		"dev:test:xml-language-server": "cd ../xml-language-server && npm run test",
+		"dev:test:xml-odata-language-server-extension": "cd ../xml-odata-language-server-extension && npm run test",
+		"dev:test:annotation-service": "cd ../../lib/annotation-service && npm run test",
+		"dev:test:annotations": "cd ../../lib/annotations && npm run test",
+		"dev:test:cds-annotation-adapter": "cd ../../lib/cds-annotation-adapter && npm run test",
+		"dev:test:metadata": "cd ../../lib/metadata && npm run test",
+		"dev:test:vocabularies": "cd ../../lib/vocabularies && npm run test",
+		"dev:test:xml-annotation-adapter": "cd ../../lib/xml-annotation-adapter && npm run test",
+		"setup": "./setup.sh",
+		"setup_link": "./setup_link.sh",
+		"setup_am": "./setup_am.sh",
+		"setup_cds": "./setup_cds.sh",
+		"setup_vscode": "./setup_vscode.sh",
+		"setup_unlink": "./setup_unlink.sh",
+		"setup_appmod": "./setup_appmod.sh"
+	},
+	"dependencies": {
+		"@prettier/plugin-xml": "1.2.0",
+		"prettier": "2.5.1"
+	},
+	"devDependencies": {
+		"@sap/ux-telemetry": "1.11.4",
+		"@sap/ux-xml-language-server": "1.11.4",
+		"@sapux/vsce": "1.78.2",
+		"@types/node": "18.18.5",
+		"@types/vscode": "1.73.1",
+		"i18next": "19.4.4",
+		"madge": "4.0.2",
+		"npm-run-all": "4.1.5",
+		"typescript": "5.2.2",
+		"vscode-languageclient": "8.0.2"
+	},
+	"files": [
+		"*.vsix",
+		"CHANGELOG.md"
+	],
+	"jestSonar": {
+		"reportPath": "reports/test/unit",
+		"reportFile": "test-report.xml"
+	},
+	"galleryBanner": {
+		"color": "#00195A",
+		"theme": "dark"
+	},
+	"eslint-formatter-multiple": {
+		"formatters": [
+			{
+				"name": "stylish",
+				"output": "console"
+			},
+			{
+				"name": "json",
+				"output": "file",
+				"path": "reports/lint/eslint.json"
+			},
+			{
+				"name": "checkstyle",
+				"output": "file",
+				"path": "reports/lint/eslint.checkstyle.xml"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "3ae15e7a-46bc-4d0a-a286-193808706bf9",
+		"publisherId": "a17c53d7-5315-4db5-a571-feab995abf60",
+		"publisherDisplayName": "SAP SE",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": true,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1699721760706,
+		"preRelease": false
+	}
+}

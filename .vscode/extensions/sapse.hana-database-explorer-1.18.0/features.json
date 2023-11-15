@@ -1,0 +1,1108 @@
+{
+  "features": [
+    {
+      "name": "ID:cv_keyboard_shortcuts",
+      "jira": "HANATOOLING-13082",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "ID:cv_keyboard_shortcuts_2",
+      "jira": "HANATOOLING-14766",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "ID:cv_keyboard_shortcuts_3",
+      "jira": "HANATOOLING-18124",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "abort_or_continue_sql",
+      "jira": "HANATOOLING-74783",
+      "status": "candidate",
+      "capabilities": []
+    },
+    {
+      "name": "artifact_creation_open_file",
+      "jira": "HANATOOLING-22766",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "artifact_creation_use_vt_wizard",
+      "jira": "HANATOOLING-2935",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "bas_collection_index",
+      "jira": "HANATOOLING-12535",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "bas_last_used_path",
+      "jira": "HANATOOLING-10333",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "bas_project_gitignore",
+      "jira": "HANATOOLING-8278",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "bas_scheduler_job",
+      "jira": "HANATOOLING-72298",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "bas_swa_tracking",
+      "jira": "HANATOOLING-3456",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "calcview_simplify_using_outside_objects",
+      "jira": "HANATOOLING-7691",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_clone_objects",
+      "jira": "HANATOOLING-14117",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_column_based_pruning",
+      "jira": "HANATOOLING-12121",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_columns_sequence_changeable",
+      "jira": "HANATOOLING-55154",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_configure_data_preview_auto_execute_query",
+      "jira": "HANATOOLING-27810",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_copy_multi_nodes",
+      "jira": "HANATOOLING-55152",
+      "status": "candidate",
+      "capabilities": []
+    },
+    {
+      "name": "cv_createSQLHierarchiesFlag",
+      "jira": "HANATOOLING-13085",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_datapreview_client_value",
+      "jira": "HANATOOLING-18668",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_ds_dlg_role_list",
+      "jira": "HANATOOLING-14737",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_end_user_view",
+      "jira": "HANATOOLING-13087",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_evaluate_session_variables_early",
+      "jira": "HANATOOLING-13086",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_exception_aggregation_for_calculated_measures",
+      "jira": "HANATOOLING-43943",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_expression_editor_like_operator",
+      "jira": "HANATOOLING-18673",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_exprssion_editor_add_func_substr_regexpr",
+      "jira": "HANATOOLING-68353",
+      "status": "dev",
+      "capabilities": []
+    },
+    {
+      "name": "cv_filter_map",
+      "jira": "HANATOOLING-50132",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_filter_map_dialog",
+      "jira": "HANATOOLING-68960",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_filter_objects",
+      "jira": "HANATOOLING-18670",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_filtermap_direction",
+      "jira": "HANATOOLING-69707",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_greedy_pruning",
+      "jira": "HANATOOLING-31983",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_greedy_pruning_execution_hints",
+      "jira": "HANATOOLING-50873",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_impact_analysis_cross_objects",
+      "jira": "HANATOOLING-75230",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_improve_debug",
+      "jira": "HANATOOLING-18678",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_intermediate_data_preview",
+      "jira": "HANATOOLING-4538",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_keep_non_equi_join_priorities",
+      "jira": "HANATOOLING-13409",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_mapping_virtualtable",
+      "jira": "HANATOOLING-13084",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_mask_mode",
+      "jira": "HANATOOLING-21550",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_median_aggregation_support",
+      "jira": "HANATOOLING-31982",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_new_find_dlg_refactoring",
+      "jira": "HANATOOLING-22583",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_offer_measures4restriction",
+      "jira": "HANATOOLING-69717",
+      "status": "candidate",
+      "capabilities": []
+    },
+    {
+      "name": "cv_open_sql_editor_from_context_menu",
+      "jira": "HANATOOLING-68030",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_optimize_join_column_ne",
+      "jira": "HANATOOLING-69712",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_parameters_ordering",
+      "jira": "HANATOOLING-11771",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_propagate_adding",
+      "jira": "HANATOOLING-76649",
+      "status": "dev",
+      "capabilities": []
+    },
+    {
+      "name": "cv_propagate_rename",
+      "jira": "HANATOOLING-75228",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_references_option",
+      "jira": "HANATOOLING-18671",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_rename",
+      "jira": "HANATOOLING-1121",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_replace_dlg_supports_parameter_mappings",
+      "jira": "HANATOOLING-27129",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_replace_ds_dlg_improve",
+      "jira": "HANATOOLING-11772",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_replace_ds_existing_nodes",
+      "jira": "HANATOOLING-11773",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_scube_gen_mds",
+      "jira": "HANATOOLING-51072",
+      "status": "candidate",
+      "capabilities": []
+    },
+    {
+      "name": "cv_scube_support",
+      "jira": "HANATOOLING-30608",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_search_associations",
+      "jira": "HANATOOLING-31987",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_search_associations_join",
+      "jira": "HANATOOLING-69704",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_session_variable_mapped_into_data_sources",
+      "jira": "HANATOOLING-31986",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_snapshot",
+      "jira": "HANATOOLING-30609",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_specify_t009_t009b_for_generate_fiscal_data",
+      "jira": "HANATOOLING-75451",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_src_svc_for_new_find_dlg",
+      "jira": "HANATOOLING-12323",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_starjoin_default_jointype",
+      "jira": "HANATOOLING-18674",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_swap_input",
+      "jira": "HANATOOLING-55150",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_system_version_table",
+      "jira": "HANATOOLING-12122",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_system_versioned_table_between_from",
+      "jira": "HANATOOLING-69716",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_udf_for_filter_expression_and_calculated_attributes",
+      "jira": "HANATOOLING-69391",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_udf_for_masking_dialog",
+      "jira": "HANATOOLING-69715",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_udf_for_ne_join",
+      "jira": "HANATOOLING-69710",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_udf_for_restricted_columns",
+      "jira": "HANATOOLING-69711",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_udf_list_output_params",
+      "jira": "HANATOOLING-75328",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "cv_undo_redo_history",
+      "jira": "HANATOOLING-18672",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "database_info",
+      "jira": "HANATOOLING-81243",
+      "status": "dev",
+      "capabilities": []
+    },
+    {
+      "name": "dt_artifact_types",
+      "jira": "HANATOOLING-3449",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "export_sql_results",
+      "jira": "HANATOOLING-50010",
+      "status": "candidate",
+      "capabilities": []
+    },
+    {
+      "name": "generator_command",
+      "jira": "HANATOOLING-5841",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "guided_development",
+      "jira": "HANATOOLING-4439",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "guided_development_cv",
+      "jira": "HANATOOLING-27181",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "hana.sqlanlz.exec_plan_comparison",
+      "jira": "HANATOOLING-19151",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "hana.sqlanlz.inner_plan_visualization",
+      "jira": "HANATOOLING-3918",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "hana.sqlanlz.location_based_coloring",
+      "jira": "HANATOOLING-3855",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "hana.sqlanlz.remote_data_source_name",
+      "jira": "HANATOOLING-4049",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "hana.sqlanlz.rewrite_step_viz",
+      "jira": "HANATOOLING-75693",
+      "status": "dev",
+      "capabilities": []
+    },
+    {
+      "name": "hana.sqlanlz.search_in_chat",
+      "jira": "HANATOOLING-4004",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "hana.sqlanlz.thread_limit",
+      "jira": "HANATOOLING-9731",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "hana.sqlanlz.vscode.live_connection",
+      "jira": "HANATOOLING-3850",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "hana.studio.2022-12",
+      "jira": "HANATOOLING-69416",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "hana.studio.2023-03",
+      "jira": "HANATOOLING-74233",
+      "status": "dev",
+      "capabilities": []
+    },
+    {
+      "name": "hana_service",
+      "jira": "HANATOOLING-3946",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "lsp_json_schema_validation",
+      "jira": "HANATOOLING-3915",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "module_generator_cf_service_selection",
+      "jira": "HANATOOLING-3574",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "multiple_sql_params_csv",
+      "jira": "HANATOOLING-70276",
+      "status": "dev",
+      "capabilities": []
+    },
+    {
+      "name": "network_transfer_information",
+      "jira": "HANATOOLING-15026",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "prompt_for_credentials",
+      "jira": "HANATOOLING-54028",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "quote_env_file",
+      "jira": "HANATOOLING-49446",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "reset_artifact_to_deployed",
+      "jira": "HANATOOLING-8535",
+      "status": "dev",
+      "capabilities": []
+    },
+    {
+      "name": "reverse_engineer_dt",
+      "jira": "HANATOOLING-5778",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "select_database_new_ui",
+      "jira": "HANATOOLING-73157",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "sql-console-result-limits",
+      "jira": "HANATOOLING-74916",
+      "status": "candidate",
+      "capabilities": []
+    },
+    {
+      "name": "sql_cell_viewer",
+      "jira": "HANATOOLING-50006",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "sql_console_results_table",
+      "jira": "HANATOOLING-70735",
+      "status": "dev",
+      "capabilities": []
+    },
+    {
+      "name": "sql_db_switch",
+      "jira": "HANATOOLING-29716",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "sql_enhanced_statement_history",
+      "jira": "HANATOOLING-56334",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "sql_parser",
+      "jira": "HANATOOLING-56798",
+      "status": "dev",
+      "capabilities": []
+    },
+    {
+      "name": "sql_runtime_stats",
+      "jira": "HANATOOLING-28292",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "sql_statement_help_panel",
+      "jira": "HANATOOLING-30534",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "sqlc_auto_commit_setting",
+      "jira": "HANATOOLING-41432",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "sqlc_parameterized_statements",
+      "jira": "HANATOOLING-30409",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "statement_library",
+      "jira": "HANATOOLING-50013",
+      "status": "dev",
+      "capabilities": []
+    },
+    {
+      "name": "supportability_liveConnectionRefinement",
+      "jira": "HANATOOLING-12290",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "toolbar_schema",
+      "jira": "HANATOOLING-74582",
+      "status": "candidate",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-add-hdb-module.support_managed_services",
+      "jira": "HANATOOLING-51875",
+      "status": "dev",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-dbx.databaseFilter",
+      "jira": "HANATOOLING-74417",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-dbx.job_scheduler",
+      "jira": "HANATOOLING-74784",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.add_bindtomanagedservice_option",
+      "jira": "HANATOOLING-74927",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.add_bindtoschemaservice_option",
+      "jira": "HANATOOLING-74098",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.auto_clean_deployment_log",
+      "jira": "HANATOOLING-8767",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.bindModuleToDefaultService",
+      "jira": "HANATOOLING-22636",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.bind_to_schemaservice",
+      "jira": "HANATOOLING-70046",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.bind_to_servicemanager_services",
+      "jira": "HANATOOLING-72612",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.bind_ups_to_targetcontainer",
+      "jira": "HANATOOLING-41917",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.bindunbindallservice",
+      "jira": "HANATOOLING-13890",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.cap_development",
+      "jira": "HANATOOLING-8565",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.checkEnvEntryForDBModule",
+      "jira": "HANATOOLING-17044",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.check_database_connection",
+      "jira": "HANATOOLING-19587",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.checkdatabaseidwhenbind",
+      "jira": "HANATOOLING-42893",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.checkschemawhenbind",
+      "jira": "HANATOOLING-22629",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.config_deploy_trace",
+      "jira": "HANATOOLING-68358",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.create_grantfiles_when_addconnection",
+      "jira": "HANATOOLING-42444",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.create_procedure_grantor",
+      "jira": "HANATOOLING-48918",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.delete_database_connection",
+      "jira": "HANATOOLING-19586",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.deploy_multiple_files",
+      "jira": "HANATOOLING-19584",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.disableAutoUndeployWhenBinding",
+      "jira": "HANATOOLING-19162",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.embedded_help_for_hdieditor",
+      "jira": "HANATOOLING-30578",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.explandPanelByDefault",
+      "jira": "HANATOOLING-19583",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.hdbgrants_editor",
+      "jira": "HANATOOLING-27141",
+      "status": "dev",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.outdated_deployer_warning",
+      "jira": "HANATOOLING-73640",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.setDefaultStopOnErrorParam",
+      "jira": "HANATOOLING-30237",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.set_migrationtable_development_mode",
+      "jira": "HANATOOLING-17311",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.showHDIConfigFiles",
+      "jira": "HANATOOLING-25391",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.show_warningmsg_when_bind",
+      "jira": "HANATOOLING-14113",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.support_managed_services",
+      "jira": "HANATOOLING-50482",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.supportmodeexport",
+      "jira": "HANATOOLING-41774",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.sync_deploymentstate_with_database",
+      "jira": "HANATOOLING-48519",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-hana-explorer.unbind_services_when_switch_cfspace",
+      "jira": "HANATOOLING-42898",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc-xs-tools.show_status_in_task_bar",
+      "jira": "HANATOOLING-76024",
+      "status": "candidate",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_auto_commit_setting",
+      "jira": "HANATOOLING-42807",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_choose_time_table",
+      "jira": "HANATOOLING-2801",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_custom_editor",
+      "jira": "HANATOOLING-41633",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_db_explorer",
+      "jira": "HANATOOLING-22726",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_db_switch",
+      "jira": "HANATOOLING-43401",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_dbx_add_database_command",
+      "jira": "HANATOOLING-74183",
+      "status": "dev",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_dbx_copy_object_names",
+      "jira": "HANATOOLING-43625",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_dbx_create_statement",
+      "jira": "HANATOOLING-31482",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_dbx_hdi_admin_connection",
+      "jira": "HANATOOLING-48171",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_dbx_hrtt_connection_setting",
+      "jira": "HANATOOLING-30606",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_dbx_open_dbx",
+      "jira": "HANATOOLING-28995",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_dbx_select_statement",
+      "jira": "HANATOOLING-31483",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_dbx_statement_help_panel",
+      "jira": "HANATOOLING-47211",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_dbx_userstore",
+      "jira": "HANATOOLING-30538",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_dependency_viewer",
+      "jira": "HANATOOLING-68643",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_dependency_viewer_caching_results",
+      "jira": "HANATOOLING-85719",
+      "status": "dev",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_dependency_viewer_collapse_schema",
+      "jira": "HANATOOLING-85064",
+      "status": "dev",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_extension_sa.access_table_filtering",
+      "jira": "HANATOOLING-9979",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_extension_sa.comment_remove",
+      "jira": "HANATOOLING-10801",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_extension_sa.comment_user_anonymize",
+      "jira": "HANATOOLING-10800",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_extension_sa.cpu_mode",
+      "jira": "HANATOOLING-9303",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_extension_sa.expert_mode",
+      "jira": "HANATOOLING-9728",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_extension_sa.hex_analyze_support",
+      "jira": "HANATOOLING-75490",
+      "status": "candidate",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_extension_sa.input_parameter_view",
+      "jira": "HANATOOLING-5584",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_extension_sa.new_connection_ui",
+      "jira": "HANATOOLING-5590",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_extension_sa.re_execute_hrtt",
+      "jira": "HANATOOLING-85037",
+      "status": "dev",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_extension_sa.real_time_visualization",
+      "jira": "HANATOOLING-5988",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_extension_sa.save_inner_plan",
+      "jira": "HANATOOLING-5776",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_extension_sa.skip_file_dialog",
+      "jira": "HANATOOLING-70516",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_extension_sa.skip_timeline_data",
+      "jira": "HANATOOLING-31000",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_extension_sa.sql_console_adoption_dbx",
+      "jira": "HANATOOLING-30868",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_extension_sa.static_properties",
+      "jira": "HANATOOLING-15279",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_lsp_json_descriptions",
+      "jira": "HANATOOLING-30943",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_metadata_procedures",
+      "jira": "HANATOOLING-30513",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_metadata_views",
+      "jira": "HANATOOLING-50128",
+      "status": "dev",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_parameterized_statements",
+      "jira": "HANATOOLING-42797",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_sql_console",
+      "jira": "HANATOOLING-3322",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_sql_console_on_file",
+      "jira": "HANATOOLING-25305",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_support_connect_xsa",
+      "jira": "HANATOOLING-55981",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_virtual_table_editor",
+      "jira": "HANATOOLING-47985",
+      "status": "released",
+      "capabilities": []
+    },
+    {
+      "name": "vsc_virtual_table_format_editor",
+      "jira": "HANATOOLING-51427",
+      "status": "dev",
+      "capabilities": []
+    },
+    {
+      "name": "window_function_integration",
+      "jira": "HANATOOLING-7117",
+      "status": "released",
+      "capabilities": []
+    }
+  ]
+}

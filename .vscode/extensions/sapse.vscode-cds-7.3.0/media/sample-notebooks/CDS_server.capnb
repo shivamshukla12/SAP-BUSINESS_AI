@@ -1,0 +1,38 @@
+[
+    {
+        "kind": 1,
+        "language": "markdown",
+        "value": "# The *CDS Server* cell\n\nThe *CDS Server* cell in your CAP Notebook uses a customized [VS Code's integrated **terminal**](https://code.visualstudio.com/docs/terminal/basics#_terminal-shells) to launch and monitor `cds watch`:<br>\n\n- When executed, it opens a (VS Code) terminal window which runs the command.\n- Used for [pending](#pending-commands) or [non-terminating](#non-terminating-commands) CLI calls that:\n   - Do not block the workflow as the calls are delegated to the terminal\n   - Support *Run all* by waiting for server-ready events before moving onto the next cell\n- Output is returned to the running (VS Code) Terminal window.\n\n## Examples\n\n### [Single command](#single-command)\n\nSimply write into the *CDS Server* code cell just like you would type into your shell and press the execute button.\n\nThe following cell runs `cds watch` in a newly opened VS Code Terminal window when executed:",
+        "outputs": []
+    },
+    {
+        "kind": 2,
+        "language": "cds server",
+        "value": "cds watch",
+        "outputs": []
+    },
+    {
+        "kind": 1,
+        "language": "markdown",
+        "value": "Note, that the cell in the notebooks has finished running, while the `cds watch` process is allowed to continute to run in the terminal. Next, create a database schema file to see that the terminal responds to our actions:",
+        "outputs": []
+    },
+    {
+        "kind": 2,
+        "language": "shell",
+        "value": "mkdir db",
+        "outputs": []
+    },
+    {
+        "kind": 2,
+        "language": "cds",
+        "value": "%%writefile \"db/schema.cds\"\nentity Books {\n    Title: String;\n}",
+        "outputs": []
+    },
+    {
+        "kind": 1,
+        "language": "markdown",
+        "value": "We can see in the terminal that `cds watch` as reacted:<br>\n\n`No service definitions found in loaded models.`\n\nNavigate to the running Terminal and use `Ctrl+C` to end the process.",
+        "outputs": []
+    }
+]

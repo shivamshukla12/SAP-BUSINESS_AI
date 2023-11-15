@@ -1,0 +1,10 @@
+{
+  "annotationModeler.displayName": "SAP Fiori Tools - XML Annotation Language Server",
+  "annotationModeler.description": "Allows you to access resources that help to define annotations in the code editor thus improving the application development by reducing effort and ensuring code consistency. The following is a subset of features that are part of this extension: code completion, micro-snippets, diagnostics, and internationalization support.",
+  "annotationModeler.configuration.title": "SAP Fiori Tools Annotation LSP",
+  "annotationModeler.configuration.properties.enableTelemetry.description": "Enable telemetry data to be captured for SAP Fiori Tools - Annotation LSP extension. (if enabled the setting still abides by the overall 'Telemetry: enable telemetry' setting). As part of the telemetry data recording, non-personally identifiable information is used to help understand product usage and improve the product.",
+  "annotationModeler.configuration.properties.semanticHighlighting.description": "Semantic highlighting of annotation elements (requires restart of IDE). \nNote: It may override some existing semantic token settings.",
+  "commands.annotationModeler.startXmlServer.title": "Restart XML Annotation Language Server",
+  "commands.fiori.category": "Fiori",
+  "annotationModeler.configuration.properties.deprecation.enableTelemetry.description": "This setting has been deprecated. Refer to https://help.sap.com/viewer/17d50220bcd848aa854c9c182d65b699/Latest/en-US/837c23115bff43b4a245e9f01b0e80f7.html"
+}

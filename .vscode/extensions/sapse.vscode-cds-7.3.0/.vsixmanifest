@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+		<Metadata>
+			<Identity Language="en-US" Id="vscode-cds" Version="7.3.0" Publisher="SAPSE" />
+			<DisplayName>SAP CDS Language Support</DisplayName>
+			<Description xml:space="preserve">Language support for SAP CDS for Visual Studio Code</Description>
+			<Tags>CAP,CDS,LSP,SAP,language,editor,SAP BTP,Cloud Platform,keybindings,json,cds,CDS Repl,__ext_cds,cds server,CDS Server,__ext_csn,terminal,Terminal,shell,Shell,capnb,CAP Notebook,__ext_capnb,csv (semicolon),CSV (semicolon)</Tags>
+			<Categories>Programming Languages,Formatters,Other</Categories>
+			<GalleryFlags>Public</GalleryFlags>
+			
+			<Properties>
+				<Property Id="Microsoft.VisualStudio.Code.Engine" Value="^1.80.0" />
+				<Property Id="Microsoft.VisualStudio.Code.ExtensionDependencies" Value="" />
+				<Property Id="Microsoft.VisualStudio.Code.ExtensionPack" Value="" />
+				<Property Id="Microsoft.VisualStudio.Code.ExtensionKind" Value="workspace" />
+				<Property Id="Microsoft.VisualStudio.Code.LocalizedLanguages" Value="" />
+				
+				
+				
+				<Property Id="Microsoft.VisualStudio.Services.Links.Support" Value="https://cap.cloud.sap/docs/ask-question-vscode" />
+				<Property Id="Microsoft.VisualStudio.Services.Links.Learn" Value="https://cap.cloud.sap" />
+				
+				
+				<Property Id="Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown" Value="true" />
+				<Property Id="Microsoft.VisualStudio.Services.Content.Pricing" Value="Free"/>
+
+				<Property Id="Microsoft.VisualStudio.Services.EnableMarketplaceQnA" Value="false" />
+				
+			</Properties>
+			<License>extension/LICENSE.txt</License>
+			<Icon>extension/media/cap-logo.png</Icon>
+		</Metadata>
+		<Installation>
+			<InstallationTarget Id="Microsoft.VisualStudio.Code"/>
+		</Installation>
+		<Dependencies/>
+		<Assets>
+			<Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="extension/package.json" Addressable="true" />
+			<Asset Type="Microsoft.VisualStudio.Services.Content.Details" Path="extension/README.md" Addressable="true" />
+<Asset Type="Microsoft.VisualStudio.Services.Content.Changelog" Path="extension/CHANGELOG.md" Addressable="true" />
+<Asset Type="Microsoft.VisualStudio.Services.Content.License" Path="extension/LICENSE.txt" Addressable="true" />
+<Asset Type="Microsoft.VisualStudio.Services.Icons.Default" Path="extension/media/cap-logo.png" Addressable="true" />
+		</Assets>
+	</PackageManifest>

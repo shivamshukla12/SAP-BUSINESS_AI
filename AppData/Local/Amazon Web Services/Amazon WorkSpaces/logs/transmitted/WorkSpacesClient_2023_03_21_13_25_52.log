@@ -1,0 +1,114 @@
+2023-03-21T13:25:52.714Z { Version: "5.6.0.3404" }: [INF] Target framework .NET 6.0.11
+2023-03-21T13:25:52.716Z { Version: "5.6.0.3404" }: [INF] Initiating clean up at logs
+2023-03-21T13:25:52.746Z { Version: "5.6.0.3404" }: [INF] Initiating clean up at pcoip
+2023-03-21T13:25:52.753Z { Version: "5.6.0.3404" }: [DBG] Launched from cli
+2023-03-21T13:25:52.823Z { Version: "5.6.0.3404" }: [DBG] Registry value Software\Amazon Web Services. LLC\Amazon WorkSpacesEnableHwAcc Does Not Exists
+2023-03-21T13:25:52.824Z { Version: "5.6.0.3404" }: [DBG] Hardware acceleration enabled from UserSettings file.
+2023-03-21T13:25:52.891Z { Version: "5.6.0.3404" }: [DBG] Setting Session factory
+2023-03-21T13:25:52.894Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> Application::Launch=1
+2023-03-21T13:25:53.313Z { Version: "5.6.0.3404" }: [WRN] Exception occurred while reading setting: No value for key: HKEY_LOCAL_MACHINE\SOFTWARE\Amazon\Amazon WorkSpaces Client\clientUpgradeDisabled
+2023-03-21T13:25:53.345Z { Version: "5.6.0.3404" }: [WRN] Local OS: Windows , Version: [64 bit OS] 10.0.22621.0
+2023-03-21T13:25:53.370Z { Version: "5.6.0.3404" }: [DBG] WorkspaceStateChange: Init
+2023-03-21T13:25:53.372Z { Version: "5.6.0.3404" }: [ERR] File 'LoginPageProperties.json' is not found
+2023-03-21T13:25:53.632Z { Version: "5.6.0.3404" }: [INF] Navigating to Use Case WorkSpacesClient.Common.UseCases.BeginPreSessionUseCase.BeginPreSessionPresenter
+2023-03-21T13:25:53.651Z { Version: "5.6.0.3404" }: [DBG] CredentialCache.DefaultCredentials is set to acutal system proxy
+2023-03-21T13:25:53.651Z { Version: "5.6.0.3404" }: [INF] HttpClient created using SystemProxy from settings: SystemProxy -> 127.0.0.1:8080
+2023-03-21T13:25:53.730Z { Version: "5.6.0.3404" }: [INF] Before <BeginUseCase> CPU:0% Memory:196,768.000kb
+2023-03-21T13:25:53.737Z { Version: "5.6.0.3404" }: [INF] Resolving region for: WSpdx+JPPATZ
+2023-03-21T13:25:53.738Z { Version: "5.6.0.3404" }: [INF] Region Key obtained from code: WSpdx
+2023-03-21T13:25:53.741Z { Version: "5.6.0.3404" }: [INF] Checking for localization update
+2023-03-21T13:25:53.781Z { Version: "5.6.0.3404" }: [INF] Local language assets version: 1
+2023-03-21T13:25:53.781Z { Version: "5.6.0.3404" }: [INF] Requesting language updates from: https://ws-client-service.us-west-2.amazonaws.com/configuration/GetLocalizationAssets
+2023-03-21T13:25:53.808Z { Version: "5.6.0.3404" }: [INF] Checking for error definitions update
+2023-03-21T13:25:53.809Z { Version: "5.6.0.3404" }: [INF] Local languages version: 1 | Local error definitions version: 1
+2023-03-21T13:25:53.809Z { Version: "5.6.0.3404" }: [INF] Requesting error definition updates from: https://ws-client-service.us-west-2.amazonaws.com/configuration/GetErrorDefinition
+2023-03-21T13:25:53.842Z { Version: "5.6.0.3404" }: [DBG] GetAuthInfo Request Amzn-id: 87c65ad5-0771-43e2-b965-a4e9200f2808
+2023-03-21T13:25:54.093Z { Version: "5.6.0.3404" }: [ERR] Error while making a request to : https://ws-client-service.us-west-2.amazonaws.com/configuration/GetErrorDefinition. Message: Response status code does not indicate success: 403 (Forbidden).
+2023-03-21T13:25:54.094Z { Version: "5.6.0.3404" }: [ERR] Exception occured during error-definition remote configuration: HttpClient4xxNetworkError
+2023-03-21T13:25:54.095Z { Version: "5.6.0.3404" }: [INF] No changes to error definitions
+2023-03-21T13:25:54.095Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> ErrorUpdate::Error=0
+2023-03-21T13:25:54.095Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> ErrorUpdate::Fault=0
+2023-03-21T13:25:54.271Z { Version: "5.6.0.3404" }: [DBG] Check for Custom udate URL https://d2td7dqidlhjx7.cloudfront.net/custom/prod/pdx/d-92673560a3/windows/WorkSpacesAppCast.xml returned OverrideDoesNotExists
+2023-03-21T13:25:54.271Z { Version: "5.6.0.3404" }: [DBG] Setting the Update FeedURL URL to https://d2td7dqidlhjx7.cloudfront.net/prod/pdx/windows/WorkSpacesAppCastx64.xml
+2023-03-21T13:25:54.529Z { Version: "5.6.0.3404" }: [ERR] Error while making a request to : https://ws-client-service.us-west-2.amazonaws.com/configuration/GetLocalizationAssets. Message: Response status code does not indicate success: 403 (Forbidden).
+2023-03-21T13:25:54.530Z { Version: "5.6.0.3404" }: [ERR] Exception occured during locale remote configuration: HttpClient4xxNetworkError
+2023-03-21T13:25:54.530Z { Version: "5.6.0.3404" }: [INF] No changes to localization
+2023-03-21T13:25:54.530Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> LocaleUpdate::Error=0
+2023-03-21T13:25:54.530Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> LocaleUpdate::Fault=0
+2023-03-21T13:25:55.061Z { Version: "5.6.0.3404" }: [DBG] Received Http WsBrokerGetAuthInfoResponse(Url: https://ws-broker-service.us-west-2.amazonaws.com/) with (SessionId: 7cd90217-d242-4358-899a-1c04816357e1, OrgName: d-92673560a3, AuthMethods: [OAUTH])
+2023-03-21T13:25:55.062Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> GetAuthInfo::Error=0
+2023-03-21T13:25:55.062Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> GetAuthInfo::Fault=0
+2023-03-21T13:25:55.079Z { Version: "5.6.0.3404" }: [DBG] WorkspaceStateChange: Registered
+2023-03-21T13:25:55.952Z { Version: "5.6.0.3404" }: [ERR] Error while making a request to : https://d1cbg795sa4g1u.cloudfront.net/prod/pdx/d-92673560a3/en_US/wsassets.json. Message: Response status code does not indicate success: 403 (Forbidden).
+2023-03-21T13:25:55.976Z { Version: "5.6.0.3404" }: [ERR] Exception while getting file headers from URI: https://d1cbg795sa4g1u.cloudfront.net/prod/pdx/d-92673560a3/en_US/wsassets.json. Exception: WorkSpacesClient.Common.Infrastructure.ExceptionHandler.WorkspacesClientNetworkException: HttpClient - 4xx Network error
+ ---> System.Net.Http.HttpRequestException: Response status code does not indicate success: 403 (Forbidden).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at WorkSpacesClient.Common.UseCases.CommonGateways.HttpClientWorker.HttpClientWorker.SendAsync(HttpMethod method, Uri uri, Int64 timeoutTicks)
+   --- End of inner exception stack trace ---
+   at WorkSpacesClient.Common.UseCases.CommonGateways.HttpClientWorker.HttpClientWorker.SendAsync(HttpMethod method, Uri uri, Int64 timeoutTicks)
+   at WorkSpacesClient.Common.UseCases.CommonGateways.HttpClientWorker.HttpClientWorker.SendAsync(HttpMethod method, Uri uri)
+   at WorkSpacesClient.Common.UseCases.CommonGateways.FileDownloadWorker.FileDownloadWorker.GetFileHeadersAsync(Uri uri)
+2023-03-21T13:25:56.071Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T13:25:56.072Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T13:25:56.284Z { Version: "5.6.0.3404" }: [ERR] Error while making a request to : https://d1cbg795sa4g1u.cloudfront.net/messaging/prod/pdx/d-92673560a3/en_US/wsMessagings.json. Message: Response status code does not indicate success: 403 (Forbidden).
+2023-03-21T13:25:56.285Z { Version: "5.6.0.3404" }: [ERR] Exception while getting file headers from URI: https://d1cbg795sa4g1u.cloudfront.net/messaging/prod/pdx/d-92673560a3/en_US/wsMessagings.json. Exception: WorkSpacesClient.Common.Infrastructure.ExceptionHandler.WorkspacesClientNetworkException: HttpClient - 4xx Network error
+ ---> System.Net.Http.HttpRequestException: Response status code does not indicate success: 403 (Forbidden).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at WorkSpacesClient.Common.UseCases.CommonGateways.HttpClientWorker.HttpClientWorker.SendAsync(HttpMethod method, Uri uri, Int64 timeoutTicks)
+   --- End of inner exception stack trace ---
+   at WorkSpacesClient.Common.UseCases.CommonGateways.HttpClientWorker.HttpClientWorker.SendAsync(HttpMethod method, Uri uri, Int64 timeoutTicks)
+   at WorkSpacesClient.Common.UseCases.CommonGateways.HttpClientWorker.HttpClientWorker.SendAsync(HttpMethod method, Uri uri)
+   at WorkSpacesClient.Common.UseCases.CommonGateways.FileDownloadWorker.FileDownloadWorker.GetFileHeadersAsync(Uri uri)
+2023-03-21T13:25:56.307Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T13:25:56.307Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T13:25:56.312Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientAddIns::Error=0
+2023-03-21T13:25:56.312Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientAddIns::Fault=0
+2023-03-21T13:25:56.315Z { Version: "5.6.0.3404" }: [INF] Started diagnostics upload process watcher timer
+2023-03-21T13:25:56.357Z { Version: "5.6.0.3404" }: [INF] Navigating to Use Case WorkSpacesClient.Common.UseCases.Authenticate.WarpDriveAuthentication.WarpDriveAuthenticationPresenter
+2023-03-21T13:25:56.375Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T13:25:56.375Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T13:25:56.399Z { Version: "5.6.0.3404" }: [DBG] Setting proxy for embedded browser
+2023-03-21T13:25:56.401Z { Version: "5.6.0.3404" }: [DBG] Received login url: https://d-92673560a3.awsapps.com:443/login/?client_id=f6547774fae7346f&redirect_uri=https%3a%2f%2fskylight.local&locale=en_US
+2023-03-21T13:25:56.402Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T13:25:56.402Z { Version: "5.6.0.3404" }: [DBG] Got IsRememberMeDisalbeResult False
+2023-03-21T13:25:56.402Z { Version: "5.6.0.3404" }: [DBG] Initialize view for embedded browser
+2023-03-21T13:25:56.417Z { Version: "5.6.0.3404" }: [DBG] Initializing WebView2 (version: 107.0.1418.42, browserExeFolder: C:\Program Files\Amazon Web Services, Inc\Amazon WorkSpaces\WebView2, userDataFolder: C:\Users\Yoga\AppData\Local\Amazon Web Services\Amazon WorkSpaces\webview2)
+2023-03-21T13:25:56.418Z { Version: "5.6.0.3404" }: [DBG] OS level proxy will be used for WebView2 browser
+2023-03-21T13:25:56.532Z { Version: "5.6.0.3404" }: [INF] After <BeginUseCase> Elapsed:2825ms, CPU:1.22% Memory:207,796.000kb
+2023-03-21T13:25:56.552Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T13:25:56.552Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T13:25:56.552Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T13:25:56.552Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T13:25:56.573Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T13:25:56.573Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T13:25:56.598Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T13:25:56.598Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T13:25:56.611Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> HealthCheck::HcUnhealthy=1
+2023-03-21T13:25:57.104Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> HealthCheck::HcUnhealthy=1
+2023-03-21T13:25:57.145Z { Version: "5.6.0.3404" }: [INF] WebView2 initialized successfully (version: 107.0.1418.42, browserExeFolder: C:\Program Files\Amazon Web Services, Inc\Amazon WorkSpaces\WebView2, userDataFolder: C:\Users\Yoga\AppData\Local\Amazon Web Services\Amazon WorkSpaces\webview2)
+2023-03-21T13:25:57.146Z { Version: "5.6.0.3404" }: [DBG] OS level proxy will be used for WebView2 browser
+2023-03-21T13:25:57.193Z { Version: "5.6.0.3404" }: [DBG] LoadUrl: https://d-92673560a3.awsapps.com:443/login/?client_id=f6547774fae7346f&redirect_uri=https%3a%2f%2fskylight.local&locale=en_US
+2023-03-21T13:25:57.197Z { Version: "5.6.0.3404" }: [DBG] Loading WarpDrive Page from: $https://d-92673560a3.awsapps.com/login/?client_id=f6547774fae7346f&redirect_uri=https%3a%2f%2fskylight.local&locale=en_US
+2023-03-21T13:25:58.039Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientCustomization::Error=0
+2023-03-21T13:25:58.039Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientCustomization::Fault=0
+2023-03-21T13:25:58.045Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T13:25:58.056Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T13:25:58.094Z { Version: "5.6.0.3404" }: [INF] Diagnostic process is already running, continuing without starting a new process
+2023-03-21T13:25:58.122Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T13:25:58.122Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T13:25:58.125Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientAddIns::Error=0
+2023-03-21T13:25:58.125Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> DescribeClientAddIns::Fault=0
+2023-03-21T13:25:58.126Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> HealthCheck::HcUnhealthy=1
+2023-03-21T13:25:58.455Z { Version: "5.6.0.3404" }: [DBG] Registry value Software\Amazon Web Services. LLC\Amazon WorkSpaces\SSOOverrideSSO Does Not Exists
+2023-03-21T13:25:58.455Z { Version: "5.6.0.3404" }: [DBG] Injecting JS to Override SSO
+2023-03-21T13:26:01.661Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> WdPageLoad::Error=0
+2023-03-21T13:26:01.661Z { Version: "5.6.0.3404" }: [DBG] Recording Metric-> WdPageLoad::Fault=0
+2023-03-21T13:26:01.664Z { Version: "5.6.0.3404" }: [DBG] WarpDrive Page Loaded in 3616 ms
+2023-03-21T13:26:01.673Z { Version: "5.6.0.3404" }: [DBG] Apply CSS to WarpDrive Page
+2023-03-21T13:26:01.674Z { Version: "5.6.0.3404" }: [DBG] Disable Context Menu in WarpDrive Page
+2023-03-21T13:26:01.677Z { Version: "5.6.0.3404" }: [INF] Remote login setting: True. Current Local admin setting: True
+2023-03-21T13:26:01.677Z { Version: "5.6.0.3404" }: [DBG] Uncloaked WarpDrive Page
+2023-03-21T13:26:02.112Z { Version: "5.6.0.3404" }: [DBG] Sent Metrics Request to https://skylight-client-ds.us-west-2.amazonaws.com/put-metrics: 
+2023-03-21T13:26:26.576Z { Version: "5.6.0.3404" }: [INF] Exiting application
+2023-03-21T13:26:26.577Z { Version: "5.6.0.3404" }: [DBG] App Exit with Code: 0
+2023-03-21T13:26:26.577Z { Version: "5.6.0.3404" }: [DBG] Killing the current Process

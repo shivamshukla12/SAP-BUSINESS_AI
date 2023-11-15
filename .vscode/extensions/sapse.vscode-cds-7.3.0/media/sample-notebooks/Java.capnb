@@ -1,0 +1,26 @@
+[
+    {
+        "kind": 1,
+        "language": "markdown",
+        "value": "# The *Java* cell\n\nThe *Java* cell in your CAP Notebook executes your cell content in *Java*:<br>\n\n- When executed, the command is run in an underlying (*jshell*) subprocess (see [Single command](#single-command) example).\n- Can handle more complex code with multiple lines (see [Multiple lines](#multiple-lines) example).\n- Output is returned to the CAP Notebook.\n\n## Examples\n\n### [Single command](#single-command)\n\nSimply write into the *Java* code cell.\n\nThe following cell prints `\"Hello, world!\"` on the output when executed:",
+        "outputs": []
+    },
+    {
+        "kind": 2,
+        "language": "java",
+        "value": "System.out.println(\"Hello, world!\");",
+        "outputs": []
+    },
+    {
+        "kind": 1,
+        "language": "markdown",
+        "value": "### [Multiple line](#multiple-lines)\n\nYou can also use this cell type to create more complex code. The following cell demonstrates this via a simple example creating sample csv data for a CAP project:",
+        "outputs": []
+    },
+    {
+        "kind": 2,
+        "language": "java",
+        "value": "String[] cols = {\"ID\", \"TITLE\", \"AUTHOR\", \"PUBLISHER\", \"GENRE\"};\nint lines = 1000;\n\nFile dataFile = new File(\"data.csv\");\n\nSystem.out.println(\"Writing file...\");\ntry (BufferedWriter bw = new BufferedWriter(new FileWriter(dataFile))) {\n    String header = String.join(\";\", cols);\n    bw.write(header);\n    bw.newLine();\n\n    for(int i = 0; i < lines; i++) {\n        for (String col : cols) {\n            int length = (int)(Math.random() * 8) + 4;\n            String randomText = UUID.randomUUID().toString().replaceAll(\"\\\\W\", \"\").substring(0, length);\n            bw.write((col == cols[0] ? \"\": \";\") + col + \"-\" + randomText);\n        }\n        bw.newLine();\n    }\n    System.out.println(\"Successfully wrote file \" + dataFile.getCanonicalPath());\n\n} catch (IOException e) {\n    e.printStackTrace();\n}",
+        "outputs": []
+    }
+]

@@ -1,0 +1,56 @@
+{
+  "commands.help.category": "Fiori",
+  "commands.help.openGuidedDevelopment.title": "Open Guided Development",
+  "commands.help.openGuidedDevelopmentToTheSide.title": "Open Guided Development to the Side",
+  "commands.help.openGuidedDevelopmentFromExplorer.title": "Open Guided Development",
+
+  "configuration.title": "SAP Fiori Tools - Guided Development",
+  "configuration.properties.enableTelemetry.description": "Enable telemetry data to be captured for SAP Fiori Tools - Guided Development extension. (if enabled the setting still abides by the overall 'Telemetry: enable telemetry' setting). As part of the telemetry data recording, non personally identifiable information is used to help understand product usage and improve the product.",
+  "configuration.properties.deprecation.enableTelemetry.description": "This setting has been deprecated. Refer to https://help.sap.com/viewer/17d50220bcd848aa854c9c182d65b699/Latest/en-US/837c23115bff43b4a245e9f01b0e80f7.html",
+
+  "configuration.properties.guideDetailsMode.description": "Select Guide Details View Mode",
+  "configuration.properties.guideDetailsMode.enum.wizard.description": "Wizard Mode",
+  "configuration.properties.guideDetailsMode.enum.full.description": "Full View Mode",
+
+  "configuration.properties.showDescriptions.description": "Set the visibility of descriptions in Guided Development guides",
+  "configuration.properties.showDescriptions.enum.disabled.description": "Hide step and parameter descriptions",
+  "configuration.properties.showDescriptions.enum.enabled.description": "Show all guide, step, and parameter descriptions",
+
+  "configuration.properties.loggingLevel.description": "Set the logging level",
+  "configuration.properties.loggingLevel.enum.info.description": "Provides general information about the application",
+  "configuration.properties.loggingLevel.enum.warn.description": "Provides warnings and information that may require developer attention",
+  "configuration.properties.loggingLevel.enum.error.description": "Provides information related to a failure in the application",
+  "configuration.properties.loggingLevel.enum.debug.description": "Provides information to help diagnose and troubleshoot issues in the application",
+
+  "commands.help.ai.category": "Fiori tools AI",
+  "commands.help.ai.createProject.title": "Create Project",
+  "commands.help.ai.chatProjectExplorerView.openFile.title": "Open Chat Project Explorer File",
+  "commands.help.ai.chatProjectExplorerView.refreshFile.title": "Refresh Chat Project Explorer File",
+
+  "configuration.properties.fiori.ai.llmProvider.type.description": "Large Language Model (LLM) Provider",
+  "configuration.properties.fiori.ai.llmProvider.type.enum.openAI.description": "OpenAI",
+  "configuration.properties.fiori.ai.llmProvider.type.enum.azureOpenAI.description": "Azure OpenAI",
+
+  "configuration.properties.fiori.ai.llmProvider.openAiApiSettings.markdownDescription": "OpenAI API Settings\nRefer to [OpenAI Documentation](https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key) on where to find your secret API key and best practices for API key safety.",
+  "configuration.properties.fiori.ai.llmProvider.openAiApiSettings.properties.apiKey.description": "OpenAI API Key",
+
+  "configuration.properties.fiori.ai.llmProvider.azureOpenAiApiSettings.markdownDescription": "Azure OpenAI API Settings\nRefer to the [Azure OpenAI API Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference) on where to find the API key and other resource information.",
+  "configuration.properties.fiori.ai.llmProvider.azureOpenAiApiSettings.properties.apiKey.description": "Azure OpenAI API Key",
+  "configuration.properties.fiori.ai.llmProvider.azureOpenAiApiSettings.properties.apiVersion.description": "Azure OpenAI API Version",
+  "configuration.properties.fiori.ai.llmProvider.azureOpenAiApiSettings.properties.instanceName.description": "Azure OpenAI Instance Name",
+  "configuration.properties.fiori.ai.llmProvider.azureOpenAiApiSettings.properties.deploymentName.description": "Azure OpenAI Deployment Name",
+  "configuration.properties.fiori.ai.llmProvider.azureOpenAiApiSettings.properties.embeddingsDeploymentName.description": "Azure OpenAI Embeddings Deployment Name",
+
+  "viewsContainers.activitybar.title": "SAP Fiori tools AI",
+
+  "views.sap.ux.help.fiori.ai.chatProjectExplorerView.name": "Chat Project Explorer",
+  "views.sap.ux.help.fiori.ai.chatView.name": "Chat",
+
+  "commands.help.ai.storeServiceKey.title": "Store Service Key",
+  "commands.help.ai.deleteServiceKey.title": "Delete Service Key",
+
+  "commands.help.ai.chatView.displayLLMProviderSettings.title": "Open Chat Settings",
+  "commands.help.ai.chatView.openReadMe.title": "Open ReadMe File",
+  "commands.help.ai.chatView.exportChatMessages.title": "Export Chat Conversation",
+  "commands.help.ai.chatView.clearChatMessages.title": "Clear Chat Conversation"
+}

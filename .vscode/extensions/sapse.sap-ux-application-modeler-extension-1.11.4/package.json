@@ -1,0 +1,839 @@
+{
+	"name": "sap-ux-application-modeler-extension",
+	"displayName": "%appModeler.displayName%",
+	"description": "%appModeler.description%",
+	"publisher": "SAPSE",
+	"license": "SEE LICENSE IN LICENSE",
+	"version": "1.11.4",
+	"icon": "media/Page-Editor.png",
+	"categories": [
+		"Programming Languages",
+		"Snippets"
+	],
+	"keywords": [
+		"SAP",
+		"SAP Fiori Elements",
+		"Pages",
+		"Story Board",
+		"Page Map"
+	],
+	"bugs": {
+		"url": "https://ask.sapfioritools.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "private"
+	},
+	"engines": {
+		"vscode": "^1.73.1"
+	},
+	"main": "./dist/extension-min.js",
+	"private": false,
+	"scripts": {
+		"disable-test:e2e": "cross-env PUPPETEER_HEADLESS=\"true\" npm-run-all test:e2e:clean test:e2e:set test:e2e:compile test:e2e:set-project test:e2e:run",
+		"test:e2e:run": "yarn --cwd ../../../test/e2e test:e2e:app-modeler:run",
+		"test:e2e:set": "mkdirp reports/test/e2e",
+		"test:e2e:set-project": "cd test/e2e/sample/project_v2_data_service && npm ci",
+		"test:e2e:compile": "tsc --build ./ --pretty ",
+		"test:int:compile": "tsc --build test/int/tsconfig.test.json --pretty",
+		"test:e2e:clean": "rimraf ./reports/test/e2e/*",
+		"build:clean": "npm-run-all clean",
+		"setup:intTest-rel": "npm-run-all clean:intTest prepare:intTest",
+		"setup:intTest-stage": "npm-run-all clean:intTest prepare:intTest && replace-in-file @sap:registry=https://registry.npmjs.org @sap:registry=http://bots.cloudconnector.c.eu-de-2.cloud.sap/ ./test/int/test-data-copy/**/.npmrc",
+		"setup:intTest-dev": "npm-run-all clean:intTest prepare:intTest && replace-in-file @sap:registry=https://registry.npmjs.org @sap:registry=https://int.repositories.cloud.sap/artifactory/api/npm/build-milestones-npm/ ./test/int/test-data-copy/**/.npmrc",
+		"clean:intTest": "rimraf ./test/int/test-data-copy",
+		"prepare:copyFiles": "copyfiles --error --all --up 3 \"./test/int/test-data/**/*\" \"./test/int/test-data-copy\"",
+		"prepare:intTest": "npm-run-all test:int:compile prepare:copyFiles",
+		"test-integration-screenshot": "run-script-os",
+		"test-integration-screenshot:default": "exit 1",
+		"test-integration-screenshot:linux": "cross-env DISPLAY=:99.0 && mkdirp test/reports && import -window root test/reports/final-xvfb.png && exit 1",
+		"test:integration:run": "cross-env CODE_VERSION=1.77.3 CODE_VERBOSE=false CODE_FORCE_DOWNLOAD=true CODE_WAIT=true CODE_TESTS_WORKSPACE=./test/int/test-data-copy CODE_TESTS_PATH=./test/int/dist TOOL_SUITE_TIMEOUT=600000 CODE_DISABLE_EXTENSIONS=true node ./../../tools/jest-runner-vscode/dist/test.js || npm-run-all test-integration-screenshot",
+		"test:integration:verbose": "cross-env CODE_VERSION=1.77.3 CODE_VERBOSE=true CODE_TESTS_WORKSPACE=./test/int/test-data-copy CODE_TESTS_PATH=./test/int/dist TOOL_SUITE_TIMEOUT=300000 CODE_DISABLE_EXTENSIONS=true node ./../../tools/jest-runner-vscode/dist/test.js",
+		"git-status-index": "run-script-os",
+		"git-status-index:default": "git status -u",
+		"git-status-index:linux": "git status -u > /dev/null",
+		"clean-yarn-cache": "rimraf ../../../.yarn-cache",
+		"test:ui-integration": "cross-env CODE_VERSION='1.83.1' jest --maxWorkers=1 --ci --forceExit --detectOpenHandles --config='jest.ui.integration.config.js'",
+		"test:ui-integration-stage": "cross-env CODE_VERSION='1.83.1' SAP_TEST_REGISTRY=@sap:registry=http://bots.cloudconnector.c.eu-de-2.cloud.sap/ jest --maxWorkers=1 --ci --forceExit --detectOpenHandles --config='jest.ui.integration.config.js'",
+		"test:ui-integration-dev": "cross-env CODE_VERSION='1.83.1' SAP_TEST_REGISTRY=@sap:registry=https://int.repositories.cloud.sap/artifactory/api/npm/build-milestones-npm/ jest --maxWorkers=1 --ci --forceExit --detectOpenHandles --config='jest.ui.integration.config.js'",
+		"test:integration": "npm-run-all setup:intTest-rel git-status-index test:integration:run",
+		"test:integration-stage": "npm-run-all setup:intTest-stage test:integration:run",
+		"test:integration-dev": "npm-run-all setup:intTest-dev test:integration:run",
+		"pre-commit": "lint-staged --quiet",
+		"clean:dist": "rimraf ./dist ./generators *.tsbuildinfo",
+		"clean": "rimraf ./out ./reports *.tgz *.vsix yarn-error.log  ./test/int/test-data-copy ./.webpack_cache",
+		"build": "npm-run-all -l -s clean -p build:copyfiles build:templatefiles build:eslintRunner build:extension",
+		"build:pack": "npm-run-all -p build:copyfiles build:templatefiles build:eslintRunner build:compile build:extension",
+		"build:compile": "tsc  --build ./tsconfig.build.json --pretty",
+		"build:extension": "node esbuild.js",
+		"build:copyfiles": "copyfiles --error --flat ./media/assets/icons/* ./dist/media/assets/icons",
+		"build:templatefiles": "copyfiles --error --flat ../core/src/page-map/resources/templates/* ./dist/resources/templates/",
+		"build:eslintRunner": "copyfiles --error --flat ../../lib/project-validation/core/dist/plugins/eslint/runner.js ./dist/",
+		"vscode:prepublish": "npm-run-all build:pack",
+		"watch": "npm-run-all -l -p watch:*",
+		"watch:compile": "tsc  --build ./tsconfig.build.json --pretty --watch",
+		"watch:extension": "node esbuild --watch --stats --minify=false",
+		"test": "cross-env NODE_OPTIONS='--max-old-space-size=3072' jest --ci --forceExit --detectOpenHandles --maxWorkers=1 && node ../../../scripts/scov.js reports/test/unit/coverage/lcov.info",
+		"lint": "eslint . --ext .ts,.tsx",
+		"lint:summary": "eslint . --ext .ts,.tsx -f summary",
+		"lint:fix": "eslint . --fix  --ext .ts,.tsx",
+		"lint:fix:all": "eslint . --ext .ts,.tsx,.js --fix",
+		"lint:report:debug": "eslint . --ext .ts,.tsx --debug -f multiple ",
+		"lint:report": "eslint . --ext .ts,.tsx -f multiple ",
+		"format:fix": "prettier --write --loglevel silent --ignore-path ../../../.prettierignore",
+		"format:fix:all": "prettier --write '**/*.{css,scss,html,js,json,ts,tsx,yaml,yml}' '!**/{out,dist,typings,node_modules}/**' '!**/*.{svg,png,xml}' --ignore-path ../../../.prettierignore",
+		"ide-ext:package": "vsce package --yarn --failOnIssues",
+		"madge": "madge --warning --circular --extensions ts ./",
+		"update-app-descriptor": "curl https://raw.githubusercontent.com/SAP/ui5-manifest/master/schema.json > src/manifest-editor/schemas/schema.json && yarn prettier src/manifest-editor/schemas/schema.json --write"
+	},
+	"activationEvents": [
+		"*",
+		"onCommand:sap.ux.appGenerator.ui5Version",
+		"onCommand:sap.ux.appGenerator.ui5VersionV4",
+		"onCommand:sap.ux.appGenerator.ui5VersionV4FormEntry",
+		"onCommand:sap.ux.appGenerator.ui5VersionV4ALP",
+		"onCommand:sap.ux.applicationModeler.migrateProject",
+		"onCommand:sap.ux.appGenerator.launch",
+		"onCommand:sap.ux.appGenerator.launchDeployment",
+		"onCommand:sap.ux.appGenerator.launchReferenceLib",
+		"onCommand:sap.ux.appGenerator.launchReuseLibGen",
+		"onCommand:sap.ux.appGenerator.launchDeployConfig",
+		"onCommand:sap.ux.appGenerator.launchDeploy",
+		"onCommand:sap.ux.appGenerator.launchFlpConfig"
+	],
+	"contributes": {
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "sap-ux-fioritools",
+					"icon": "resources/SAPFioriTools.svg",
+					"title": "%viewContainer.fioritools.title%"
+				}
+			]
+		},
+		"viewsWelcome": [
+			{
+				"view": "sap.ux.applicationModeler.configExplorer",
+				"contents": "%appModeler.message.noProjectFound%",
+				"when": "isTreeEmpty"
+			},
+			{
+				"view": "sap.ux.applicationModeler.configExplorer",
+				"contents": "%appModeler.message.loadingProjects%",
+				"when": "!isTreeEmpty"
+			},
+			{
+				"view": "sap.ux.applicationModeler.sapSystems",
+				"contents": "%appModeler.message.noSystemsFound%",
+				"when": "sap.ux.applicationModeler.isSystemTreeEmpty"
+			},
+			{
+				"view": "sap.ux.applicationModeler.sapSystems",
+				"contents": "%appModeler.message.loadingSystems%",
+				"when": "!sap.ux.applicationModeler.isSystemTreeEmpty"
+			}
+		],
+		"configuration": {
+			"id": "sap.ux.applicationModeler",
+			"type": "object",
+			"title": "%configuration.title%",
+			"properties": {
+				"sap.ux.fioriTools.showReleaseNotesOnActivation": {
+					"type": "boolean",
+					"description": "%configuration.properties.showReleaseNotesOnActivation.description%",
+					"default": true,
+					"scope": "window"
+				},
+				"sap.ux.applicationModeler.enableTelemetry": {
+					"type": "boolean",
+					"description": "%configuration.properties.enableTelemetry.description%",
+					"default": true,
+					"scope": "window",
+					"markdownDeprecationMessage": "%configuration.properties.deprecation.enableTelemetry.description%",
+					"deprecationMessage": "%configuration.properties.deprecation.enableTelemetry.description%"
+				},
+				"sap.ux.applicationModeler.showJsonSchemas": {
+					"type": "boolean",
+					"description": "%configuration.properties.expertMode.description%",
+					"default": false,
+					"scope": "window"
+				},
+				"sap.ux.applicationModeler.disableMigrationPrompt": {
+					"type": "boolean",
+					"description": "%configuration.properties.disableMigrationPrompt.description%",
+					"default": false,
+					"scope": "window"
+				},
+				"sap.ux.applicationModeler.showFioriToolsProjectsInMigrationView": {
+					"type": "boolean",
+					"description": "%configuration.properties.showFioriToolsProjectsInMigrationView.description%",
+					"default": false,
+					"scope": "window"
+				},
+				"sap.ux.applicationModeler.enableExperimentalFeatures": {
+					"type": "boolean",
+					"description": "%configuration.properties.enableExperimentalFeatures.description%",
+					"default": true,
+					"scope": "window"
+				},
+				"sap.ux.applicationModeler.showPropertiesDescriptionInPageEditor": {
+					"type": "boolean",
+					"description": "%configuration.properties.showPropertiesDescriptionInPageEditor.description%",
+					"default": true,
+					"scope": "window"
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "sap.ux.fioriTools.showReleaseNotes",
+				"title": "%commands.fioriTools.showReleaseNotes.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.pageMap.showMap",
+				"title": "%commands.appModeler.showPageMap.title%",
+				"category": "%commands.fiori.category%",
+				"icon": {
+					"dark": "./dist/media/assets/icons/ico-page-map-dark.svg",
+					"light": "./dist/media/assets/icons/ico-page-map-light.svg"
+				}
+			},
+			{
+				"command": "sap.ux.pageMap.showPageEditor",
+				"title": "%commands.appModeler.showPageEditor.title%",
+				"category": "%commands.fiori.category%",
+				"icon": {
+					"dark": "./dist/media/assets/icons/ico-page-editor-dark.svg",
+					"light": "./dist/media/assets/icons/ico-page-editor-light.svg"
+				}
+			},
+			{
+				"command": "sap.ux.pageEditor.previewExternal",
+				"title": "%commands.appModeler.previewExternal.title%",
+				"category": "%commands.fiori.category%",
+				"icon": {
+					"dark": "./dist/media/assets/icons/ico-preview-dark.svg",
+					"light": "./dist/media/assets/icons/ico-preview-light.svg"
+				}
+			},
+			{
+				"command": "sap.ux.applicationModeler.configExplorer.refresh",
+				"title": "%commands.appModeler.refresh.title%",
+				"category": "%commands.fiori.category%",
+				"icon": {
+					"light": "resources/light/refresh.svg",
+					"dark": "resources/dark/refresh.svg"
+				}
+			},
+			{
+				"command": "sap.ux.applicationModeler.configExplorer.showFile",
+				"title": "%commands.appModeler.showFtfs%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.applicationModeler.sapSystems.import",
+				"title": "%commands.appModeler.sapSystems.import.title%",
+				"category": "%commands.fiori.category%",
+				"icon": {
+					"light": "resources/light/icon-import-light.svg",
+					"dark": "resources/dark/icon-import-dark.svg"
+				}
+			},
+			{
+				"command": "sap.ux.applicationModeler.sapSystems.add",
+				"title": "%commands.appModeler.sapSystems.add.title%",
+				"category": "%commands.fiori.category%",
+				"icon": {
+					"light": "resources/light/icon-add-light.svg",
+					"dark": "resources/dark/icon-add-dark.svg"
+				}
+			},
+			{
+				"command": "sap.ux.applicationModeler.sapSystems.refresh",
+				"title": "%commands.appModeler.sapSystems.refresh.title%",
+				"category": "%commands.fiori.category%",
+				"icon": {
+					"light": "resources/light/icon-refresh-light.svg",
+					"dark": "resources/dark/icon-refresh-dark.svg"
+				}
+			},
+			{
+				"command": "sap.ux.applicationModeler.sapSystems.show",
+				"title": "%commands.appModeler.sapSystems.show.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.appGenerator.launch",
+				"title": "%commands.appGenerator.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.applicationModeler.changeMinUI5Version",
+				"title": "%commands.appModeler.changeMinUI5.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.appGenerator.launchDeployment",
+				"title": "%commands.appDeployment.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.appGenerator.launchDeployConfig",
+				"title": "%commands.appDeployConfig.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.appGenerator.launchDeploy",
+				"title": "%commands.appDeploy.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.appGenerator.launchReferenceLib",
+				"title": "%commands.appReferenceLib.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.appGenerator.launchReuseLibGen",
+				"title": "%commands.reuseLibGenerator.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.appGenerator.launchFlpConfig",
+				"title": "%commands.appGenerator.addflpConfig.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.applicationModeler.migrateProject",
+				"title": "%commands.appModeler.migrateProject.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.applicationModler.launchConfig",
+				"title": "%commands.appModeler.launchConfig.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.applicationModeler.appToAppNavigation",
+				"title": "%commands.sap.ux.applicationModeler.appToAppNavigation.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.applicationModeler.sapSystems.delete",
+				"title": "%commands.appModeler.sapSystems.delete.title%",
+				"category": "%commands.fiori.category%",
+				"icon": {
+					"light": "resources/light/trash.svg",
+					"dark": "resources/dark/trash.svg"
+				}
+			},
+			{
+				"command": "sap.ux.applicationModeler.deleteCapApp",
+				"title": "%commands.appModeler.deleteCapApp.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.applicationModeler.validate",
+				"title": "%commands.appModeler.validate.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.dataEditor.open",
+				"title": "%commands.dataEditor.open.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.applicationModeler.flpEmbeddedMode",
+				"title": "%commmands.sap.appModeler.flpEmbeddedMode.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.application.generated.handler",
+				"title": "%commands.application.generated.handler.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.library.generated.handler",
+				"title": "%commands.library.generated.handler.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.application.info",
+				"title": "%commands.application.info.title%",
+				"category": "%commands.fiori.category%",
+				"icon": {
+					"dark": "./dist/media/assets/icons/ico-app-info-dark.svg",
+					"light": "./dist/media/assets/icons/ico-app-info-light.svg"
+				}
+			},
+			{
+				"command": "sap.ux.application.info.refresh",
+				"title": "%commands.application.info.refresh.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.applicationModeler.showManifest",
+				"title": "%applicationModeler.showManifest.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.applicationModeler.showPackage",
+				"title": "%applicationModeler.showPackage.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.environmentcheck.open",
+				"title": "%commands.environmentcheck.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.environmentcheck.archiveProject",
+				"title": "%commands.environmentcheck.archiveProject.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.applicationModeler.addVariantsConfig",
+				"title": "%commands.appModeler.addVariantsConfig.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.applicationModeler.addControlPropertyEditorConfig",
+				"title": "%commands.appModeler.addControlPropertyEditorConfig.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.applicationModeler.findUsedEntities",
+				"title": "%commands.appModeler.findUsedEntities.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.applicationModeler.configExplorer.addPage",
+				"title": "%commands.appModeler.addPage%",
+				"category": "%commands.fiori.category%",
+				"icon": {
+					"light": "resources/light/add.svg",
+					"dark": "resources/dark/add.svg"
+				}
+			},
+			{
+				"command": "sap.ux.applicationModeler.showDocu",
+				"title": "%commands.appModeler.showDocu.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.applicationModeler.changeTelemetrySettings",
+				"title": "%commands.appModeler.changeTelemetrySettings.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.applicationModeler.openManifestEditor",
+				"title": "%commands.appModeler.openManifestEditor.title%",
+				"category": "%commands.fiori.category%"
+			},
+			{
+				"command": "sap.ux.applicationModeler.showOutputChannel",
+				"title": "%applicationModeler.showOutputChannel.title%",
+				"category": "%commands.fiori.category%",
+				"icon": {
+					"light": "resources/light/icon-output-light.svg",
+					"dark": "resources/dark/icon-output-dark.svg"
+				}
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "sap.ux.applicationModeler.sapSystems.import",
+					"when": "!isAppStudio"
+				},
+				{
+					"command": "sap.ux.applicationModeler.sapSystems.delete",
+					"when": "false"
+				},
+				{
+					"command": "sap.ux.applicationModeler.sapSystems.add",
+					"when": "!isAppStudio"
+				},
+				{
+					"command": "sap.ux.applicationModeler.sapSystems.refresh",
+					"when": "false"
+				},
+				{
+					"command": "sap.ux.applicationModeler.sapSystems.show",
+					"when": "!isAppStudio"
+				},
+				{
+					"command": "sap.ux.applicationModeler.configExplorer.showFile",
+					"when": "false"
+				},
+				{
+					"command": "sap.ux.applicationModeler.configExplorer.addPage",
+					"when": "false"
+				},
+				{
+					"command": "sap.ux.application.generated.handler",
+					"when": "false"
+				},
+				{
+					"command": "sap.ux.library.generated.handler",
+					"when": "false"
+				},
+				{
+					"command": "sap.ux.applicationModeler.showManifest",
+					"when": "false"
+				},
+				{
+					"command": "sap.ux.applicationModeler.showPackage",
+					"when": "false"
+				},
+				{
+					"command": "sap.ux.applicationModeler.addControlPropertyEditorConfig",
+					"when": "config.sap.ux.internal.enableInternalFeatures"
+				},
+				{
+					"command": "sap.ux.application.info.refresh",
+					"when": "false"
+				},
+				{
+					"command": "sap.ux.applicationModeler.findUsedEntities",
+					"when": "false"
+				},
+				{
+					"command": "sap.ux.applicationModeler.showDocu",
+					"when": "false"
+				},
+				{
+					"command": "sap.ux.applicationModeler.openManifestEditor",
+					"when": "config.sap.ux.applicationModeler.testBetaFeatures.manifestEditor"
+				}
+			],
+			"editor/title": [
+				{
+					"when": "resourceFilename == 'app.json' && resourceScheme == ftfs && editorLangId == json",
+					"command": "sap.ux.pageMap.showMap",
+					"group": "navigation"
+				},
+				{
+					"when": "sap.ux.applicationModeler.pageMap.open",
+					"command": "sap.ux.applicationModeler.showOutputChannel",
+					"group": "navigation"
+				}
+			],
+			"explorer/context": [
+				{
+					"when": "resourcePath in sap.ux.contextMenu.appRoots || resourcePath in sap.ux.contextMenu.webappRoots",
+					"command": "sap.ux.pageMap.showMap",
+					"group": "1__fiori_tools@4"
+				},
+				{
+					"when": "resourcePath in sap.ux.contextMenu.appRoots || resourcePath in sap.ux.contextMenu.webappRoots || resourcePath in sap.ux.contextMenu.localServiceRoots",
+					"command": "sap.ux.dataEditor.open",
+					"group": "1__fiori_tools@6"
+				},
+				{
+					"when": "resourceExtname == .xml",
+					"command": "sap.ux.dataEditor.open",
+					"group": "1__fiori_tools"
+				},
+				{
+					"when": "resourcePath in sap.ux.contextMenu.projectRoots || resourcePath in sap.ux.contextMenu.appRoots || resourcePath in sap.ux.contextMenu.webappRoots || resourcePath in sap.ux.contextMenu.subWebappRoots || resourcePath in sap.ux.contextMenu.adaptationAppRoots || resourcePath in sap.ux.contextMenu.extensionAppRoots || resourcePath in sap.ux.contextMenu.extensionWebappRoots",
+					"command": "sap.ux.pageEditor.previewExternal",
+					"group": "1__fiori_tools@1"
+				},
+				{
+					"when": "config.sap.ux.applicationModeler.testBetaFeatures.manifestEditor && resourceFilename == manifest.json",
+					"command": "sap.ux.applicationModeler.openManifestEditor",
+					"group": "1_modification@5"
+				},
+				{
+					"when": "resourcePath in sap.ux.contextMenu.appRoots || resourcePath in sap.ux.contextMenu.webappRoots || resourcePath in sap.ux.contextMenu.libraryRoots",
+					"command": "sap.ux.application.info",
+					"group": "1__fiori_tools@2"
+				},
+				{
+					"when": "resourcePath in sap.ux.contextMenu.projectRoots",
+					"command": "sap.ux.environmentcheck.archiveProject",
+					"group": "1__fiori_tools@7"
+				}
+			],
+			"view/item/context": [
+				{
+					"command": "sap.ux.applicationModeler.configExplorer.showFile",
+					"when": "view == sap.ux.applicationModeler.configExplorer && viewItem =~ /^configFtfsAppFile$|^configFtfsPageFile.*$|^configFtfsCustomPageFile.*$/",
+					"group": "navigation"
+				},
+				{
+					"command": "sap.ux.applicationModeler.configExplorer.addPage",
+					"when": "view == sap.ux.applicationModeler.configExplorer && viewItem =~ /^configFtfsPageFile_addable$|^configFtfsCustomPageFile_addable$/",
+					"group": "navigation"
+				},
+				{
+					"command": "sap.ux.applicationModeler.configExplorer.addPage",
+					"when": "view == sap.ux.applicationModeler.configExplorer && viewItem =~ /^configFtfsPageFile_addable$|^configFtfsCustomPageFile_addable$/",
+					"group": "inline"
+				},
+				{
+					"command": "sap.ux.application.info",
+					"when": "view == sap.ux.applicationModeler.configExplorer && viewItem == configFtfsFolder",
+					"group": "navigation"
+				},
+				{
+					"command": "sap.ux.pageEditor.previewExternal",
+					"when": "view == sap.ux.applicationModeler.configExplorer && viewItem == configFtfsFolder",
+					"group": "navigation"
+				},
+				{
+					"command": "sap.ux.applicationModeler.sapSystems.delete",
+					"when": "view == sap.ux.applicationModeler.sapSystems",
+					"group": "inline"
+				},
+				{
+					"command": "sap.ux.applicationModeler.sapSystems.delete",
+					"when": "view == sap.ux.applicationModeler.sapSystems"
+				},
+				{
+					"command": "sap.ux.applicationModeler.sapSystems.show",
+					"when": "view ==  sap.ux.applicationModeler.sapSystems && viewItem == sapSystem",
+					"group": "navigation"
+				},
+				{
+					"command": "sap.ux.application.info",
+					"when": "view == sap.ux.applicationModeler.configExplorer && viewItem == configFtfsFolder",
+					"group": "inline"
+				},
+				{
+					"command": "sap.ux.pageEditor.previewExternal",
+					"when": "view == sap.ux.applicationModeler.configExplorer && viewItem == configFtfsFolder",
+					"group": "inline"
+				},
+				{
+					"command": "sap.ux.appGenerator.launchDeployConfig",
+					"when": "view == sap.ux.applicationModeler.configExplorer && viewItem == configFtfsFolder",
+					"group": "appgen-deploy"
+				},
+				{
+					"command": "sap.ux.appGenerator.launchDeploy",
+					"when": "view == sap.ux.applicationModeler.configExplorer && viewItem == configFtfsFolder",
+					"group": "appgen-deploy"
+				},
+				{
+					"command": "sap.ux.appGenerator.launchFlpConfig",
+					"when": "view == sap.ux.applicationModeler.configExplorer && viewItem == configFtfsFolder",
+					"group": "appgen-deploy"
+				},
+				{
+					"command": "sap.ux.applicationModeler.showPackage",
+					"when": "view == sap.ux.applicationModeler.configExplorer && viewItem == configFtfsFolder"
+				},
+				{
+					"command": "sap.ux.applicationModeler.showManifest",
+					"when": "view == sap.ux.applicationModeler.configExplorer && viewItem == configFtfsFolder"
+				},
+				{
+					"command": "sap.ux.applicationModeler.showDocu",
+					"when": "view == sap.ux.applicationModeler.configExplorer && viewItem =~ /^configFtfsAppFile$|^configFtfsFolder$|^configFtfsPageFile.*$/",
+					"group": "navigation"
+				}
+			],
+			"view/title": [
+				{
+					"command": "sap.ux.applicationModeler.configExplorer.refresh",
+					"when": "view == sap.ux.applicationModeler.configExplorer",
+					"group": "navigation"
+				},
+				{
+					"command": "sap.ux.applicationModeler.sapSystems.import",
+					"when": "view == sap.ux.applicationModeler.sapSystems",
+					"group": "navigation@0"
+				},
+				{
+					"command": "sap.ux.applicationModeler.sapSystems.add",
+					"when": "view == sap.ux.applicationModeler.sapSystems",
+					"group": "navigation@1"
+				},
+				{
+					"command": "sap.ux.applicationModeler.sapSystems.refresh",
+					"when": "view == sap.ux.applicationModeler.sapSystems",
+					"group": "navigation@2"
+				}
+			]
+		},
+		"views": {
+			"sap-ux-fioritools": [
+				{
+					"id": "sap.ux.applicationModeler.configExplorer",
+					"name": "%views.appModeler.configExplorer.name%"
+				},
+				{
+					"id": "sap.ux.applicationModeler.sapSystems",
+					"name": "%views.appModeler.sapSystems.name%",
+					"when": "!isAppStudio"
+				},
+				{
+					"id": "sap.ux.applicationModeler.information",
+					"name": "%views.appModeler.information.name%"
+				}
+			]
+		}
+	},
+	"dependencies": {
+		"@sap/cds": "7.0.2",
+		"@sap/cds-reflect": "2.13.3",
+		"@sap/ux-app-templates": "1.11.4",
+		"@sap/ux-application-info-webapp": "1.11.4",
+		"@sap/ux-application-modeler-webapp": "1.11.4",
+		"@sap/ux-configuration-documentation-webapp": "1.11.4",
+		"@sap/ux-data-editor-webapp": "1.11.4",
+		"@sap/ux-launch-config-webapp": "1.11.4",
+		"@sap/ux-manifest-editor-webapp": "1.11.4",
+		"@sap/ux-migration-webapp": "1.11.4",
+		"@sap/ux-specification-types": "1.108.16",
+		"@sap/ux-store-webapp": "1.11.4",
+		"ejs": "3.1.8",
+		"express": "4.17.3",
+		"keytar": "7.9.0",
+		"shelljs": "0.8.5"
+	},
+	"devDependencies": {
+		"@reduxjs/toolkit": "1.6.1",
+		"@sap-ux/cap-config-writer": "0.2.0",
+		"@sap-ux/environment-check": "0.16.1",
+		"@sap-ux/project-access": "1.14.0",
+		"@sap-ux/ui-components": "1.11.19",
+		"@sap/ux-annotations": "1.11.4",
+		"@sap/ux-app-migrator": "1.11.4",
+		"@sap/ux-application-modeler-core": "1.11.4",
+		"@sap/ux-application-modeler-sync": "1.11.4",
+		"@sap/ux-application-modeler-types": "1.11.4",
+		"@sap/ux-cds": "1.11.4",
+		"@sap/ux-common-utils": "1.11.4",
+		"@sap/ux-data-editor": "1.11.4",
+		"@sap/ux-data-editor-types": "1.11.4",
+		"@sap/ux-extension-launch-config": "1.11.4",
+		"@sap/ux-extension-logger": "1.11.4",
+		"@sap/ux-extension-project-access": "1.11.4",
+		"@sap/ux-extension-project-validation": "1.11.4",
+		"@sap/ux-feature-toggle": "1.11.4",
+		"@sap/ux-generator-common": "1.11.4",
+		"@sap/ux-i18n-properties": "1.11.4",
+		"@sap/ux-jest-runner-vscode": "1.11.4",
+		"@sap/ux-jest-runner-vscode-remote": "1.11.4",
+		"@sap/ux-launch-config": "1.11.4",
+		"@sap/ux-logger": "1.11.4",
+		"@sap/ux-odata-client": "1.11.4",
+		"@sap/ux-project-access": "1.11.4",
+		"@sap/ux-store": "1.11.4",
+		"@sap/ux-telemetry": "1.11.4",
+		"@sap/ux-ui5-info": "1.11.4",
+		"@sapux/project-spec": "1.11.4",
+		"@sapux/vsce": "1.78.2",
+		"@types/http-proxy": "^1.17.0",
+		"@types/json-schema": "7.0.5",
+		"@types/md5": "2.1.33",
+		"@types/node": "18.18.5",
+		"@types/socket.io": "^2.1.2",
+		"@types/source-map-support": "0.5.0",
+		"@types/uuid": "3.4.7",
+		"@types/vscode": "1.73.1",
+		"@types/wait-on": "5.3.1",
+		"@xml-tools/parser": "1.0.11",
+		"autoprefixer": "10.4.7",
+		"axios": "1.4.0",
+		"big.js": "5.2.2",
+		"chalk": "4.1.2",
+		"copyfiles": "2.1.1",
+		"cross-env": "6.0.3",
+		"fast-glob": "3.2.12",
+		"fs-extra": "10.0.0",
+		"i18next": "19.0.2",
+		"jest-sonar": "0.2.12",
+		"json-schema": "0.4.0",
+		"json5": "2.2.3",
+		"lodash": "4.17.21",
+		"log4js": "^6.7.0",
+		"normalize-path": "3.0.0",
+		"npm-run-all": "4.1.5",
+		"portfinder": "1.0.28",
+		"prettier": "^2.7.1",
+		"replace-in-file": "6.2.0",
+		"rimraf": "3.0.0",
+		"socket.io": "2.5.0",
+		"source-map-support": "0.5.16",
+		"ts-import-plugin": "^1.5.5",
+		"ts-jest": "29.1.1",
+		"typescript": "5.2.2",
+		"uuid": "3.4.0",
+		"vscode-json-languageservice": "5.3.5",
+		"vscode-test": "1.5.2",
+		"vscode-uri": "3.0.2",
+		"wait-for-expect": "3.0.2",
+		"wait-on": "7.0.1",
+		"xmlbuilder": "11.0.1",
+		"zip-a-folder": "^1.1.5"
+	},
+	"files": [
+		"*.vsix",
+		"CHANGELOG.md"
+	],
+	"jestSonar": {
+		"reportFile": "test-report.xml",
+		"reportPath": "reports/test/unit"
+	},
+	"galleryBanner": {
+		"color": "#00195A",
+		"theme": "dark"
+	},
+	"eslint-formatter-multiple": {
+		"formatters": [
+			{
+				"name": "stylish",
+				"output": "console"
+			},
+			{
+				"name": "json",
+				"output": "file",
+				"path": "reports/lint/eslint.json"
+			},
+			{
+				"name": "checkstyle",
+				"output": "file",
+				"path": "reports/lint/eslint.checkstyle.xml"
+			}
+		]
+	},
+	"basContributes": {
+		"samples": [
+			{
+				"id": "fiori.1",
+				"title": "SAP Fiori elements List Report Application",
+				"description": "An app, built with SAP Fiori tools, to manage products based on the SAP Fiori elements List Report OData V2 floorplan.",
+				"link": "https://github.com/SAP-samples/fiori-tools-samples/tree/main/app-with-tutorials/non-cap/sap-fiori-elements/V2/myfioriapp",
+				"position": 1
+			},
+			{
+				"id": "fiori.2",
+				"title": "Custom App built using Basic template",
+				"description": "A custom app, built with SAP Fiori tools, to manage products. Making use of the Basic template, the app began as an empty page.",
+				"link": "https://github.com/SAP-samples/fiori-tools-samples/tree/main/app-with-tutorials/non-cap/sapui5/basic/manage-products",
+				"position": 2
+			}
+		],
+		"welcome": {
+			"samples": [
+				"fiori.1",
+				"fiori.2"
+			]
+		}
+	},
+	"__metadata": {
+		"id": "a70a948d-64eb-4de1-af40-661933d50cb8",
+		"publisherId": "a17c53d7-5315-4db5-a571-feab995abf60",
+		"publisherDisplayName": "SAP SE",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": true,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1699721760757,
+		"preRelease": false
+	}
+}
